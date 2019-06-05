@@ -1,2 +1,3 @@
-# ericpowell3d.git.io
-My Website
+Basic Portfolio
+
+Currently working towards building my portfolio.

@@ -1,43 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
+<!-- Start Head of Document -->
 <head>
 
-    <meta charset="UTF-8">
-    <title>Eric Powell - About</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- CSS Reference -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/scripts/style.css">
+
+  <title>Eric Powell - About</title>
 
 </head>
 
+<!-- Start Body of Document -->
 <body>
 
-  <div>
-    <nav class="topNav">
-      <header>
-        <h1 href="index.html">Eric Powell</h1>
-      </header>
-      <a href="contact.html">Contact</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a class="active" href="index.html">About</a>
-    </nav>
+  <div class="container-full" id="navFill">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3" id="correction">
+          <h1 href="index.html">Eric Powell</h1>
+        </div>
+
+        <div class="col-lg-5"></div>
+
+        <div class="col-lg-4" id="correction">
+          <nav class="nav nav-pills nav-fill">
+            <a class="nav-item nav-link active" id="navSelect" href="index.html">About</a>
+            <a class="nav-item nav-link" id="navSelect" href="portfolio.html">Portfolio</a>
+            <a class="nav-item nav-link" id="navSelect" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
   </div>
-    
-  <div class="aboutText">
-    <h2 id="headBody">About Me</h2>
-    <p>I like to think of myself as a designer, developer & technical artist. I dabble in a lot of different things, but what enjoy most is being creative. I've always been creative as a kid, which is where my dream of becoming a game developer started.</p>
-    <br>
-    <p>At Longwood University, I studied animation and graphic design. though I enjoyed both, I started to become more of a technical person and dove straight into coding. For my senior project, I made a game in the Unity Engine which I coded in C#. This was my introduction to coding and it gave me the hope that my dream could become real.</p>
-    <br>
-    <p>The technical and formulaic aspects of coding are what I most enjoy. In my future, I'm going to strive to make something no one has ever seen before. I understand that pouring your heart and soul into your work can be stressful, but undoubtably gives you the best result. This is what I live by. I believe that no matter what you are doing, you should always give it your all.</p>
+
+  <br>
+  <br>
+
+  <div class="container" id="bodyFill">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 id="bodyHead">About Me</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="bodyLine"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+
+          <div id="bodyPic">
+            <img src="assets/images/profile.jpg" alt="Eric Powell" width="128" height="128">
+          </div>
+
+          <div id="bodyText">
+            <p>I like to think of myself as a designer, developer & technical artist. I dabble in a lot of different things, but what enjoy most is being creative. I've always been creative as a kid, which is where my dream of becoming a game developer started.</p>
+            <p>At Longwood University, I studied animation and graphic design. Though I enjoyed both, I started to become more of a technical person and dove straight into coding. For my senior project, I made a game in the Unity Engine which I coded in C#. This was my introduction to coding and it gave me the hope that my dream could become real.</p>
+            <p>The technical and formulaic aspects of coding are what I most enjoy. In my future, I'm going to strive to make something no one has ever seen before. I understand that pouring your heart and soul into your work can be stressful, but undoubtably gives you the best result. This is what I live by. I believe that no matter what you are doing, you should always give it your all.</p>
+          </div>
+      </div>
+    </div>
   </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
 
   <div>
     <footer>
       <p>Copyright &copy;2019 Eric Powell</p>
     </footer>
   </div>
-  
+
 </body>
+
+<!-- jQuery & JavaScript Reference -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="assets/scripts/javascript.js"></script>
 
 </html>

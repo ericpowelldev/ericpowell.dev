@@ -1,45 +1,113 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
+<!-- Start Head of Document -->
 <head>
 
-    <meta charset="UTF-8">
-    <title>Eric Powell - Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- CSS Reference -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/scripts/style.css">
+
+  <title>Eric Powell - Portfolio</title>
 
 </head>
 
+<!-- Start Body of Document -->
 <body>
 
-  <div>
-    <nav class="topNav">
-      <header>
-        <h1>Eric Powell</h1>
-      </header>
-      <a href="contact.html">Contact</a>
-      <a class="active" href="portfolio.html">Portfolio</a>
-      <a href="index.html">About</a>
-    </nav>
+  <div class="container-full" id="navFill">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3" id="correction">
+          <h1 href="index.html">Eric Powell</h1>
+        </div>
+
+        <div class="col-lg-5"></div>
+
+        <div class="col-lg-4" id="correction">
+          <nav class="nav nav-pills nav-fill">
+            <a class="nav-item nav-link" id="navSelect" href="index.html">About</a>
+            <a class="nav-item nav-link active" id="navSelect" href="portfolio.html">Portfolio</a>
+            <a class="nav-item nav-link" id="navSelect" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
   </div>
-    
-  <div class="portfolioText">
-    <h2 id="headBody">Portfolio</h2>
-    <ol>
-        <li>Hangman</li>
-        <li>RPG Game</li>
-        <li>Trivia Game</li>
-        <li>Rutgers Info Widget</li>
-        <li>Rock Paper Scisors</li>
-    </ol>
+
+  <br>
+  <br>
+
+  <div class="container" id="bodyFill">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 id="bodyHead">Portfolio</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="bodyLine"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-around flex-wrap" id="bodyText">
+
+        <div>
+          <div id="portImg">
+            <img src="assets/images/hangman.png" alt="Hangman" width="256" height="256">
+            <a href="https://ericpowell3d.github.io/Word-Guess-Game/">Hangman</a>
+          </div>
+
+          <div id="portImg">
+            <img src="assets/images/sm.jpg" alt="Super Mario Bros." width="256" height="256">
+            <a href="#">Super&nbsp;Mario&nbsp;Bros.</a>
+          </div>
+
+          <div id="portImg">
+            <img src="assets/images/si.jpg" alt="Space Invaders" width="256" height="256">
+            <a href="#">Space&nbsp;Invaders</a>
+          </div>
+
+          <div id="portImg">
+            <img src="assets/images/dd.jpg" alt="Dig Dug" width="256" height="256">
+            <a href="#">Dig&nbsp;Dug</a>
+          </div>
+
+          <div id="portImg">
+            <img src="assets/images/gg.jpg" alt="Galaga" width="256" height="256">
+            <a href="#">Galaga</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
 
   <div>
     <footer>
       <p>Copyright &copy;2019 Eric Powell</p>
     </footer>
   </div>
-  
+
 </body>
+
+<!-- jQuery & JavaScript Reference -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="assets/scripts/javascript.js"></script>
 
 </html>

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #dcdcff20;
+}
+::-webkit-scrollbar-thumb {
+    background: #dcdcff80;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #dcdcff;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #00ff80;
+}
+  
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    line-height: 1.25em;
+    color: #dcdcff;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: #24242d;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+.navFix {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navBar {
+    width: 1024px;
+    height: 0;
+    border-bottom: 64px solid #18181ec8;
+    border-left: 37px solid transparent;
+    border-right: 37px solid transparent;
+    transform: rotate(180deg);
+}
+.navFL {
+    position: absolute;
+    float: left;
+}
+.navFR {
+    position: absolute;
+    float: right;
+    margin-right: 24px;
+    top: 0;
+}
+
+.navBtn {
+    float: left;
+    text-align: center;
+    font-weight: 500;
+    width: 200px;
+    height: 48px;
+    transform: skew(-30deg);
+    padding-top: 12px;
+    margin-left: 15px;
+    background: #dcdcff20;
+    color: #8484a0;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.navBtn:hover {
+    background: #dcdcff;
+    color: #202028;
+}
+.navBtn:active {
+    font-weight: 600;
+    background: #00ff80;
+    color: #202028;
+}
+.navBtnTxt {
+    transform: skew(30deg);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #dcdcff;
+    padding: 14px 0px 0px 0px;
+    border: 0;
+    margin: 0 auto;
+    clear: both;
+    background: #30303c;
+    opacity: 0.9;
+}

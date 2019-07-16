@@ -18,16 +18,19 @@
     * Background
     * Objective
     * Principles
-* [ ] 4: Capabilities
+* [ ] 4: Capabilities w/ Resume link
     * Full-Stack Development
     * Game Development Pipeline
-    * 
+    * Ins & Outs of Design
 * [ ] 5: Let's work together
     * Link to work page
     * Link to contact page
 * [ ] 6: Footer
     * Logo & name
     * Links to all pages
+    * Links to social media
+    * Link to resume
+    * Copyright at bottom of footer
 
 
 ### RESUME TO DO:

@@ -34,8 +34,67 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+h2 {
+    font-size: 35px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+p {
+    font-size: 21px;
+}
+
+#homePage {
+    width: 100%;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    background: #202028;
+}
+.boxTitle {
+    text-align: center;
+    width: 100%;
+    margin-top: 64px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boxWork {
+    display: inline-block;
+    text-align: center;
+    width: 330px;
+    height: 330px;
+    margin: 24px 0 24px 20px;
+    background: #dcdcff20;
+    transition: 0.25s ease-out;
+    cursor: pointer;
+}
+.boxWork img {
+    max-height: 128px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.boxWork h2 {
+    padding: 0 24px;
+}
+.boxWork p {
+    padding: 0 32px;
+    margin-top: 26px;
+}
+.boxWork:hover {
+    transform: scale(1.075);
+    background: #dcdcff40;
+}
+.boxWork:active {
+    background: #00ff8080;
+}
 
 nav {
+    z-index: 1;
     position: fixed;
     left: 0;
     top: 0;
@@ -55,7 +114,7 @@ nav {
 .navBar {
     width: 1024px;
     height: 0;
-    border-bottom: 64px solid #18181ec8;
+    border-bottom: 64px solid #18181e;
     border-left: 37px solid transparent;
     border-right: 37px solid transparent;
     transform: rotate(180deg);
@@ -93,7 +152,7 @@ nav {
     margin-left: 12px;
     background: #dcdcff20;
     color: #8484a0;
-    transition: 0.25s;
+    transition: 0.25s ease-out;
     cursor: pointer;
 }
 .navBtn:hover {
@@ -109,18 +168,57 @@ nav {
     transform: skew(30deg);
 }
 
+.homeName {
+    width: 480px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.homeName img {
+    max-width: 480px;
+}
+.homeWork {
+    width: 1440px;
+    height: 378px;
+}
+.homeAbout {
+    position: relative;
+    line-height: 1.5em;
+    width: 1024px;
+    padding: 24px;
+}
+.homeAbout img {
+    float: left;
+    max-width: 240px;
+    margin-bottom: 8px;
+    margin-right: 24px;
+}
+.homeAbout p {
+    font-size: 21px;
+}
+
 footer {
-    position: fixed;
+    z-index: 1;
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align: center;
-    font-size: 14px;
-    color: #dcdcff;
-    padding: 14px 0px 0px 0px;
-    border: 0;
-    margin: 0 auto;
     clear: both;
-    background: #30303c;
-    opacity: 0.9;
+    background: #18181e;
+    color: #dcdcff;
+}
+.footer {
+    width: 1024px;
+    padding: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footerBox {
+    display: inline-block;
+    background: #dcdcff20;
+    padding: 24px;
+    margin-right: 24px;
+}
+.footerBox h4 {
+    cursor: pointer;
 }

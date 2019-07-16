@@ -7,13 +7,13 @@
 * Contact
 
 ### WEBSITE TO DO:
-* [ ] Create navbar
-* [ ] 1: Logo & name
-* [ ] 2: Work links
-    * [ ] Web Dev
-    * [ ] Game Dev
-    * [ ] Design
-    * [ ] 3D Modeling
+* [X] Create navbar with PROFILE, WORK & CONTACT buttons
+* [X] 1: Name & titles
+* [X] 2: Work links
+    * [X] Web Dev
+    * [X] Game Dev
+    * [X] Design
+    * [X] 3D Modeling
 * [ ] 3: About me
     * Background
     * Objective
@@ -26,7 +26,7 @@
     * Link to work page
     * Link to contact page
 * [ ] 6: Footer
-    * Logo & name
+    * Large Logo
     * Links to all pages
     * Links to social media
     * Link to resume

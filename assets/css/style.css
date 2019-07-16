@@ -46,6 +46,7 @@ nav {
     margin: 0;
 }
 .navFix {
+    position: relative;
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
@@ -61,24 +62,35 @@ nav {
 }
 .navFL {
     position: absolute;
-    float: left;
+    top: 0;
+    left: 0;
+    margin-left: 64px;
 }
 .navFR {
     position: absolute;
-    float: right;
-    margin-right: 24px;
     top: 0;
+    right: 0;
+    margin-right: 32px;
+}
+
+.navTitle {
+    cursor: pointer;
+}
+.navTitle img {
+    float: left;
+    height: 64px;
 }
 
 .navBtn {
     float: left;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     width: 200px;
     height: 48px;
     transform: skew(-30deg);
     padding-top: 12px;
-    margin-left: 15px;
+    margin-top: 8px;
+    margin-left: 12px;
     background: #dcdcff20;
     color: #8484a0;
     transition: 0.25s;
@@ -89,7 +101,7 @@ nav {
     color: #202028;
 }
 .navBtn:active {
-    font-weight: 600;
+    font-weight: 700;
     background: #00ff80;
     color: #202028;
 }

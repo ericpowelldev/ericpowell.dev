@@ -10,8 +10,6 @@
 }
 ::-webkit-scrollbar-thumb {
     background: #dcdcff80;
-    -webkit-transition-duration: 0.25s;
-    transition-duration: 0.25s;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #dcdcff;
@@ -19,12 +17,30 @@
 ::-webkit-scrollbar-thumb:active {
     background: #00ff80;
 }
+
+.anim, a {
+    transition: 0.2s ease-out;
+}
+.shade, h1, h2, h3, h4, h5, h6, p {
+    filter: drop-shadow(3px 3px 5px #18181e60);
+}
+
+#cover {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #24242d;
+    z-index:9999;
+}
   
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;
+    font-weight: 300;
     line-height: 1.25em;
-    color: #dcdcff;
+    color: #fff;
     padding: 0;
     border: 0;
     margin: 0;
@@ -34,16 +50,14 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-h2 {
-    font-size: 35px;
-    font-weight: 600;
+
+a {
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
 }
-h3 {
-    font-size: 28px;
-    font-weight: 500;
-}
-p {
-    font-size: 21px;
+a:hover {
+    color: #00ff80;
 }
 
 #homePage {
@@ -63,25 +77,34 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
+.boxTitle p {
+    font-size: 35px;
+    font-weight: 600;
+}
 .boxWork {
-    display: inline-block;
+    display: block;
+    float: left;
     text-align: center;
     width: 330px;
     height: 330px;
-    margin: 24px 0 24px 20px;
+    margin: 24px 0 24px 24px;
     background: #dcdcff20;
-    transition: 0.25s ease-out;
+    transition: 0.2s ease-out;
     cursor: pointer;
 }
 .boxWork img {
-    max-height: 128px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    max-height: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-.boxWork h2 {
+.boxWork h1 {
+    font-size: 35px;
+    font-weight: 600;
     padding: 0 24px;
 }
 .boxWork p {
+    font-size: 21px;
+    font-weight: 300;
     padding: 0 32px;
     margin-top: 26px;
 }
@@ -135,9 +158,17 @@ nav {
 .navTitle {
     cursor: pointer;
 }
-.navTitle img {
+.navLogo {
     float: left;
-    height: 64px;
+    height: 48px;
+    margin-top: 8px;
+    margin-left: 12px;
+}
+.navName {
+    float: left;
+    width: 160px;
+    margin-top: 16px;
+    margin-left: 20px;
 }
 
 .navBtn {
@@ -152,7 +183,7 @@ nav {
     margin-left: 12px;
     background: #dcdcff20;
     color: #8484a0;
-    transition: 0.25s ease-out;
+    transition: 0.2s ease-out;
     cursor: pointer;
 }
 .navBtn:hover {
@@ -160,23 +191,35 @@ nav {
     color: #202028;
 }
 .navBtn:active {
-    font-weight: 700;
     background: #00ff80;
     color: #202028;
 }
-.navBtnTxt {
+.navBtn p {
     transform: skew(30deg);
 }
 
 .homeName {
     width: 480px;
     margin-top: 48px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     margin-left: auto;
     margin-right: auto;
 }
-.homeName img {
-    max-width: 480px;
+.homeMovieBox {
+    width: 100%;
+    height: 540px;
+    background: #202028;
+    clip-path: inset(0px 0px 0px 0px);
+}
+.homeMovieHold {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#testMovie {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
 }
 .homeWork {
     width: 1440px;
@@ -194,31 +237,47 @@ nav {
     margin-bottom: 8px;
     margin-right: 24px;
 }
+.homeAbout h1 {
+    font-size: 28px;
+    font-weight: 500;
+}
 .homeAbout p {
     font-size: 21px;
 }
 
 footer {
+    text-align: center;
     z-index: 1;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 380px;
     clear: both;
     background: #18181e;
-    color: #dcdcff;
 }
 .footer {
-    width: 1024px;
-    padding: 24px;
+    width: 1440px;
     margin-left: auto;
     margin-right: auto;
 }
 .footerBox {
-    display: inline-block;
-    background: #dcdcff20;
-    padding: 24px;
-    margin-right: 24px;
+    width: 33.333%;
+    display: block;
+    float: left;
+    padding: 36px;
 }
-.footerBox h4 {
-    cursor: pointer;
+.footerLogo {
+    width: 256px;
+}
+.footerBox h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+.footerBox a {
+    line-height: 2em;
+}
+.footerUnder {
+    clear: both;
+    padding: 22px 0;
+    background: #121216;
 }

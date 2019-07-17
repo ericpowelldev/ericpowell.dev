@@ -10,13 +10,12 @@
 * [X] Create navbar with PROFILE, WORK & CONTACT buttons
 * [X] 1: Name & titles
 * [X] 2: Work links
-    * [X] Web Dev
-    * [X] Game Dev
-    * [X] Design
-    * [X] 3D Modeling
-* [ ] 3: About me
+    * Web Dev
+    * Game Dev
+    * Design
+    * 3D Modeling
+* [X] 3: About me
     * Background
-    * Objective
     * Principles
 * [ ] 4: Capabilities w/ Resume link
     * Full-Stack Development
@@ -25,7 +24,7 @@
 * [ ] 5: Let's work together
     * Link to work page
     * Link to contact page
-* [ ] 6: Footer
+* [X] 6: Footer
     * Large Logo
     * Links to all pages
     * Links to social media

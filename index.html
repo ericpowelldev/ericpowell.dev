@@ -14,12 +14,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- FONTS -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat:300|Montserrat:500|Montserrat:600|Montserrat:700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat:300|Montserrat:400|Montserrat:500|Montserrat:600|Montserrat:700&display=swap" rel="stylesheet">
 
     <!-- Favicon & Tab Title -->
-    <link rel="icon" href="assets/images/logo/favicon.ico" />
+    <link rel="icon" href="assets/images/logo/favicon.ico">
     <title>Eric Powell</title>
 
 </head>
@@ -28,24 +26,25 @@
 
 <body>
 
+    <div id="cover"></div>
     <nav>
         <div class="navFix">
             <div class="navBar"></div>
             <div class="navFL">
                 <div class="navTitle">
-                    <img src="assets/images/vectors/vLogo.svg">
-                    <img src="assets/images/vectors/vName.svg" style="margin-top: 6px;">
+                    <img class="navLogo shade" src="assets/images/vector/vLogo.svg" alt="">
+                    <img class="navName shade" src="assets/images/vector/vName.svg" alt="">
                 </div>
             </div>
             <div class="navFR">
                 <div class="navBtn">
-                    <p class="navBtnTxt">PROFILE</p>
+                    <p>PROFILE</p>
                 </div>
                 <div class="navBtn">
-                    <p class="navBtnTxt">WORK</p>
+                    <p>WORK</p>
                 </div>
                 <div class="navBtn">
-                    <p class="navBtnTxt">CONTACT</p>
+                    <p>CONTACT</p>
                 </div>
             </div>
         </div>
@@ -55,46 +54,53 @@
     <br>
     <div id="homePage">
         <div class="homeName">
-            <img src="assets/images/logo/shd_text.png">
+            <img class="shade" src="assets/images/vector/vText.svg">
+        </div>
+        <div class="homeMovieBox">
+            <div class="homeMovieHold">
+                <video id="testMovie" width="960px" playsinline autoplay muted loop>
+                    <source src="assets/videos/testReel.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+        <div class="boxTitle">
+            <p>Survey my portfolio.</p>
         </div>
         <div class="box homeWork">
             <div class="boxWork">
-                <img src="assets/images/vectors/vWeb.svg">
-                <h2>Web Dev</h2>
+                <img class="shade" src="assets/images/vector/vWeb.svg" alt="">
+                <h1>Web Dev</h1>
                 <p>Interact with my websites and web apps.</p>
             </div>
             <div class="boxWork">
-                <img src="assets/images/vectors/vGame.svg">
-                <h2>Game Dev</h2>
+                <img class="shade" src="assets/images/vector/vGame.svg" alt="">
+                <h1>Game Dev</h1>
                 <p>Experience the games I’ve made in Unity.</p>
             </div>
             <div class="boxWork">
-                <img src="assets/images/vectors/v2D.svg">
-                <h2>Graphic Design</h2>
+                <img class="shade" src="assets/images/vector/v2D.svg" alt="">
+                <h1>Graphic Design</h1>
                 <p>Have a look at my static & motion design.</p>
             </div>
             <div class="boxWork">
-                <img src="assets/images/vectors/v3D.svg">
-                <h2>3D Design</h2>
+                <img class="shade" src="assets/images/vector/v3D.svg" alt="">
+                <h1>3D Design</h1>
                 <p>View my 3D models and character animation.</p>
             </div>
         </div>
         <div class="boxTitle">
-            <h2>Learn a little more about me.</h2>
+            <p>Learn a little more about me.</p>
         </div>
         <div class="box homeAbout">
-            <img src="assets/images/profile.jpg">
-            <h3>Background</h3>
+            <img src="assets/images/profile.jpg" alt="">
+            <h1>Background</h1>
             <br>
-            <p></p>
+            <p>I like to think of myself as a designer, developer & technical artist. I dabble in a lot of different things, but what I enjoy most is being creative. I've always been creative as a kid, which is where my dream of becoming a game developer started.<br><br>At Longwood University, I studied animation and graphic design. Though I enjoyed both, I started to become more of a technical person and dove straight into coding. For my senior project, I made a game in the Unity Engine which I coded in C#. This was my introduction to coding and it gave me the hope that my dream could become real.</p>
             <br>
-            <h3>Objective</h3>
+            <h1>Principles</h1>
             <br>
-            <p></p>
-            <br>
-            <h3>Principles</h3>
-            <br>
-            <p>As a designer and web developer, I know what a clean, responsive interface can do for your business. As a game developer, I understand how mechanics can make or break the gameplay experience. I enjoy technical aspects of design & development and obsessing over details that others may overlook. I simply find problems and solve them. I am searching for experience to prove what I can accomplish. Contact me and let's work together.</p>
+            <p>The technical and formulaic aspects of coding are what I most enjoy. In my future, I'm going to strive to make something no one has ever seen before. I understand that pouring your heart and soul into your work can be stressful, but undoubtably gives you the best result. This is what I live by. I believe that no matter what you are doing, you should always give it your all.<br><br>As a designer and web developer, I know what a clean, responsive interface can do for your business. As a game developer, I understand how mechanics can make or break the gameplay experience. I enjoy technical aspects of design & development and obsessing over details that others may overlook. I simply find problems and solve them. I am searching for experience to prove what I can accomplish. Contact me and let's work together.</p>
         </div>
     </div>
 
@@ -106,19 +112,33 @@
     <footer>
         <div class="footer">
             <div class="footerBox">
-                <h4>Profile</h4>
-                <br>
-                <h4>Work</h4>
-                <br>
-                <h4>Contact</h4>
+                <img class="footerLogo shade" src="assets/images/vector/vLogo.svg" alt="">
             </div>
             <div class="footerBox">
-                <h4>LinkedIn</h4>
+                <h1>Site Links</h1>
                 <br>
-                <h4>Facebook</h4>
+                <a href="#">Profile</a>
                 <br>
-                <h4>Instagram</h4>
+                <a href="#">Work</a>
+                <br>
+                <a href="#">Contact</a>
+                <br>
+                <a href="assets/images/EricPowell_Resume.pdf" target="_blank">Resume</a>
             </div>
+            <div class="footerBox">
+                <h1>Social Links</h1>
+                <br>
+                <a href="https://www.linkedin.com/in/ericpowell3d/" target="_blank">LinkedIn</a>
+                <br>
+                <a href="https://www.artstation.com/ericpowell3d" target="_blank">ArtStation</a>
+                <br>
+                <a href="https://www.facebook.com/ericpowell3d" target="_blank">Facebook</a>
+                <br>
+                <a href="https://www.instagram.com/ericpowell3d/" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="footerUnder">
+            <p>&copy;2019 Eric Powell</p>
         </div>
     </footer>
 

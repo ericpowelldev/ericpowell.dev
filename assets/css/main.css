@@ -181,14 +181,23 @@ footer {
 .footerBox h1 {
     font-size: 28px;
     font-weight: 400;
+    margin-bottom: 32px;
 }
-.footerBox a {
+.footerBox p {
     line-height: 2em;
 }
 .footerUnder {
     clear: both;
     padding: 22px 0;
     background: #121216;
+}
+#socialLogos {
+    display: none;
+}
+#socialLogos a {
+    display: inline-block;
+    width: 64px;
+    padding: 8px;
 }
 
 

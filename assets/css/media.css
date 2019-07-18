@@ -1,16 +1,16 @@
-@media screen and (min-width: 1440px) { /* 1440px and above (in screen width). Typical for full HD monitors/TVs */
+@media screen and (min-width: 1464px) { /* 1440px and above (in screen width). Typical for full HD monitors/TVs */
     
 }
-@media screen and (max-width: 1440px) { /* 1440px and below (in screen width). Typical for low HD monitors/TVs */
+@media screen and (max-width: 1464px) { /* 1440px and below (in screen width). Typical for low HD monitors/TVs */
     .footer {
-        width: 1024px;
+        width: 100%;
     }
     .profileWork {
         width: 732px;
         height: 732px;
     }
 }
-@media screen and (max-width: 1024px) { /* 1024px and below (in screen width). Typical for full HD tablets */
+@media screen and (max-width: 1048px) { /* 1024px and below (in screen width). Typical for full HD tablets */
     .navFix, .navBar {
         width: 480px;
     }
@@ -20,11 +20,75 @@
     .navIcons {
         display: initial;
     }
+
+    footer {
+        height: 300px;
+    }
+    .footerLogo {
+        width: 160px;
+        margin-top: 18px;
+    }
+    .footerBox h1 {
+        font-size: 21px;
+    }
+    .footerBox p {
+        font-size: 16px;
+    }
+    .footerUnder {
+        font-size: 16px;
+    }
+
+    .boxTitle {
+        font-size: 28px;
+    }
+
+    .profileName {
+        width: 320px;
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+    .profileMovieBox {
+        height: 55vw;
+    }
+    .profileMovieHold {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #testMovie {
+        /* position: fixed;
+        top: 0;
+        left: 0; */
+        width: 100%;
+    }
+
+    .profileAbout {
+        position: relative;
+        line-height: 1em;
+        width: 100%;
+        padding: 16px;
+    }
+    .profileAbout img {
+        max-width: 160px;
+        margin-bottom: 0px;
+        margin-right: 18px;
+    }
+    .profileAbout h1 {
+        font-size: 21px;
+    }
+    .profileAbout p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .profileAbout span {
+        display: block;
+        padding: 50px;
+    }
 }
 @media screen and (max-width: 768px) { /* 1024px and below (in screen width). Typical for low HD tablets */
     .profileWork {
-        width: 100%;
-        height: 732px;
+        width: 378px;
+        height: 1440px;
     }
 }
 @media screen and (max-width: 640px) { /* 640px and below (in screen width). Typical for phones */
@@ -36,5 +100,47 @@
     }
     .navIcons img {
         padding: 0px 18px 0px 18px;
+    }
+
+    footer {
+        height: 400px;
+    }
+    .footerBox {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+    .footerLogo {
+        margin-top: 24px;
+    }
+    .footerBox h1 {
+        margin-top: 18px;
+        margin-bottom: 12px;
+    }
+    #siteLinks, #socialLinks p {
+        display: none;
+    }
+    #socialLogos {
+        display: initial;
+    }
+
+    .boxTitle {
+        font-size: 18px;
+    }
+
+    .profileAbout {
+        line-height: 0.9em;
+    }
+    .profileAbout img {
+        max-width: 120px;
+        margin-right: 12px;
+    }
+    .profileAbout h1 {
+        font-size: 18px;
+    }
+    .profileAbout p {
+        font-size: 12px;
+        margin-bottom: 12px;
     }
 }

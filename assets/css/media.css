@@ -87,8 +87,29 @@
 }
 @media screen and (max-width: 768px) { /* 1024px and below (in screen width). Typical for low HD tablets */
     .profileWork {
-        width: 378px;
-        height: 1440px;
+        width: 488px;
+        height: 488px;
+        padding: 8px;
+    }
+    .profileBoxWork {
+        width: 220px;
+        height: 220px;
+        margin: 8px;
+    }
+    .profileBoxWork img {
+        max-height: 72px;
+        margin-top: 28px;
+        margin-bottom: 18px;
+    }
+    .profileBoxWork h1 {
+        font-size: 18px;
+        padding: 0 16px;
+    }
+    .profileBoxWork p {
+        line-height: 1.5em;
+        font-size: 12px;
+        padding: 0 21px;
+        margin-top: 12px;
     }
 }
 @media screen and (max-width: 640px) { /* 640px and below (in screen width). Typical for phones */
@@ -142,5 +163,12 @@
     .profileAbout p {
         font-size: 12px;
         margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profileWork {
+        width: 252px;
+        height: 944px;
     }
 }

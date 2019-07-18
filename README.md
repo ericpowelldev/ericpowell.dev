@@ -1,6 +1,6 @@
 # ERIC POWELL | DESIGNER & DEVELOPER
 * This is my portfolio
-* [Deployed site here.](https://ericpowell3d.github.io/)
+* [Deployed site here.](https://ericpowell3d.github.io)
 
 ### PAGES:
 * Profile

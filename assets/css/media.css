@@ -126,6 +126,12 @@
         padding: 0 21px;
         margin-top: 12px;
     }
+
+    .workBoxWork {
+        width: 220px;
+        height: 220px;
+        margin: 8px;
+    }
 }
 @media screen and (max-width: 640px) { /* 640px and below (in screen width). Typical for phones */
     .navFix, .navBar {

@@ -41,31 +41,29 @@
                 </div>
             </div>
             <div class="navFR">
-                <a href="index.html">
-                    <div class="navBtn">
-                        <p>PROFILE</p>
-                    </div>
-                </a>
-                <div class="navBtn">
+                <div class="navBtn" id="nProfile">
+                    <p>PROFILE</p>
+                </div>
+                <div class="navBtn" id="nWork">
                     <p>WORK</p>
                 </div>
-                <div class="navBtn">
+                <div class="navBtn" id="nContact">
                     <p>CONTACT</p>
                 </div>
             </div>
             <div class="navIcons">
-                <a href="index.html">
-                    <img class="anim shade" src="assets/images/vectors/vProfile.svg" alt="Profile">
-                </a>
-                <img class="anim shade" src="assets/images/vectors/vWork.svg" alt="Work">
-                <img class="anim shade" src="assets/images/vectors/vContact.svg" alt="Contact">
+                <img class="anim shade" id="nProfile" src="assets/images/vectors/vProfile.svg" alt="Profile">
+                <img class="anim shade" id="nWork" src="assets/images/vectors/vWork.svg" alt="Work">
+                <img class="anim shade" id="nContact" src="assets/images/vectors/vContact.svg" alt="Contact">
             </div>
         </div>
     </nav>
+
     <br>
     <br>
     <br>
-    <div id="pageProfile">
+
+    <div id="profile">
         <div class="profileName">
             <img class="shade" src="assets/images/vectors/vText.svg">
         </div>
@@ -119,6 +117,45 @@
         </div>
     </div>
 
+    <div id="work">
+        <div class="boxTitle">
+            <p>Demo reels.</p>
+        </div>
+        <div class="profileMovieBox">
+            <div class="profileMovieHold">
+                <video id="testMovie" width="960px" playsinline controls>
+                    <source src="assets/videos/testReel.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+        <div class="boxTitle">
+            <p>Web development projects.</p>
+        </div>
+        <div class="box profileWork">
+            <div class="workBoxWork">
+                <a href="https://ericpowell3d.github.io/Monki/" target="_blank"><img src="assets/images/thumbs/monki.jpg" alt="Monki App"></a>
+                <p>Monki</p>
+            </div>
+            <div class="workBoxWork">
+                <a href="https://ericpowell3d.github.io/Trivia-Game/" target="_blank"><img src="assets/images/thumbs/smash.jpg" alt="Smash Trivia App"></a>
+                <p>Smash&nbsp;Bros&nbsp;Trivia</p>
+            </div>
+            <div class="workBoxWork">
+                <a href="https://ericpowell3d.github.io/Giphy-App/" target="_blank"><img src="assets/images/thumbs/giphy.jpg" alt="Giphy App"></a>
+                <p>Giphy&nbsp;Generator</p>
+            </div>
+            <div class="workBoxWork">
+                <a href="https://ericpowell3d.github.io/Train-Time/" target="_blank"><img src="assets/images/thumbs/train.jpg" alt="Train App"></a>
+                <p>Train&nbsp;Time</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        
+    </div>
+
     <br>
     <br>
     <br>
@@ -132,9 +169,9 @@
             </div>
             <div class="footerBox" id="siteLinks">
                 <h1>Site Links</h1>
-                <p><a href="index.html">Profile</a></p>
-                <p><a href="#">Work</a></p>
-                <p><a href="#">Contact</a></p>
+                <p><a id="nProfile" href="#">Profile</a></p>
+                <p><a id="nWork" href="#">Work</a></p>
+                <p><a id="nContact" href="#">Contact</a></p>
                 <p><a href="assets/resources/EricPowell_Resume.pdf" target="_blank">Resume</a></p>
             </div>
             <div class="footerBox" id="auxilaryLinks">

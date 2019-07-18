@@ -131,7 +131,7 @@ nav {
     background: #dcdcff;
     color: #202028;
 }
-.navBtn:active {
+.navBtn:active, .navBtnActive {
     background: #00ff80;
     color: #202028;
 }
@@ -226,6 +226,12 @@ footer {
     background: #24242d;
     z-index:9999;
 }
-#pageProfile {
+#profile {
+    width: 100%;
+}
+#work {
+    width: 100%;
+}
+#contact {
     width: 100%;
 }

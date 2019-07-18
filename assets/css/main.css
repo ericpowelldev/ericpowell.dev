@@ -96,14 +96,14 @@ nav {
     margin-right: 32px;
 }
 
-.navTitle {
-    cursor: pointer;
-}
 .navLogo {
     float: left;
     height: 48px;
     margin-top: 8px;
     margin-left: 12px;
+}
+.navLogo:hover {
+    filter: grayscale();
 }
 .navName {
     float: left;
@@ -151,6 +151,15 @@ nav {
     float: left;
     height: 48px;
     padding: 0px 32px 0px 32px;
+    cursor: pointer;
+}
+.navIcons img:hover {
+    filter: grayscale();
+    /* background-color: #dcdcff80; */
+}
+.navIcons img:active {
+    filter: grayscale();
+    /* background-color: #00ff8080; */
 }
 
 
@@ -178,6 +187,9 @@ footer {
 .footerLogo {
     width: 256px;
 }
+.footerLogo:hover {
+    filter: grayscale();
+}
 .footerBox h1 {
     font-size: 28px;
     font-weight: 400;
@@ -191,13 +203,16 @@ footer {
     padding: 22px 0;
     background: #121216;
 }
-#socialLogos {
+#auxilaryLogos {
     display: none;
 }
-#socialLogos a {
+#auxilaryLogos a {
     display: inline-block;
-    width: 64px;
-    padding: 8px;
+    width: 48px;
+    padding: 4px;
+}
+#auxilaryLogos img:hover {
+    filter: opacity(0.5);
 }
 
 

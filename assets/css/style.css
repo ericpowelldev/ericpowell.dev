@@ -88,18 +88,21 @@
     line-height: 1.5em;
     width: 1024px;
     padding: 24px;
+    border-radius: 144px 0 0 0;
 }
 .profileAbout img {
     float: left;
     max-width: 240px;
     margin-bottom: 8px;
-    margin-right: 24px;
+    margin-right: 48px;
+    shape-outside: circle();
+    clip-path: circle(50% at 50% 50%);
 }
 .profileAbout h1 {
     font-size: 28px;
     font-weight: 500;
 }
 .profileAbout p {
-    font-size: 21px;
+    font-size: 18px;
     margin-bottom: 32px;
 }

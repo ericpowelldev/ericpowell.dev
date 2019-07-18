@@ -12,15 +12,18 @@
 }
 @media screen and (max-width: 1048px) { /* 1024px and below (in screen width). Typical for full HD tablets */
     .navFix, .navBar {
-        width: 480px;
+        width: 768px;
     }
-    .navFL, .navFR {
+    .navLogo {
+        margin-left: 8px;
+    }
+    .navName {
         display: none;
     }
-    .navIcons {
-        display: initial;
+    .navBtn {
+        width: 180px;
     }
-
+    
     footer {
         height: 300px;
     }
@@ -38,14 +41,10 @@
         font-size: 16px;
     }
 
-    .boxTitle {
-        font-size: 28px;
-    }
-
     .profileName {
-        width: 320px;
-        margin-top: 32px;
-        margin-bottom: 24px;
+        width: 400px;
+        margin-top: 38px;
+        margin-bottom: 28px;
     }
     .profileMovieBox {
         height: 55vw;
@@ -67,11 +66,12 @@
         line-height: 1em;
         width: 100%;
         padding: 16px;
+        border-radius: 96px 0 0 0;
     }
     .profileAbout img {
         max-width: 160px;
-        margin-bottom: 0px;
-        margin-right: 18px;
+        margin-bottom: 6px;
+        margin-right: 36px;
     }
     .profileAbout h1 {
         font-size: 21px;
@@ -80,12 +80,27 @@
         font-size: 14px;
         margin-bottom: 16px;
     }
-    .profileAbout span {
-        display: block;
-        padding: 50px;
-    }
 }
-@media screen and (max-width: 768px) { /* 1024px and below (in screen width). Typical for low HD tablets */
+@media screen and (max-width: 780px) { /* 1024px and below (in screen width). Typical for low HD tablets */
+    .navFix, .navBar {
+        width: 480px;
+    }
+    .navFL, .navFR {
+        display: none;
+    }
+    .navIcons {
+        display: initial;
+    }
+
+    .boxTitle {
+        font-size: 28px;
+    }
+    
+    .profileName {
+        width: 320px;
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
     .profileWork {
         width: 488px;
         height: 488px;
@@ -139,23 +154,26 @@
         margin-top: 18px;
         margin-bottom: 12px;
     }
-    #siteLinks, #socialLinks p {
+    #siteLinks, #auxilaryLinks p {
         display: none;
     }
-    #socialLogos {
+    #auxilaryLogos {
         display: initial;
     }
 
-    .boxTitle {
-        font-size: 18px;
+    .profileName {
+        width: 280px;
+        margin-top: 32px;
+        margin-bottom: 24px;
     }
-
     .profileAbout {
         line-height: 0.9em;
+        border-radius: 78px 0 0 0;
     }
     .profileAbout img {
         max-width: 120px;
-        margin-right: 12px;
+        margin-bottom: 4px;
+        margin-right: 24px;
     }
     .profileAbout h1 {
         font-size: 18px;
@@ -167,6 +185,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    .boxTitle {
+        font-size: 18px;
+    }
     .profileWork {
         width: 252px;
         height: 960px;

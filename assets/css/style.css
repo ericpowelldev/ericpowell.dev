@@ -96,7 +96,6 @@
     margin-bottom: 8px;
     margin-right: 48px;
     shape-outside: circle();
-    clip-path: circle(50% at 50% 50%);
 }
 .profileAbout h1 {
     font-size: 28px;

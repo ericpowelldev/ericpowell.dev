@@ -1,6 +1,8 @@
 # ERIC POWELL | DESIGNER & DEVELOPER
 * This is my portfolio
-* [Deployed site here.](https://ericpowell3d.github.io)
+* [Deployed site here.](https://ericpowell3d.com)
+* [WWW deployed site here.](https://www.ericpowell3d.com)
+* [GitHub test site here.](https://ericpowell3d.github.io)
 
 ### PAGES:
 * Profile
@@ -32,44 +34,82 @@
     * Link to resume
     * Copyright at bottom of footer
 
+### FAVORED TOOLS:
 
-### RESUME TO DO:
+* C#/Unity Engine
+* HTML/CSS
+* JavaScript/jQuery
+* Node.js/NPM
+* GitBash/CMD
+* Adobe CC
+* Blender/Maya
+* Logic Pro
+* Microsoft Office
+
+### SKILLS:
+
+* Game development pipeline
+* Full-stack web development with API integration & databasing
+* Command line interface & git version-control
+* Vector creation, image manipulation & motion graphics
+* 3D modeling, rigging, animation, texturing & rendering
+* Leadership, teamwork & logical problem solving
+* KISS & DRY principles
+
+### CURRENT PROJECTS:
+
+* Currently working with a small team on an indie game project in Unity
+* Currently working on a web-based RPG
+* Currently working on a JavaScript bot for my Discord server
+
+### RESUME:
 
 OBJECTIVE STATEMENT
 
-As a designer and web developer, I know what a clean, responsive interface can do for your business.
 As a game developer, I understand how mechanics can make or break the gameplay experience.
-I enjoy technical aspects of design & development and obsessing over details that others may overlook.
-I find problems and I solve them.
-I am searching for experience to prove what I can accomplish.
+As a designer and web developer, I know what a clean, responsive interface can do for your business.
+I enjoy technical aspects of design & development and polishing critical details that others may overlook.
+I am fully confident in proving what I say I can do. (I am searching for the opportunity to prove what I can accomplish.)
 Contact me and let's work together.
-
-SOFTWARE SKILLS
-
-HTML/CSS
-JavaScript/jQuery
-AngularJS
-Unity Engine/C#
-Blender/Maya
-Adobe CC
-Logic Pro
-Microsoft Office
-
-PROFESSIONAL SKILLS
-
-Attention to Detail
-Experience in Leadership
-Logical Problem Solving
-Software Variety-Trained
-AGILE Methodology
-KISS/DRY Principles
 
 PROJECTS & HOBBIES
 
-Made a game called "Tilt" in Unity, coded in C#
+Made an indie game called "Tilt" in Unity, coded in C#
 Experimentation with video game code and creating mods
-Playing guitar & piano, including writing my own music
+Playing guitar, piano & drums, including writing my own music
 Currently working on a Discord Bot to host on my server
 Currently leading a team on a large-scale, commercial game project (Indie)
 
-*References & address available upon request
+### THINGS I HAVE LEARNED/CURRENTLY LEARNING
+
+* HTML/CSS
+* JavaScript
+* C#
+* Python
+* SQL
+
+* CLI/GitBash
+* Git Version-Control
+* Bootstrap
+* Responsive Design
+* jQuery
+* Ajax
+* Cookies/Local Storage
+* Firebase
+* NodeJS
+* 
+
+### THINGS I PLAN TO LEARN:
+
+* MongoDB
+* ExpressJS
+* ReactJS
+* Heroku
+* Spring MVC
+* Handlebars
+* Maven
+* ORM
+* SEO
+
+* VueJS
+* C++

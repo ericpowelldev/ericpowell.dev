@@ -1,27 +1,33 @@
-# ERIC POWELL | DESIGNER & DEVELOPER
-* This is my portfolio
-* [Deployed site here.](https://ericpowell3d.com)
+# Eric Powell | Designer & Developer
 
-### PAGES:
+## Overview
+
+This is my current portfolio made using ReactJS. [Deployed site here.](https://ericpowell3d.com)
+
+- - -
+
+## Website Tabs
+
 * Profile
 * Work
 * Contact
 
-### WEBSITE TO DO:
+### Profile
+
 * [X] Create navbar with PROFILE, WORK & CONTACT buttons
 * [X] 1: Name & titles
 * [X] 2: Work links
-    * Web Dev
     * Game Dev
+    * Web Dev
     * Design
     * 3D Modeling
 * [X] 3: About me
     * Background
     * Principles
 * [ ] 4: Capabilities w/ Resume link
-    * Full-Stack Development
-    * Game Development Pipeline
-    * Ins & Outs of Design
+    * Game Development
+    * Front-End Design
+    * Back-End Integration
 * [ ] 5: Let's work together
     * Link to work page
     * Link to contact page
@@ -32,37 +38,11 @@
     * Link to resume
     * Copyright at bottom of footer
 
-### FAVORED TOOLS:
+- - -
 
-* C#/Unity Engine
-* HTML/CSS
-* JavaScript/jQuery
-* Node.js/NPM
-* GitBash/CMD
-* Adobe CC
-* Blender/Maya
-* Logic Pro
-* Microsoft Office
+## Resume
 
-### SKILLS:
-
-* Game development pipeline
-* Full-stack web development with API integration & databasing
-* Command line interface & git version-control
-* Vector creation, image manipulation & motion graphics
-* 3D modeling, rigging, animation, texturing & rendering
-* Leadership, teamwork & logical problem solving
-* KISS & DRY principles
-
-### CURRENT PROJECTS:
-
-* Currently working with a small team on an indie game project in Unity
-* Currently working on a web-based RPG
-* Currently working on a JavaScript bot for my Discord server
-
-### RESUME:
-
-OBJECTIVE STATEMENT
+### Objective Statement
 
 As a game developer, I understand how mechanics can make or break the gameplay experience.
 As a designer and web developer, I know what a clean, responsive interface can do for your business.
@@ -70,44 +50,116 @@ I enjoy technical aspects of design & development and polishing critical details
 I am fully confident in proving what I say I can do. (I am searching for the opportunity to prove what I can accomplish.)
 Contact me and let's work together.
 
-PROJECTS & HOBBIES
+### Skills
 
-Made an indie game called "Tilt" in Unity, coded in C#
-Experimentation with video game code and creating mods
-Playing guitar, piano & drums, including writing my own music
-Currently working on a Discord Bot to host on my server
-Currently leading a team on a large-scale, commercial game project (Indie)
+* Game Development Pipeline (Unity/C#)
+* Full-Stack Web Development (MERN Stack)
+* API & Database Integration (AJAX/MongoDB/SQL)
+* Command Line Interface, Git Version-Control & Deployment 
+* Vector Creation, Image Manipulation & Motion Graphics
+* 3D Modeling, Rigging, Animation, Texturing & Rendering
+* Leadership, Teamwork & Logical Problem Solving
 
-### THINGS I HAVE LEARNED/CURRENTLY LEARNING
+### Favored Tools
 
+* C#/Unity
 * HTML/CSS
 * JavaScript
+* MongoDB/SQL
+* Express.js
+* React.js
+* Node.js/NPM
+* Adobe CC
+* Blender/Maya
+
+### Auxilary Information
+
+Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) for more detailed information
+
+- - -
+
+## Skills & Technologies I Have Learned
+
+### Industry Knowledge
+
+* Game Development
+
+* Full-Stack Web Development
+* Responsive Web Design
+* API & Database Integration
+
+* Graphic Design
+* Motion Graphics
+* Video Editing
+
+* 3D Modeling
+* Animation/Character Animation
+* Character Rigging
+
+* Songwriting
+* Musical Composition
+* Sound Mixing
+
+### Tech Knowledge
+
 * C#
-* Python
+* Unity Engine
+
+* HTML
+* CSS
+* JavaScript
+* NodeJS
+* NPM
+* ExpressJS
+* MongoDB
 * SQL
+* HandlebarsJS
+* ReactJS
 
 * CLI/GitBash
-* Git Version-Control
+* Heroku Deployment
+
+* JQuery
+* AJAX/Axios
+* Local Storage/Cookies
 * Bootstrap
-* Responsive Design
-* jQuery
-* Ajax
-* Cookies/Local Storage
-* Firebase
-* NodeJS
-* 
 
-### THINGS I PLAN TO LEARN:
+* Adobe CC
+* Adobe Illustrator
+* Adobe Photoshop
+* Adobe InDesign
+* Adobe After Effects
+* Adobe Audition
+* Adobe XD
+* Figma
 
-* MongoDB
-* ExpressJS
-* ReactJS
-* Heroku
-* Spring MVC
-* Handlebars
-* Maven
-* ORM
-* SEO
+* Blender
+* Autodesk Maya
+
+* Logic Pro X
+
+* Microsoft Office
+* Microsoft Word
+* Microsoft Excel
+* Microsoft Powerpoint
+
+* Guitar
+* Piano
+
+- - -
+
+## Skills & Technologies I Plan To Learn
 
 * VueJS
+* TypeScript
+* Python
 * C++
+* SEO
+
+- - -
+
+## Current Projects
+
+* Currently working with a small team on an indie game project in Unity
+* Currently working on a web-based RPG
+* Currently working on a JavaScript bot for my Discord server

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my current portfolio made using ReactJS. [Deployed site here.](https://ericpowell3d.com)
+This is my current portfolio made using handlebars. This site will be replaced soon by a React App. [Deployed site here.](https://ericpowell3d.com)
 
 - - -
 
@@ -17,12 +17,13 @@ This is my current portfolio made using ReactJS. [Deployed site here.](https://e
 * [X] Create navbar with PROFILE, WORK & CONTACT buttons
 * [X] 1: Name & titles
 * [X] 2: Work links
-    * Game Dev
     * Web Dev
-    * Design
-    * 3D Modeling
+    * Game Dev
+    * Graphic Design
+    * 3D Design
 * [X] 3: About me
     * Background
+    * Hobbies
     * Principles
 * [ ] 4: Capabilities w/ Resume link
     * Game Development
@@ -33,9 +34,8 @@ This is my current portfolio made using ReactJS. [Deployed site here.](https://e
     * Link to contact page
 * [X] 6: Footer
     * Large Logo
-    * Links to all pages
+    * Links to all pages + resume
     * Links to social media
-    * Link to resume
     * Copyright at bottom of footer
 
 - - -
@@ -45,7 +45,7 @@ This is my current portfolio made using ReactJS. [Deployed site here.](https://e
 ### Objective Statement
 
 As a game developer, I understand how mechanics can make or break the gameplay experience.
-As a designer and web developer, I know what a clean, responsive interface can do for your business.
+As a designer and web developer, I know what a clean, responsive interface can do for a business.
 I enjoy technical aspects of design & development and polishing critical details that others may overlook.
 I am fully confident in proving what I say I can do. (I am searching for the opportunity to prove what I can accomplish.)
 Contact me and let's work together.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my current portfolio made using handlebars. This site will be replaced soon by a React App. [Deployed site here.](https://ericpowell3d.com)
+This is my current portfolio made using ReactJS. [Deployed site here.](https://ericpowell3d.com)
 
 - - -
 

@@ -1,0 +1,29 @@
+/* WORK */
+
+#work {
+    position: relative;
+    width: 100%;
+}
+
+/* WORK REEL */
+
+#workReel {
+    display: inline-flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #202028;
+    clip-path: inset(0px 0px 0px 0px);
+}
+
+#workReelFix {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#workReelMovie {
+    width: 960px;
+}
+
+/*  */

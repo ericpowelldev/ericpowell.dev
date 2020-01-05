@@ -1,0 +1,157 @@
+@media screen and (max-width: 1600px) {
+    .footer3rd {
+        width: 30%;
+    }
+    #profilePortDrop {
+        max-width: calc(732px * var(--scale));
+        ;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #navFix {
+        max-width: 768px;
+    }
+    #navShape {
+        width: 768px;
+    }
+    #navLogo {
+        margin-left: 8px;
+    }
+    #navName {
+        display: none;
+    }
+    .navBtn {
+        width: 180px;
+    }
+    .footer3rd {
+        width: 33.333%;
+    }
+    #profileAboutDrop {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --scale: 0.667;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+    footer h1 {
+        font-size: 21px;
+        margin-bottom: 24px;
+    }
+    footer h2, footer h3 {
+        font-size: 15px;
+    }
+    #footerLogoLink img {
+        height: 180px;
+        padding: 12px 0;
+    }
+    .title {
+        font-size: 24px;
+    }
+    #profileNameLogo {
+        width: 360px;
+    }
+    #profileReelFix, #workReelFix {
+        width: 100%;
+    }
+    #profileReelMovie, #workReelMovie {
+        width: 100%;
+    }
+    #profileAboutDrop {
+        border-radius: 84px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #navFix {
+        max-width: 480px;
+    }
+    #navShape {
+        width: 480px;
+    }
+    #navL, #navR {
+        display: none;
+    }
+    #navIcons {
+        display: initial;
+    }
+    #profileAboutDrop {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navFix, #navShape {
+        width: 320px;
+    }
+    #navIcons {
+        max-width: 320px;
+        padding: 8px 36px;
+    }
+    #navIcons img {
+        padding: 0 15px;
+    }
+    footer h1 {
+        margin-bottom: 12px;
+    }
+    footer h2 {
+        display: none;
+    }
+    .footer3rd {
+        display: block;
+        width: 100%;
+        padding: 18px 0;
+    }
+    #footerLogoLink img {
+        height: 156px;
+        padding: 0;
+    }
+    #footerSiteLinks {
+        display: none;
+    }
+    #footerAuxIcons {
+        display: initial;
+    }
+    #profilePortDrop {
+        max-width: calc(378px * var(--scale));
+        ;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+    #profileNameLogo {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #navFix, #navShape {
+        width: 300px;
+    }
+    #navIcons {
+        max-width: 300px;
+    }
+    .title {
+        font-size: 16px;
+    }
+    #profileNameLogo {
+        width: 240px;
+    }
+}

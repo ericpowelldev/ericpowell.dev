@@ -1,0 +1,137 @@
+/* PROFILE */
+
+#profile {
+    position: relative;
+    width: 100%;
+}
+
+/* PROFILE NAME */
+
+#profileName {
+    width: max-content;
+    margin-top: calc(72px * var(--scale));
+    margin-bottom: calc(24px * var(--scale));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profileNameLogo {
+    width: 480px;
+}
+
+/* PROFILE REEL */
+
+#profileReel {
+    display: inline-flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #202028;
+    clip-path: inset(0px 0px 0px 0px);
+}
+
+#profileReelFix {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profileReelMovie {
+    width: 960px;
+}
+
+/* PROFILE PORTFOLIO */
+
+#profilePort {
+    position: relative;
+    width: 100%;
+    line-height: calc(2.5em * var(--scale));
+}
+
+#profilePortDrop {
+    max-width: calc(1440px * var(--scale));
+    ;
+    width: fit-content;
+    height: fit-content;
+    padding: calc(12px * var(--scale));
+    margin-left: auto;
+    margin-right: auto;
+    background: #202028;
+}
+
+.profilePortBox {
+    display: inline-block;
+    text-align: center;
+    width: calc(330px * var(--scale));
+    height: calc(330px * var(--scale));
+    margin: calc(12px * var(--scale));
+    background: #dcdcff20;
+}
+
+.profilePortBox img {
+    max-height: calc(100px * var(--scale));
+    margin-top: calc(40px * var(--scale));
+    margin-bottom: calc(32px * var(--scale));
+}
+
+.profilePortBox h1 {
+    font-size: calc(35px * var(--scale));
+    font-weight: 600;
+    margin-bottom: calc(24px * var(--scale));
+}
+
+.profilePortBox p {
+    font-size: calc(21px * var(--scale));
+    font-weight: 300;
+    padding: 0 calc(28px * var(--scale));
+}
+
+.profilePortBox:hover {
+    cursor: pointer;
+    transform: scale(1.075);
+    background: #dcdcff40;
+}
+
+.profilePortBox:active {
+    background: #00ff8080;
+}
+
+/* PROFILE CAPABILITIES */
+
+/* PROFILE ABOUT */
+
+#profileAbout {
+    position: relative;
+    width: 100%;
+    line-height: calc(2.5em * var(--scale));
+}
+
+#profileAboutDrop {
+    max-width: 1100px;
+    width: fit-content;
+    height: fit-content;
+    padding: 24px;
+    border-radius: 144px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: #202028;
+}
+
+#profileAbout img {
+    float: left;
+    max-height: calc(240px * var(--scale) * var(--scale));
+    margin-bottom: calc(8px * var(--scale));
+    margin-right: calc(48px * var(--scale));
+    shape-outside: circle();
+}
+
+#profileAbout h1 {
+    font-size: calc(28px * var(--scale));
+    font-weight: 500;
+}
+
+#profileAbout p {
+    font-size: calc(18px * var(--scale));
+    ;
+    margin-top: calc(28px * var(--scale));
+}

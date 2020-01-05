@@ -4,9 +4,9 @@ export default function Contact(props) {
 
   // const { setPage } = props;
 
-  return (
+  return (<>
     <div id="contact">
 
     </div>
-  )
+  </>)
 }

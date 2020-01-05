@@ -5,7 +5,7 @@ export default function Nav(props) {
 
   const { page, setPage } = props;
 
-  return (
+  return (<>
     <nav>
       <div id="navFix">
         <div id="navShape"></div>
@@ -27,5 +27,5 @@ export default function Nav(props) {
         </div>
       </div>
     </nav>
-  )
+  </>)
 }

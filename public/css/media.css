@@ -2,7 +2,7 @@
     .footer3rd {
         width: 30%;
     }
-    #profilePortDrop {
+    #profilePortDrop, #workPortDrop {
         max-width: calc(732px * var(--scale));
         ;
     }
@@ -27,7 +27,7 @@
     .footer3rd {
         width: 33.333%;
     }
-    #profileAboutDrop {
+    #profileAboutDrop, #workAboutDrop {
         max-width: 768px;
     }
 }
@@ -59,6 +59,9 @@
         height: 180px;
         padding: 12px 0;
     }
+    .pad {
+        height: 48px;
+    }
     .title {
         font-size: 24px;
     }
@@ -71,7 +74,7 @@
     #profileReelMovie, #workReelMovie {
         width: 100%;
     }
-    #profileAboutDrop {
+    #profileAboutDrop, #workAboutDrop {
         border-radius: 84px 0 0 0;
     }
 }
@@ -89,7 +92,7 @@
     #navIcons {
         display: initial;
     }
-    #profileAboutDrop {
+    #profileAboutDrop, #workAboutDrop {
         max-width: 100%;
     }
 }
@@ -126,7 +129,7 @@
     #footerAuxIcons {
         display: initial;
     }
-    #profilePortDrop {
+    #profilePortDrop, #workPortDrop {
         max-width: calc(378px * var(--scale));
         ;
     }

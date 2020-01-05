@@ -8,7 +8,7 @@ export default function Profile(props) {
 
   const { setPage } = props;
 
-  return (
+  return (<>
     <div id="profile">
       <div id="profileName">
         <img id="profileNameLogo" src="/images/vectors/vText.svg" alt="Eric Powell" />
@@ -21,5 +21,5 @@ export default function Profile(props) {
       <h1 className="title">Learn&nbsp;a&nbsp;little&nbsp;more&nbsp;about&nbsp;me.</h1>
       <PA />
     </div>
-  )
+  </>)
 }

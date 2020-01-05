@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WorkReel() {
   
-  return (
+  return (<>
     <div id="workReel">
       <div id="workReelFix">
         <video id="workReelMovie" playsInline controls>
@@ -10,5 +10,5 @@ export default function WorkReel() {
         </video>
       </div>
     </div>
-  )
+  </>)
 }

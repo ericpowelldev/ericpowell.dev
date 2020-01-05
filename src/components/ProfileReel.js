@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function ProfileReel() {
-  
-  return (
+
+  return (<>
     <div id="profileReel">
       <div id="profileReelFix">
         <video id="profileReelMovie" playsInline autoPlay muted loop>
@@ -10,5 +10,5 @@ export default function ProfileReel() {
         </video>
       </div>
     </div>
-  )
+  </>)
 }

@@ -50,7 +50,6 @@
 
 #profilePortDrop {
     max-width: calc(1440px * var(--scale));
-    ;
     width: fit-content;
     height: fit-content;
     padding: calc(12px * var(--scale));
@@ -60,7 +59,9 @@
 }
 
 .profilePortBox {
+    position: relative;
     display: inline-block;
+    vertical-align: top;
     text-align: center;
     width: calc(330px * var(--scale));
     height: calc(330px * var(--scale));

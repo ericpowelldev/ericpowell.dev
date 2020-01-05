@@ -6,7 +6,7 @@ export default function Footer(props) {
 
   const { setPage } = props;
 
-  return (
+  return (<>
     <footer>
       <div id="footerTop">
         <br />
@@ -42,7 +42,7 @@ export default function Footer(props) {
                 <img className="footerAuxIcon" src="/images/vectors/vIg.svg" alt="Instagram" />
               </a>
             </div>
-            <a href="https://github.com/ericpowell3d" target="_blank" rel="noopener noreferrer"><h2>GitHub</h2></a>
+            <a href="https://github.com/ericpowell3d?tab=repositories" target="_blank" rel="noopener noreferrer"><h2>GitHub</h2></a>
             <a href="https://www.linkedin.com/in/epowell3d/" target="_blank" rel="noopener noreferrer"><h2>LinkedIn</h2></a>
             <a href="https://www.artstation.com/epowell3d" target="_blank" rel="noopener noreferrer"><h2>ArtStation</h2></a>
             <a href="https://www.facebook.com/epowell3d" target="_blank" rel="noopener noreferrer"><h2>Facebook</h2></a>
@@ -56,5 +56,5 @@ export default function Footer(props) {
         </div>
       </div>
     </footer>
-  )
+  </>)
 }

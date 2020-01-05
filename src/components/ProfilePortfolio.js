@@ -5,7 +5,7 @@ export default function ProfilePortfolio(props) {
 
   const { setPage } = props;
 
-  return (
+  return (<>
     <div id="profilePort">
       <div id="profilePortDrop">
         <Link to="/work/web" onClick={() => setPage(1)}>
@@ -38,5 +38,5 @@ export default function ProfilePortfolio(props) {
         </Link>
       </div>
     </div>
-  )
+  </>)
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProfileAbout() {
 
-  return (
+  return (<>
     <div id="profileAbout">
       <div id="profileAboutDrop">
         <img src="/images/profile.png" alt="Eric Powell" />
@@ -20,5 +20,5 @@ export default function ProfileAbout() {
         <p>As a game developer, I understand how mechanics can make or break the gameplay experience. As a designer and web developer, I know what a clean, responsive interface can do for a business. I enjoy technical aspects of design & development and polishing critical details that others may overlook. I am fully confident in proving what I say I can do. Contact me and let's&nbsp;work&nbsp;together.</p>
       </div>
     </div>
-  )
+  </>)
 }

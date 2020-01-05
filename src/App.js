@@ -10,7 +10,7 @@ export default function App() {
 
   const [page, setPage] = React.useState(0);
 
-  return (
+  return (<>
     <Router>
       <Nav page={page} setPage={setPage} />
       <div className="pad" />
@@ -20,5 +20,5 @@ export default function App() {
       <div className="pad" />
       <Footer setPage={setPage} />
     </Router>
-  )
+  </>)
 }

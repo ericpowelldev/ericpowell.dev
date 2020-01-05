@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function ProfileCapabilities() {
 
-  return (
+  return (<>
     <div id="profileCap">
 
     </div>
-  )
+  </>)
 }

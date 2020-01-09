@@ -163,3 +163,9 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 * Currently working with a small team on an indie game project in Unity
 * Currently working on a web-based RPG
 * Currently working on a JavaScript bot for my Discord server
+
+- - -
+
+### TO FIX
+
+* Small ipad version - Navbar icons are overlapping in firefox

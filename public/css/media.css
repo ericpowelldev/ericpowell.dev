@@ -27,7 +27,7 @@
     .footer3rd {
         width: 33.333%;
     }
-    #profileAboutDrop, #workAboutDrop {
+    #profileAboutDrop {
         max-width: 768px;
     }
 }
@@ -74,7 +74,7 @@
     #profileReelMovie, #workReelMovie {
         width: 100%;
     }
-    #profileAboutDrop, #workAboutDrop {
+    #profileAboutDrop {
         border-radius: 84px 0 0 0;
     }
 }
@@ -92,7 +92,7 @@
     #navIcons {
         display: initial;
     }
-    #profileAboutDrop, #workAboutDrop {
+    #profileAboutDrop, #notFoundDrop {
         max-width: 100%;
     }
 }
@@ -137,7 +137,7 @@
 
 @media screen and (max-width: 480px) {
     .title {
-        font-size: 20px;
+        font-size: 21px;
     }
     #profileNameLogo {
         width: 300px;

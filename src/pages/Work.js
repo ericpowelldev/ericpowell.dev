@@ -4,14 +4,19 @@ import WW from '../components/WorkWeb';
 
 export default function Work(props) {
 
-  // const { setPage } = props;
+  const { checkPage } = props
+  React.useEffect(() => { checkPage(); });
 
   return (<>
-    <div id="work">
-      <h1 className="title">Game&nbsp;Reel</h1>
-      <WR />
-      <h1 className="title">Web&nbsp;Development&nbsp;Projects</h1>
-      <WW />
-    </div>
+    <main id="work">
+      <section id="work-reel">
+        <h1 className="title">Game&nbsp;Reel</h1>
+        <WR />
+      </section>
+      <section id="work-web">
+        <h1 className="title">Web&nbsp;Development&nbsp;Projects</h1>
+        <WW />
+      </section>
+    </main>
   </>)
 }

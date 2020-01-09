@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Nav(props) {
 
-  const { page, setPage } = props;
+  const { page } = props;
 
   return (<>
     <nav>
@@ -16,14 +16,14 @@ export default function Nav(props) {
           <img id="navName" src="/images/vectors/vName.svg" alt="Eric Powell (Name)" />
         </div>
         <div id="navR">
-          <Link to="/"><div className={page === 0 ? "navBtn navBtnActive" : "navBtn"} onClick={() => setPage(0)}><h1>PROFILE</h1></div></Link>
-          <Link to="/work"><div className={page === 1 ? "navBtn navBtnActive" : "navBtn"} onClick={() => setPage(1)}><h1>WORK</h1></div></Link>
-          <Link to="/contact"><div className={page === 2 ? "navBtn navBtnActive" : "navBtn"} onClick={() => setPage(2)}><h1>CONTACT</h1></div></Link>
+          <Link to="/"><div className={page === 0 ? "navBtn navBtnActive" : "navBtn"}><h1>PROFILE</h1></div></Link>
+          <Link to="/work"><div className={page === 1 ? "navBtn navBtnActive" : "navBtn"}><h1>WORK</h1></div></Link>
+          <Link to="/contact"><div className={page === 2 ? "navBtn navBtnActive" : "navBtn"}><h1>CONTACT</h1></div></Link>
         </div>
         <div id="navIcons">
-          <Link to="/"><img className={page === 0 ? "navIcon navIconActive" : "navIcon"} onClick={() => setPage(0)} src="/images/vectors/vProfile.svg" alt="Profile" /></Link>
-          <Link to="/work"><img className={page === 1 ? "navIcon navIconActive" : "navIcon"} onClick={() => setPage(1)} src="/images/vectors/vWork.svg" alt="Work" /></Link>
-          <Link to="/contact"><img className={page === 2 ? "navIcon navIconActive" : "navIcon"} onClick={() => setPage(2)} src="/images/vectors/vContact.svg" alt="Contact" /></Link>
+          <Link to="/"><img className={page === 0 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vProfile.svg" alt="Profile" /></Link>
+          <Link to="/work"><img className={page === 1 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vWork.svg" alt="Work" /></Link>
+          <Link to="/contact"><img className={page === 2 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vContact.svg" alt="Contact" /></Link>
         </div>
       </div>
     </nav>

@@ -24,14 +24,14 @@
 
 :root {
     --scale: 1;
-    --lightGrayDC: #dcdcff;
-    --lightGrayDC-80: #dcdcff80;
-    --lightGrayDC-40: #dcdcff40;
-    --lightGrayDC-16: #dcdcff16;
-    --lightGray84: #8484a0;
-    --darkGray24: #24242d;
-    --darkGray20: #202028;
-    --darkGray18: #18181f;
+    --lightDC: #dcdcff;
+    --lightDC-80: #dcdcff80;
+    --lightDC-40: #dcdcff40;
+    --lightDC-16: #dcdcff16;
+    --lightDC-80: #8484a0;
+    --dark24: #24242d;
+    --dark20: #202028;
+    --dark18: #18181f;
     --green: #00ff80;
     --green-80: #00ff8080;
     --white: #fff;
@@ -48,15 +48,15 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--lightGrayDC-16);
+    background: var(--lightDC-16);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--lightGrayDC-80);
+    background: var(--lightDC-80);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--lightGrayDC);
+    background: var(--lightDC);
 }
 
 ::-webkit-scrollbar-thumb:active {
@@ -96,7 +96,7 @@ body {
     border: 0;
     margin: 0;
     color: var(--white);
-    background-color: var(--darkGray24);
+    background-color: var(--dark24);
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,6 +125,11 @@ body {
     width: 100%;
     margin-top: calc(72px * var(--scale));
     margin-bottom: calc(24px * var(--scale));
+}
+
+#profile, #work, #contact, #changelog, #notFound {
+    position: relative;
+    width: 100%;
 }
 
 /* NAVIGATION */
@@ -158,7 +163,7 @@ nav {
 #navShape {
     width: 1024px;
     height: 0;
-    border-bottom: 72px solid var(--darkGray18);
+    border-bottom: 72px solid var(--dark18);
     border-left: 41px solid transparent;
     border-right: 41px solid transparent;
     transform: rotate(180deg);
@@ -208,18 +213,18 @@ nav {
     margin-top: 12px;
     margin-right: 12px;
     /* background: var(--lightGrayDC-16); */
-    color: var(--lightGray84);
+    color: var(--lightDC-80);
     cursor: pointer;
 }
 
 .navBtn:hover, .navBtn:focus {
-    background: var(--lightGrayDC);
-    color: var(--darkGray24);
+    background: var(--lightDC);
+    color: var(--dark24);
 }
 
 .navBtn:active, .navBtnActive {
     background: var(--green);
-    color: var(--darkGray24);
+    color: var(--dark24);
 }
 
 .navBtn h1, .navBtnActive h1 {
@@ -286,7 +291,7 @@ footer h2, footer h3 {
 #footerTop {
     text-align: center;
     width: 100%;
-    background: var(--darkGray18);
+    background: var(--dark18);
 }
 
 #footerBottom {
@@ -296,10 +301,13 @@ footer h2, footer h3 {
     background: var(--black);
 }
 
-#footerFix {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+#footerBottom a {
+    font-weight: 300;
+    color: var(--lightDC-80);
+}
+
+#footerBottom a:hover, #footerBottom a:focus {
+    color: var(--green);
 }
 
 .footer3rd {
@@ -334,11 +342,6 @@ footer h2, footer h3 {
 
 /* PROFILE */
 
-#profile {
-    position: relative;
-    width: 100%;
-}
-
 /* PROFILE NAME */
 
 #profileName {
@@ -360,7 +363,7 @@ footer h2, footer h3 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: var(--darkGray20);
+    background: var(--dark20);
     clip-path: inset(0px 0px 0px 0px);
 }
 
@@ -389,7 +392,7 @@ footer h2, footer h3 {
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--darkGray20);
+    background: var(--dark20);
 }
 
 .profilePortBox {
@@ -400,7 +403,7 @@ footer h2, footer h3 {
     width: calc(330px * var(--scale));
     height: calc(330px * var(--scale));
     margin: calc(12px * var(--scale));
-    background: var(--lightGrayDC-16);
+    background: var(--lightDC-16);
 }
 
 .profilePortBox img {
@@ -424,7 +427,7 @@ footer h2, footer h3 {
 .profilePortBox:hover, .profilePortBox:focus {
     cursor: pointer;
     transform: scale(1.075);
-    background: var(--lightGrayDC-40);
+    background: var(--lightDC-40);
 }
 
 .profilePortBox:active {
@@ -449,7 +452,7 @@ footer h2, footer h3 {
     border-radius: 144px 0 0 0;
     margin-left: auto;
     margin-right: auto;
-    background: var(--darkGray20);
+    background: var(--dark20);
 }
 
 #profileAbout img {
@@ -472,11 +475,6 @@ footer h2, footer h3 {
 
 /* WORK */
 
-#work {
-    position: relative;
-    width: 100%;
-}
-
 /* WORK REEL */
 
 #workReel {
@@ -484,7 +482,7 @@ footer h2, footer h3 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: var(--darkGray20);
+    background: var(--dark20);
     clip-path: inset(0px 0px 0px 0px);
 }
 
@@ -514,7 +512,7 @@ footer h2, footer h3 {
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--darkGray20);
+    background: var(--dark20);
 }
 
 .workPortBox {
@@ -573,17 +571,50 @@ footer h2, footer h3 {
 
 /* CONTACT */
 
-#contact {
+/* CONTACT FORM */
+
+/* CHANGELOG */
+
+/* CHANGELOG ROWS */
+
+#changelogFix {
     position: relative;
     width: 100%;
+    height: 100%;
+    line-height: calc(2.5em * var(--scale));
+}
+
+#changelogDrop {
+    max-width: calc(1440px * var(--scale));
+    height: max-content;
+    padding: calc(32px * var(--scale));
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--dark20);
+}
+
+.changelogRow {
+    
+}
+.changelogRow h1 {
+    color: var(--lightDC-80);
+    font-size: calc(21px * var(--scale));
+    font-weight: 400;
+    line-height: calc(2em * var(--scale));
+}
+.changelogRow h2 {
+    font-size: calc(21px * var(--scale));
+    font-weight: 400;
+    line-height: calc(2em * var(--scale));
+}
+.changelogRow p {
+    font-size: calc(15px * var(--scale));
+    font-weight: 300;
+    line-height: calc(1.5em * var(--scale));
 }
 
 /* 404 NOT FOUND */
-
-#notFound {
-    position: relative;
-    width: 100%;
-}
 
 #notFoundFix {
     position: relative;
@@ -601,7 +632,7 @@ footer h2, footer h3 {
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--darkGray18);
+    background: var(--lightDC-16);
 }
 
 #notFound404 {
@@ -619,5 +650,5 @@ footer h2, footer h3 {
 }
 
 #notFoundP a:hover, #notFoundP a:focus {
-    color: var(--lightGray84);
+    color: var(--lightDC-80);
 }

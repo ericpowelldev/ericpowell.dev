@@ -20,8 +20,6 @@
 
 /* 10. 404 Page */
 
-
-
 /* THEME */
 
 :root {
@@ -29,7 +27,7 @@
     --lightGrayDC: #dcdcff;
     --lightGrayDC-80: #dcdcff80;
     --lightGrayDC-40: #dcdcff40;
-    --lightGrayDC-20: #dcdcff20;
+    --lightGrayDC-16: #dcdcff16;
     --lightGray84: #8484a0;
     --darkGray24: #24242d;
     --darkGray20: #202028;
@@ -38,7 +36,7 @@
     --green-80: #00ff8080;
     --white: #fff;
     --black: #121216;
-    --black-CC: #121216cc;
+    --black-DC: #121216dc;
     --invisible: #00000000;
 }
 
@@ -50,7 +48,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--lightGrayDC-20);
+    background: var(--lightGrayDC-16);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -72,7 +70,7 @@ html {
 }
 
 :focus {
-    outline: none;
+    outline-color: var(--green);
 }
 
 .anim, div, img, a, h1, h2, h3, h4, h5, h6, p {
@@ -80,7 +78,7 @@ html {
 }
 
 .shade, img, h1, h2, h3, h4, h5, h6, p {
-    filter: drop-shadow(3px 3px 5px #18181e60);
+    filter: drop-shadow(2px 2px 4px #12121680);
 }
 
 a {
@@ -105,9 +103,19 @@ body {
     background-attachment: fixed;
 }
 
-.pad {
+#root {
+    position: relative;
+    min-height: 100vh;
+}
+
+#navPad {
     width: 100%;
-    height: 64px;
+    height: 72px;
+}
+
+#footPad {
+    width: 100%;
+    height: 472px;
 }
 
 .title {
@@ -127,22 +135,32 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 64px;
 }
 
-#navFix {
+#navShow {
     position: relative;
+    top: 0;
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.25s ease-out;
+}
+
+#navHide {
+    position: relative;
+    top: -72px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s ease-out;
 }
 
 #navShape {
     width: 1024px;
     height: 0;
-    border-bottom: 64px solid var(--darkGray18);
-    border-left: 37px solid transparent;
-    border-right: 37px solid transparent;
+    border-bottom: 72px solid var(--darkGray18);
+    border-left: 41px solid transparent;
+    border-right: 41px solid transparent;
     transform: rotate(180deg);
     margin-left: auto;
     margin-right: auto;
@@ -159,13 +177,13 @@ nav {
     position: absolute;
     top: 0;
     right: 0;
-    margin-right: 30px;
+    margin-right: 22px;
 }
 
 #navLogo {
     float: left;
     height: 48px;
-    margin-top: 8px;
+    margin-top: 12px;
     margin-left: 12px;
 }
 
@@ -176,53 +194,53 @@ nav {
 #navName {
     float: left;
     width: 13.333em;
-    margin-top: 16px;
+    margin-top: 20px;
     margin-left: 20px;
 }
 
-.navBtn {
+.navBtn, .navBtnActive {
     float: left;
     text-align: center;
     width: 200px;
     height: 48px;
     transform: skew(-30deg);
     padding-top: 14px;
-    margin-top: 8px;
-    margin-left: 10px;
-    background: var(--lightGrayDC-20);
+    margin-top: 12px;
+    margin-right: 12px;
+    /* background: var(--lightGrayDC-16); */
     color: var(--lightGray84);
     cursor: pointer;
 }
 
 .navBtn:hover, .navBtn:focus {
     background: var(--lightGrayDC);
-    color: var(--darkGray20);
+    color: var(--darkGray24);
 }
 
 .navBtn:active, .navBtnActive {
     background: var(--green);
-    color: var(--darkGray20);
+    color: var(--darkGray24);
 }
 
-.navBtn h1 {
+.navBtn h1, .navBtnActive h1 {
     font-size: 21px;
     font-weight: 600;
     line-height: 1em;
     transform: skew(30deg);
+    filter: drop-shadow(0px 0px 0px #12121600);
 }
 
 #navIcons {
     display: none;
     position: absolute;
     top: 0;
-    max-width: 480px;
-    padding: 8px 72px;
+    width: 100%;
+    padding: 12px 48px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .navIcon {
-    display: inline-block;
     vertical-align: top;
     width: 33.333%;
     height: 48px;
@@ -243,6 +261,7 @@ nav {
 
 footer {
     z-index: 10;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -381,7 +400,7 @@ footer h2, footer h3 {
     width: calc(330px * var(--scale));
     height: calc(330px * var(--scale));
     margin: calc(12px * var(--scale));
-    background: var(--lightGrayDC-20);
+    background: var(--lightGrayDC-16);
 }
 
 .profilePortBox img {
@@ -518,7 +537,7 @@ footer h2, footer h3 {
     left: 0;
     right: 0;
     color: var(--white);
-    background-color: var(--black-CC);
+    background-color: var(--black-DC);
     opacity: 0;
 }
 
@@ -576,26 +595,29 @@ footer h2, footer h3 {
 
 #notFoundDrop {
     max-width: calc(1440px * var(--scale));
-    width: fit-content;
-    height: fit-content;
+    width: max-content;
+    height: max-content;
     padding: calc(48px * var(--scale));
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
     background: var(--darkGray18);
 }
+
 #notFound404 {
     font-size: calc(50px * var(--scale));
     font-weight: 600;
-    width: 100%;
     margin-bottom: calc(24px * var(--scale));
 }
+
 #notFoundP {
     font-size: calc(18px * var(--scale));
 }
+
 #notFoundP a {
     color: var(--green);
 }
+
 #notFoundP a:hover, #notFoundP a:focus {
     color: var(--lightGray84);
 }

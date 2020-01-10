@@ -7,31 +7,30 @@ import Work from './pages/Work';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
-const log = false;
-
 export default function App() {
-
+  
   const [page, setPage] = React.useState(0);
+  const log = true;
 
   const checkPage = () => {
     log && console.log(window.location.pathname);
-    if (window.location.pathname === "/") setPage(0);
-    else if (window.location.pathname === "/work") setPage(1);
-    else if (window.location.pathname === "/contact") setPage(2);
-    else setPage(3);
+    if (window.location.pathname === "/") setPage(1);
+    else if (window.location.pathname === "/work") setPage(2);
+    else if (window.location.pathname === "/contact") setPage(3);
+    else setPage(404);
   }
 
   return (<>
     <Router>
       <Nav page={page} />
-      <div className="pad" />
+      <div id="navPad" />
       <Switch>
-        <Route exact path="/" component={() => <Profile checkPage={checkPage} />} />
-        <Route exact path="/work" component={() => <Work checkPage={checkPage} />} />
-        <Route exact path="/contact" component={() => <Contact checkPage={checkPage} />} />
-        <Route component={() => <NotFound checkPage={checkPage} />} />
+        <Route exact path="/" component={() => <Profile checkPage={checkPage} log={log} />} />
+        <Route exact path="/work" component={() => <Work checkPage={checkPage} log={log} />} />
+        <Route exact path="/contact" component={() => <Contact checkPage={checkPage} log={log} />} />
+        <Route component={() => <NotFound checkPage={checkPage} log={log} />} />
       </Switch>
-      <div className="pad" />
+      <div id="footPad" />
       <Footer />
     </Router>
   </>)

@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-    #navFix {
+    #navShow, #navHide {
         max-width: 768px;
     }
     #navShape {
@@ -21,7 +21,7 @@
     #navName {
         display: none;
     }
-    .navBtn {
+    .navBtn, .navBtnActive {
         width: 180px;
     }
     .footer3rd {
@@ -35,6 +35,12 @@
 @media screen and (max-width: 1000px) {
     :root {
         --scale: 0.667;
+    }
+    #footPad {
+        height: 384px;
+    }
+    .title {
+        font-size: 24px;
     }
     h1 {
         font-size: 28px;
@@ -59,12 +65,6 @@
         height: 180px;
         padding: 12px 0;
     }
-    .pad {
-        height: 48px;
-    }
-    .title {
-        font-size: 24px;
-    }
     #profileNameLogo {
         width: 360px;
     }
@@ -80,11 +80,8 @@
 }
 
 @media screen and (max-width: 800px) {
-    #navFix {
-        max-width: 480px;
-    }
-    #navShape {
-        width: 480px;
+    #navShow, #navHide, #navShape {
+        max-width: 370px;
     }
     #navL, #navR {
         display: none;
@@ -98,15 +95,11 @@
 }
 
 @media screen and (max-width: 600px) {
-    #navFix, #navShape {
+    #footPad {
+        height: 440px;
+    }
+    #navShow, #navHide, #navShape {
         width: 320px;
-    }
-    #navIcons {
-        max-width: 320px;
-        padding: 8px 36px;
-    }
-    #navIcons img {
-        padding: 0 15px;
     }
     footer h1 {
         margin-bottom: 12px;
@@ -145,11 +138,19 @@
 }
 
 @media screen and (max-width: 360px) {
-    #navFix, #navShape {
+    #navPad {
+        height: 64px;
+    }
+    #navShow, #navHide, #navShape {
         width: 300px;
     }
+    #navShape {
+        border-bottom: 64px solid var(--darkGray18);
+        border-left: 37px solid transparent;
+        border-right: 37px solid transparent;
+    }
     #navIcons {
-        max-width: 300px;
+        padding: 8px 48px;
     }
     .title {
         font-size: 16px;

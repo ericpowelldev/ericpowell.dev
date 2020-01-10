@@ -7,7 +7,9 @@ export default function Contact(props) {
 
   return (<>
     <main id="contact">
+      <section id="contact-form">
 
+      </section>
     </main>
   </>)
 }

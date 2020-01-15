@@ -24,43 +24,56 @@
 
 :root {
     --scale: 1;
-    --lightDC: #dcdcff;
-    --lightDC-80: #dcdcff80;
-    --lightDC-40: #dcdcff40;
-    --lightDC-16: #dcdcff16;
-    --lightDC-80: #8484a0;
-    --dark24: #24242d;
-    --dark20: #202028;
-    --dark18: #18181f;
-    --green: #00ff80;
-    --green-80: #00ff8080;
-    --white: #fff;
-    --black: #121216;
-    --black-DC: #121216dc;
-    --invisible: #00000000;
+    --body: #fff;
+    --fore: #dcdcff;
+    --fore-80: #dcdcff80;
+    --fore-40: #dcdcff40;
+    --fore-16: #dcdcff16;
+    --backA: #24242d;
+    --backB: #202028;
+    --backC: #18181e;
+    --backD: #121216;
+    --backD-80: #12121680;
+    --backD-DC: #121216dc;
+    --primary: #00ff80;
+    --primary-80: #00ff8080;
 }
+
+/* .moody {
+    --body: #121216;
+    --fore: #121216;
+    --fore-80: #12121680;
+    --fore-40: #12121640;
+    --fore-16: #12121616;
+    --backA: #dcdcff;
+    --backB: #ccccec;
+    --backC: #bcbcd8;
+    --backD: #a0a0c6;
+    --backD-80: #a0a0c680;
+    --backD-DC: #a0a0c6dc;
+} */
 
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
     width: 12px;
-    background: var(--invisible);
+    background-color: #00000000;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--lightDC-16);
+    background-color: #dcdcff16;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--lightDC-80);
+    background-color: #dcdcff80;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--lightDC);
+    background-color: #dcdcff;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: var(--green);
+    background-color: var(--primary);
 }
 
 /* RULES */
@@ -70,7 +83,7 @@ html {
 }
 
 :focus {
-    outline-color: var(--green);
+    outline-color: var(--primary);
 }
 
 .anim, div, img, a, h1, h2, h3, h4, h5, h6, p {
@@ -78,11 +91,11 @@ html {
 }
 
 .shade, img, h1, h2, h3, h4, h5, h6, p {
-    filter: drop-shadow(2px 2px 4px #12121680);
+    filter: drop-shadow(2px 2px 4px var(--backD-80));
 }
 
 a {
-    color: var(--white);
+    color: var(--body);
 }
 
 /* GLOBALS */
@@ -95,8 +108,8 @@ body {
     padding: 0;
     border: 0;
     margin: 0;
-    color: var(--white);
-    background-color: var(--dark24);
+    color: var(--body);
+    background-color: var(--backA);
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -163,7 +176,7 @@ nav {
 #navShape {
     width: 1024px;
     height: 0;
-    border-bottom: 72px solid var(--dark18);
+    border-bottom: 72px solid var(--backC);
     border-left: 41px solid transparent;
     border-right: 41px solid transparent;
     transform: rotate(180deg);
@@ -212,19 +225,19 @@ nav {
     padding-top: 14px;
     margin-top: 12px;
     margin-right: 12px;
-    /* background: var(--lightGrayDC-16); */
-    color: var(--lightDC-80);
+    /* background: var(--fore-16); */
+    color: var(--fore-80);
     cursor: pointer;
 }
 
 .navBtn:hover, .navBtn:focus {
-    background: var(--lightDC);
-    color: var(--dark24);
+    background: var(--fore);
+    color: var(--backA);
 }
 
 .navBtn:active, .navBtnActive {
-    background: var(--green);
-    color: var(--dark24);
+    background: var(--primary);
+    color: var(--backA);
 }
 
 .navBtn h1, .navBtnActive h1 {
@@ -273,7 +286,7 @@ footer {
 }
 
 footer a:hover, footer a:focus {
-    color: var(--green);
+    color: var(--primary);
 }
 
 footer h1 {
@@ -291,23 +304,23 @@ footer h2, footer h3 {
 #footerTop {
     text-align: center;
     width: 100%;
-    background: var(--dark18);
+    background: var(--backC);
 }
 
 #footerBottom {
     text-align: center;
     width: 100%;
     padding: 12px 0;
-    background: var(--black);
+    background: var(--backD);
 }
 
 #footerBottom a {
     font-weight: 300;
-    color: var(--lightDC-80);
+    color: var(--fore-80);
 }
 
 #footerBottom a:hover, #footerBottom a:focus {
-    color: var(--green);
+    color: var(--primary);
 }
 
 .footer3rd {
@@ -363,7 +376,7 @@ footer h2, footer h3 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
     clip-path: inset(0px 0px 0px 0px);
 }
 
@@ -392,7 +405,7 @@ footer h2, footer h3 {
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
 .profilePortBox {
@@ -403,7 +416,7 @@ footer h2, footer h3 {
     width: calc(330px * var(--scale));
     height: calc(330px * var(--scale));
     margin: calc(12px * var(--scale));
-    background: var(--lightDC-16);
+    background: var(--fore-16);
 }
 
 .profilePortBox img {
@@ -427,11 +440,11 @@ footer h2, footer h3 {
 .profilePortBox:hover, .profilePortBox:focus {
     cursor: pointer;
     transform: scale(1.075);
-    background: var(--lightDC-40);
+    background: var(--fore-40);
 }
 
 .profilePortBox:active {
-    background: var(--green-80);
+    background: var(--primary-80);
 }
 
 /* PROFILE CAPABILITIES */
@@ -452,7 +465,7 @@ footer h2, footer h3 {
     border-radius: 144px 0 0 0;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
 #profileAbout img {
@@ -482,7 +495,7 @@ footer h2, footer h3 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
     clip-path: inset(0px 0px 0px 0px);
 }
 
@@ -506,13 +519,12 @@ footer h2, footer h3 {
 }
 
 #workPortDrop {
-    max-width: calc(1440px * var(--scale));
     width: fit-content;
     height: fit-content;
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
 .workPortBox {
@@ -534,8 +546,7 @@ footer h2, footer h3 {
     bottom: 0;
     left: 0;
     right: 0;
-    color: var(--white);
-    background-color: var(--black-DC);
+    background-color: var(--backD-DC);
     opacity: 0;
 }
 
@@ -566,7 +577,7 @@ footer h2, footer h3 {
 }
 
 .workPortOverlay:active {
-    background-color: var(--green-80);
+    background-color: var(--primary-80);
 }
 
 /* CONTACT */
@@ -591,23 +602,24 @@ footer h2, footer h3 {
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
-.changelogRow {
-    
-}
+.changelogRow {}
+
 .changelogRow h1 {
-    color: var(--lightDC-80);
+    color: var(--fore-80);
     font-size: calc(21px * var(--scale));
     font-weight: 400;
     line-height: calc(2em * var(--scale));
 }
+
 .changelogRow h2 {
     font-size: calc(21px * var(--scale));
     font-weight: 400;
     line-height: calc(2em * var(--scale));
 }
+
 .changelogRow p {
     font-size: calc(15px * var(--scale));
     font-weight: 300;
@@ -632,7 +644,7 @@ footer h2, footer h3 {
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--lightDC-16);
+    background: var(--fore-16);
 }
 
 #notFound404 {
@@ -646,9 +658,9 @@ footer h2, footer h3 {
 }
 
 #notFoundP a {
-    color: var(--green);
+    color: var(--primary);
 }
 
 #notFoundP a:hover, #notFoundP a:focus {
-    color: var(--lightDC-80);
+    color: var(--fore-80);
 }

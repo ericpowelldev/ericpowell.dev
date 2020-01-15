@@ -13,14 +13,35 @@ export default function App() {
   const [page, setPage] = React.useState(0);
   const log = window.location.hostname === `localhost` ? true : false;
 
+  // const darkMood = () => {
+  //   document.body.classList.remove(`moody`);
+  //   localStorage.setItem(`mood`, `dark`);
+  //   log && console.log(`MOOD: dark`);
+  // }
+  // const lightMood = () => {
+  //   document.body.classList.add(`moody`);
+  //   localStorage.setItem(`mood`, `light`);
+  //   log && console.log(`MOOD: light`);
+  // }
+
+  // const handleMood = () => {
+  //   const currentMood = localStorage.getItem(`mood`);
+  //   if (currentMood === `dark`) lightMood();
+  //   else darkMood();
+  // }
+
+  // const mood = localStorage.getItem(`mood`);
+  // if (!mood || mood === `dark`) darkMood();
+  // else lightMood();
+
   const checkPage = () => {
-    log && console.log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
     if (window.location.pathname === "/") setPage(1);
     else if (window.location.pathname === "/work") setPage(2);
     else if (window.location.pathname === "/contact") setPage(3);
     else if (window.location.pathname === "/changelog") setPage(4);
     else setPage(0);
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    log && console.log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
   }
 
   return (<>

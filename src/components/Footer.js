@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
+import { version } from '../../package.json';
 
 export default function Footer(props) {
 
@@ -55,7 +56,7 @@ export default function Footer(props) {
         </div>
       </div>
       <div id="footerBottom">
-        <h3>&copy;{moment().format(`YYYY`)}&nbsp;Eric&nbsp;Powell&nbsp;&nbsp;-&nbsp;&nbsp;<Link to="/changelog" id="footerChange">Changelog&nbsp;(v0.3.11)</Link></h3>
+        <h3>&copy;{moment().format(`YYYY`)}&nbsp;Eric&nbsp;Powell&nbsp;&nbsp;-&nbsp;&nbsp;<Link to="/changelog" id="footerChange">Changelog&nbsp;(v{version})</Link></h3>
       </div>
     </footer>
   </>)

@@ -1,13 +1,14 @@
 import React from 'react';
+import Global from '../Global';
+
 import PR from '../components/ProfileReel';
 import PP from '../components/ProfilePortfolio';
 // import PC from '../components/ProfileCapabilities';
 import PA from '../components/ProfileAbout';
 
-export default function Profile(props) {
-
-  const { checkPage } = props
-  React.useEffect(() => { checkPage(); });
+export default function Profile() {
+  const g = React.useContext(Global);
+  React.useEffect(() => { g.checkPage(); });
 
   return (<>
     <main id="profile">

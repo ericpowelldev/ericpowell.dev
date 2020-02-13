@@ -1,9 +1,9 @@
 import React from 'react';
+import Global from '../Global';
 
-export default function ChangeLog(props) {
-
-  const { checkPage } = props
-  React.useEffect(() => { checkPage(); });
+export default function ChangeLog() {
+  const g = React.useContext(Global);
+  React.useEffect(() => { g.checkPage(); });
 
   const versions = [
     {

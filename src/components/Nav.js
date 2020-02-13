@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Global from '../Global';
 
-export default function Nav(props) {
-
-  const { page } = props;
+export default function Nav() {
+  const g = React.useContext(Global);
 
   const [nav, setNav] = React.useState(`navShow`);
 
@@ -29,14 +29,14 @@ export default function Nav(props) {
           <img id="navName" src="/images/vectors/vName.svg" alt="Eric Powell (Name)" />
         </div>
         <div id="navR">
-          <Link to="/"><div className={page === 1 ? "navBtnActive" : "navBtn"}><h1>PROFILE</h1></div></Link>
-          <Link to="/work"><div className={page === 2 ? "navBtnActive" : "navBtn"}><h1>WORK</h1></div></Link>
-          <Link to="/contact"><div className={page === 3 ? "navBtnActive" : "navBtn"}><h1>CONTACT</h1></div></Link>
+          <Link to="/"><div className={g.page === 1 ? "navBtnActive" : "navBtn"}><h1>PROFILE</h1></div></Link>
+          <Link to="/work"><div className={g.page === 2 ? "navBtnActive" : "navBtn"}><h1>WORK</h1></div></Link>
+          <Link to="/contact"><div className={g.page === 3 ? "navBtnActive" : "navBtn"}><h1>CONTACT</h1></div></Link>
         </div>
         <span id="navIcons">
-          <Link to="/"><img className={page === 1 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vProfile.svg" alt="Profile" /></Link>
-          <Link to="/work"><img className={page === 2 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vWork.svg" alt="Work" /></Link>
-          <Link to="/contact"><img className={page === 3 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vContact.svg" alt="Contact" /></Link>
+          <Link to="/"><img className={g.page === 1 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vProfile.svg" alt="Profile" /></Link>
+          <Link to="/work"><img className={g.page === 2 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vWork.svg" alt="Work" /></Link>
+          <Link to="/contact"><img className={g.page === 3 ? "navIcon navIconActive" : "navIcon"} src="/images/vectors/vContact.svg" alt="Contact" /></Link>
         </span>
       </div>
     </nav>

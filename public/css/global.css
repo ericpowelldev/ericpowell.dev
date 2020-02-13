@@ -262,16 +262,11 @@ nav {
     vertical-align: top;
     width: 33.333%;
     height: 48px;
-    opacity: 0.5;
-}
-
-.navIcon:hover, .navIcon:focus {
+    opacity: 0.4;
     cursor: pointer;
-    filter: grayscale();
-    opacity: 1;
 }
 
-.navIconActive {
+.navIcon:hover, .navIcon:focus, .navIconActive {
     opacity: 1;
 }
 

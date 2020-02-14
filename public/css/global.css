@@ -28,6 +28,7 @@
     --fore: #dcdcff;
     --fore-80: #dcdcff80;
     --fore-40: #dcdcff40;
+    --fore-32: #dcdcff32;
     --fore-16: #dcdcff16;
     --backA: #24242d;
     --backB: #202028;
@@ -96,6 +97,22 @@ html {
 
 a {
     color: var(--body);
+}
+
+input {}
+
+input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--fore-80);
+}
+
+textarea {}
+
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--fore-80);
 }
 
 /* GLOBALS */
@@ -515,6 +532,7 @@ footer h2, footer h3 {
 
 #workPortDrop {
     width: fit-content;
+    max-width: 1440px;
     height: fit-content;
     padding: calc(12px * var(--scale));
     margin-left: auto;
@@ -578,6 +596,169 @@ footer h2, footer h3 {
 /* CONTACT */
 
 /* CONTACT FORM */
+
+#contactForm {
+    position: relative;
+    width: 100%;
+    /* line-height: calc(2.5em * var(--scale)); */
+}
+
+#contactFormDrop {
+    position: relative;
+    max-width: 1200px;
+    height: fit-content;
+    padding: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background: var(--backB); */
+}
+
+#contactDivWrap {
+    display: flex;
+}
+
+.contactDiv {
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+
+.contactDivInput {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-appearance: none;
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    width: calc(100% - 32px);
+    height: calc(100% - 21px);
+    padding: 0 12px;
+    border: none;
+    border-radius: 0;
+    margin: 16px;
+    background: var(--fore-32);
+    color: var(--fore);
+    opacity: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.contactDivInput:focus, .contactDivInput:valid {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.contactDivInput:focus+.contactDivLabel, .contactDivInput:valid+.contactDivLabel {
+    cursor: default;
+    pointer-events: none;
+}
+
+.contactDivInput:focus+.contactDivLabel::before, .contactDivInput:valid+.contactDivLabel::before {
+    -webkit-transform: scale3d(1, 1.5, 1);
+    transform: scale3d(1, 1.5, 1);
+}
+
+.contactDivInput:focus+.contactDivLabel .contactDivTitle, .contactDivInput:valid+.contactDivLabel .contactDivTitle {
+    -webkit-transform: translate3d(0, -2.75em, 0);
+    transform: translate3d(0, -2.75em, 0) translateZ(1px);
+}
+
+.contactDivLabel {
+    float: right;
+    width: 100%;
+    padding: 0 16px;
+    color: var(--fore-80);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: text;
+}
+
+.contactDivLabel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--backC);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.contactDivTitle {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 1.6em 0;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+#contactMessage {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    background: var(--backB);
+}
+
+#contactMessageInput {
+    resize: none;
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 32px;
+    background: #00000000;
+    color: var(--fore);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+}
+
+#contactSend {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -21px;
+    transform: translate(-50%, 0%);
+    width: 180px;
+    height: fit-content;
+    padding: 16px;
+    background: var(--primary);
+    color: var(--backA);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#contactSend:hover {
+    background: var(--fore);
+    color: var(--backA);
+}
 
 /* CHANGELOG */
 

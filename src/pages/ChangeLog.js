@@ -1,8 +1,8 @@
 import React from 'react';
-import Global from '../Global';
+import { GlobalContext } from '../GlobalContext';
 
 export default function ChangeLog() {
-  const g = React.useContext(Global);
+  const g = React.useContext(GlobalContext);
   React.useEffect(() => { g.checkPage(); });
 
   const versions = [
@@ -119,8 +119,8 @@ export default function ChangeLog() {
                     <h2>{ver.change}</h2>
                     <p>{ver.detail}</p>
                   </span>
-                  <div style={{width: "100%", height: "8px"}} />
-                  {i < versions.length - 1 ? <div style={{width: "100%", height: "1px", margin: "16px 0", background: "#dcdcff80"}} /> : null}
+                  <div style={{ width: "100%", height: "8px" }} />
+                  {i < versions.length - 1 ? <div style={{ width: "100%", height: "1px", margin: "16px 0", background: "#dcdcff80" }} /> : null}
                 </div>
               )
             }

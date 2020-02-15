@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Global from '../Global';
+import { GlobalContext } from '../GlobalContext';
 
 export default function NotFound() {
-  const g = React.useContext(Global);
+  const g = React.useContext(GlobalContext);
   React.useEffect(() => { g.checkPage(); });
 
   return (<>

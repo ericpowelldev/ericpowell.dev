@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Global from './Global';
+import { NotifyProvider } from './NotifyContext';
+import { GlobalContext } from './GlobalContext';
 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -14,27 +15,6 @@ const log = window.location.hostname === `localhost` ? true : false;
 
 export default function App() {
   const [page, setPage] = React.useState(0);
-
-  // const darkMood = () => {
-  //   document.body.classList.remove(`moody`);
-  //   localStorage.setItem(`mood`, `dark`);
-  //   log && console.log(`MOOD: dark`);
-  // }
-  // const lightMood = () => {
-  //   document.body.classList.add(`moody`);
-  //   localStorage.setItem(`mood`, `light`);
-  //   log && console.log(`MOOD: light`);
-  // }
-
-  // const handleMood = () => {
-  //   const currentMood = localStorage.getItem(`mood`);
-  //   if (currentMood === `dark`) lightMood();
-  //   else darkMood();
-  // }
-
-  // const mood = localStorage.getItem(`mood`);
-  // if (!mood || mood === `dark`) darkMood();
-  // else lightMood();
 
   // Check which page is active to render things properly
   const checkPage = () => {
@@ -51,7 +31,7 @@ export default function App() {
   }
 
   // Create global context object
-  const g = {
+  const ctx = {
     log: log,
     page: page,
     checkPage: checkPage,
@@ -60,22 +40,24 @@ export default function App() {
   // Return the router with its page routes and context
   return (<>
     <Router>
-      <Global.Provider value={g}>
-        <Nav />
-        <div id="navPad" />
-        <Switch>
-          <Route exact path="/" component={() => <Profile />} />
-          <Route exact path="/home" component={() => <Profile />} />
-          <Route exact path="/profile" component={() => <Profile />} />
-          <Route exact path="/work" component={() => <Work />} />
-          <Route exact path="/portfolio" component={() => <Work />} />
-          <Route exact path="/contact" component={() => <Contact />} />
-          <Route exact path="/changelog" component={() => <ChangeLog />} />
-          <Route component={() => <NotFound />} />
-        </Switch>
-        <div id="footPad" />
-        <Footer />
-      </Global.Provider>
+      <NotifyProvider>
+        <GlobalContext.Provider value={ctx}>
+          <Nav />
+          <div id="navPad" />
+          <Switch>
+            <Route exact path="/" component={() => <Profile />} />
+            <Route exact path="/home" component={() => <Profile />} />
+            <Route exact path="/profile" component={() => <Profile />} />
+            <Route exact path="/work" component={() => <Work />} />
+            <Route exact path="/portfolio" component={() => <Work />} />
+            <Route exact path="/contact" component={() => <Contact />} />
+            <Route exact path="/changelog" component={() => <ChangeLog />} />
+            <Route component={() => <NotFound />} />
+          </Switch>
+          <div id="footPad" />
+          <Footer />
+        </GlobalContext.Provider>
+      </NotifyProvider>
     </Router>
   </>)
 }

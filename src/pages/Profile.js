@@ -1,5 +1,5 @@
 import React from 'react';
-import Global from '../Global';
+import { GlobalContext } from '../GlobalContext';
 
 import ProfileReel from '../components/ProfileReel';
 import ProfilePortfolio from '../components/ProfilePortfolio';
@@ -7,7 +7,7 @@ import ProfilePortfolio from '../components/ProfilePortfolio';
 import ProfileAbout from '../components/ProfileAbout';
 
 export default function Profile() {
-  const g = React.useContext(Global);
+  const g = React.useContext(GlobalContext);
   React.useEffect(() => { g.checkPage(); });
 
   return (<>

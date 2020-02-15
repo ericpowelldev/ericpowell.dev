@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Global from '../Global';
+import { GlobalContext } from '../GlobalContext';
 
 export default function Nav() {
-  const g = React.useContext(Global);
+  const g = React.useContext(GlobalContext);
 
   const [nav, setNav] = React.useState(`navShow`);
 

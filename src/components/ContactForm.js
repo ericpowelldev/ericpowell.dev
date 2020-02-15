@@ -1,9 +1,10 @@
 import React from 'react';
-import Global from '../Global';
-import Notify from '../utils/Notify';
+import { NotifyContext } from '../NotifyContext';
+import { GlobalContext } from '../GlobalContext';
 
 export default function ContactForm() {
-  const g = React.useContext(Global);
+  const n = React.useContext(NotifyContext);
+  const g = React.useContext(GlobalContext);
 
   const [name, setName] = React.useState(``);
   const [email, setEmail] = React.useState(``);
@@ -41,27 +42,16 @@ export default function ContactForm() {
       setEmail(``);
       setOrg(``);
       setMessage(``);
-      !notify1 && handleNotify1();
+      n.handleAlert(`success`, `Message was sent successfully!`);
     }
     else {
       g.log && console.log(`Message Was Not Sent!`);
-      !notify2 && handleNotify2();
+      n.handleAlert(`warning`, `Please fill out all fields and provide valid credentials.`);
+      // n.handleAlert(`error`, `Failed to send message. Encountered a network error.`);
     }
   }
 
-  ////////////////////////// NOTIFY //////////////////////////
-  const [notify1, setNotify1] = React.useState(false);
-  const [notify2, setNotify2] = React.useState(false);
-  const [notify3, setNotify3] = React.useState(false);
-  const handleNotify1 = () => { if (!notify1) setNotify1(true) };
-  const handleNotify2 = () => { if (!notify2) setNotify2(true) };
-  // const handleNotify3 = () => { if (!notify3) setNotify3(true) };
-  ////////////////////////////////////////////////////////////
-
   return (<>
-    {notify3 && <Notify status="error" message="Failed to send message. Encountered a network error." setNotify={setNotify3} />}
-    {notify2 && <Notify status="warning" message="Please fill out all fields and provide valid credentials." setNotify={setNotify2} />}
-    {notify1 && <Notify status="success" message="Message was sent successfully!" setNotify={setNotify1} />}
     <div id="contactForm">
       <div id="contactFormDrop">
         <div style={{ width: '100%', height: '8px' }} />

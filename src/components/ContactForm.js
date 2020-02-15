@@ -1,5 +1,6 @@
 import React from 'react';
 import Global from '../Global';
+import Notify from '../utils/Notify';
 
 export default function ContactForm() {
   const g = React.useContext(Global);
@@ -31,21 +32,36 @@ export default function ContactForm() {
     }
     else setValid(false);
   }
+  React.useEffect(() => checkValidation());
 
   const handleSend = () => {
     if (valid) {
       g.log && console.log(`Message Sent!`);
+      setName(``);
+      setEmail(``);
+      setOrg(``);
+      setMessage(``);
+      !notify1 && handleNotify1();
     }
     else {
       g.log && console.log(`Message Was Not Sent!`);
+      !notify2 && handleNotify2();
     }
   }
 
-  React.useEffect(() => {
-    checkValidation();
-  }, [name, email, org, message]);
+  ////////////////////////// NOTIFY //////////////////////////
+  const [notify1, setNotify1] = React.useState(false);
+  const [notify2, setNotify2] = React.useState(false);
+  const [notify3, setNotify3] = React.useState(false);
+  const handleNotify1 = () => { if (!notify1) setNotify1(true) };
+  const handleNotify2 = () => { if (!notify2) setNotify2(true) };
+  // const handleNotify3 = () => { if (!notify3) setNotify3(true) };
+  ////////////////////////////////////////////////////////////
 
   return (<>
+    {notify3 && <Notify status="error" message="Failed to send message. Encountered a network error." setNotify={setNotify3} />}
+    {notify2 && <Notify status="warning" message="Please fill out all fields and provide valid credentials." setNotify={setNotify2} />}
+    {notify1 && <Notify status="success" message="Message was sent successfully!" setNotify={setNotify1} />}
     <div id="contactForm">
       <div id="contactFormDrop">
         <div style={{ width: '100%', height: '8px' }} />
@@ -76,7 +92,7 @@ export default function ContactForm() {
 
         <div id="contactMessage">
           <textarea id="contactMessageInput" rows="13" value={message} onChange={handleMessage} placeholder="Enter your message..." autoComplete="off" required />
-          <div id="contactSend" style={{ opacity: valid ? 1 : 0, cursor: valid ? `pointer` : `default` }} onClick={handleSend}>SEND&nbsp;MESSAGE</div>
+          <div id="contactSend" className={valid ? `valid` : `invalid`} onClick={handleSend}>SEND&nbsp;MESSAGE</div>
         </div>
       </div>
     </div>

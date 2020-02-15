@@ -166,6 +166,13 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 
 - - -
 
+### TO ADD
+
+* 
+
+- - -
+
 ### TO FIX
 
-* Small ipad version - Navbar icons are overlapping in firefox
+* Fix Notify component to be global and called from a standalone function
+* Have Notify component reset when the function is called again and not re-render the app

@@ -38,6 +38,10 @@
     --backD-DC: #121216dc;
     --primary: #00ff80;
     --primary-80: #00ff8080;
+    --info: #0080ff;
+    --success: #00c864;
+    --warning: #ffa064;
+    --error: #ff5064;
 }
 
 /* .moody {
@@ -136,6 +140,97 @@ body {
 #root {
     position: relative;
     min-height: 100vh;
+}
+
+#notify {
+    visibility: hidden;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 100%;
+    padding: calc(21px * var(--scale));
+    color: var(--body);
+    opacity: 0;
+    text-align: center;
+    font-size: calc(21px * var(--scale));
+    font-weight: 500;
+    line-height: normal;
+    box-shadow: 0px 0px 14px var(--backD);
+}
+
+#notify p {
+    filter: drop-shadow(0px 0px 2px var(--backD-80));
+}
+
+#notify.show {
+    visibility: visible;
+    top: 96px;
+    opacity: 1;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.6s;
+    animation: fadein 0.5s, fadeout 0.5s 4.6s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 96px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 96px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        top: 96px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 96px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+#notify.info {
+    background-color: var(--info);
+}
+
+#notify.success {
+    background-color: var(--success);
+}
+
+#notify.warning {
+    background-color: var(--warning);
+}
+
+#notify.error {
+    background-color: var(--error);
 }
 
 #navPad {
@@ -747,17 +842,27 @@ footer h2, footer h3 {
     width: 180px;
     height: fit-content;
     padding: 16px;
-    background: var(--primary);
-    color: var(--backA);
     text-align: center;
     font-size: 16px;
     font-weight: 700;
+}
+
+#contactSend.valid {
+    background: var(--primary);
+    color: var(--backA);
     cursor: pointer;
 }
 
-#contactSend:hover {
+#contactSend.valid:hover {
     background: var(--fore);
     color: var(--backA);
+}
+
+#contactSend.invalid {
+    background: var(--primary);
+    color: var(--backA);
+    opacity: 0.5;
+    cursor: default;
 }
 
 /* CHANGELOG */

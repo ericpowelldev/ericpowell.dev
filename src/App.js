@@ -47,7 +47,7 @@ export default function App() {
     else if (window.location.pathname === `/changelog`) setPage(4);
     else setPage(0);
     window.scrollTo({ top: 0, left: 0, behavior: `smooth` });
-    log && console.log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
+    // log && console.log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
   }
 
   // Create global context object
@@ -57,7 +57,7 @@ export default function App() {
     checkPage: checkPage,
   }
 
-  // Return the router with its page routes
+  // Return the router with its page routes and context
   return (<>
     <Router>
       <Global.Provider value={g}>

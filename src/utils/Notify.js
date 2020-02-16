@@ -14,8 +14,8 @@ export function NotifyProvider({ children }) {
     }
   }, [alert]);
 
-  const notify = (status = `info`, message = `This is a notification message...`, time = 5000) => {
-    setAlert({ status: status, message: message, time: time });
+  const notify = (message = `This is a notification message...`, status = `info`, time = 5000) => {
+    setAlert({ message: message, status: status, time: time });
   }
 
   return (

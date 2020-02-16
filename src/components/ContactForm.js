@@ -45,12 +45,13 @@ export default function ContactForm() {
       }
       else {
         ctx.log && console.log(`Message is spam!`);
-        notify(`error`, `Failed to send message. Please do not spam my email.`);
+        notify(`Failed to send message. Please do not spam my email.`, `error`);
       }
     }
     else {
       ctx.log && console.log(`Message is not valid!`);
-      notify(`warning`, `Please fill out all fields and provide valid credentials.`);
+      notify(`This form is under construction and will be functional very soon!`);
+      // notify(`Please fill out all fields and provide valid credentials.`, `warning`);
     }
   }
 
@@ -58,17 +59,18 @@ export default function ContactForm() {
     ctx.log && console.log(`ReCAPTCHA response:`, res);
     if (res) {
       ctx.log && console.log(`ReCAPTCHA successfully verified!`);
-      setName(``);
-      setEmail(``);
-      setOrg(``);
-      setMessage(``);
-      notify(`success`, `Message was sent successfully!`);
+      // setName(``);
+      // setEmail(``);
+      // setOrg(``);
+      // setMessage(``);
+      notify(`This form is under construction and will be functional very soon!`);
+      // notify(`Message was sent successfully!`, `success`);
       setSpam(true);
     }
   }
   const onError = (err) => {
     console.log(`ReCAPTCHA error:`, err);
-    notify(`error`, `Failed to send message. Encountered a network error.`);
+    notify(`Failed to establish a connection. Encountered a network error.`, `error`);
   }
 
   return (<>

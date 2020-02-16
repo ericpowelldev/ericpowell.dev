@@ -168,11 +168,12 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 
 ### TO ADD
 
-* 
+* Profile capabilities section
+* Look into sending emails using netlify forms
+* Create new contact form for below 800px
 
 - - -
 
 ### TO FIX
 
-* Fix Notify component to be global and called from a standalone function
-* Have Notify component reset when the function is called again and not re-render the app
+* Store recaptcha keys in envs

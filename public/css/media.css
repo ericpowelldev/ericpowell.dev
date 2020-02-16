@@ -1,14 +1,70 @@
 @media screen and (max-width: 1600px) {
+    :root {
+        --scale: 0.9;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4, .contactDivInput, #contactMessageInput {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+    .title {
+        margin-top: 64px;
+    }
+    /* .navBtn, .navBtnActive {
+        padding-top: 14px;
+    } */
+    #footPad {
+        height: 422px;
+    }
     .footer3rd {
         width: 30%;
+        padding: 32px 0;
+    }
+    footer h2 {
+        padding-bottom: 21px;
+    }
+    footer h3 {
+        padding: 7px 0;
+    }
+    #footerLogo {
+        height: 224px;
+        padding: 16px 0;
+    }
+    #profileName {
+        margin-top: 64px;
+    }
+    #profileNameLogo {
+        width: 384px;
     }
     #profilePortDrop, #workPortDrop {
         max-width: calc(732px * var(--scale));
-        ;
+    }
+    #profileAboutDrop {
+        border-radius: 136px 0 0 0;
+    }
+    #profileAbout img {
+        max-height: 220px;
+        margin-right: 48px;
     }
 }
 
 @media screen and (max-width: 1200px) {
+    :root {
+        --scale: 0.85;
+    }
     #navShow, #navHide {
         max-width: 768px;
     }
@@ -29,44 +85,63 @@
     }
     #profileAboutDrop {
         max-width: 768px;
+        border-radius: 116px 0 0 0;
+    }
+    #profileAbout img {
+        max-height: 180px;
+        margin-right: 36px;
     }
 }
 
 @media screen and (max-width: 1000px) {
     :root {
-        --scale: 0.667;
-    }
-    #footPad {
-        height: 384px;
-    }
-    .title {
-        font-size: 24px;
+        --scale: 0.8;
     }
     h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
     h2 {
-        font-size: 21px;
+        font-size: 18px;
     }
     h3 {
-        font-size: 15px;
+        font-size: 16px;
     }
-    h6 {
+    h4, .contactDivInput, #contactMessageInput {
+        font-size: 14px;
+    }
+    h5 {
         font-size: 12px;
     }
-    footer h1 {
-        font-size: 21px;
-        margin-bottom: 24px;
+    h6 {
+        font-size: 10px;
     }
-    footer h2, footer h3 {
-        font-size: 15px;
+    .title {
+        margin-top: 56px;
     }
-    #footerLogoLink img {
-        height: 180px;
+    /* .navBtn, .navBtnActive {
+        padding-top: 15.5px;
+    } */
+    #footPad {
+        height: 372px;
+    }
+    .footer3rd {
+        padding: 28px 0;
+    }
+    footer h2 {
+        padding-bottom: 18px;
+    }
+    footer h3 {
+        padding: 6px 0;
+    }
+    #footerLogo {
+        height: 193px;
         padding: 12px 0;
     }
+    #profileName {
+        margin-top: 56px;
+    }
     #profileNameLogo {
-        width: 360px;
+        width: 352px;
     }
     #profileReelFix, #workReelFix {
         width: 100%;
@@ -75,13 +150,20 @@
         width: 100%;
     }
     #profileAboutDrop {
-        border-radius: 84px 0 0 0;
+        border-radius: 100px 0 0 0;
+    }
+    #profileAbout img {
+        max-height: 150px;
+        margin-right: 32px;
     }
 }
 
 @media screen and (max-width: 800px) {
+    :root {
+        --scale: 0.75;
+    }
     #navShow, #navHide, #navShape {
-        max-width: 370px;
+        max-width: 400px;
     }
     #navL, #navR {
         display: none;
@@ -95,26 +177,30 @@
 }
 
 @media screen and (max-width: 600px) {
+    :root {
+        --scale: 0.7;
+    }
+    .title {
+        margin-top: 48px;
+    }
     #footPad {
-        height: 440px;
-    }
-    #navShow, #navHide, #navShape {
-        width: 320px;
-    }
-    footer h1 {
-        margin-bottom: 12px;
-    }
-    footer h2 {
-        display: none;
+        height: 428px;
     }
     .footer3rd {
         display: block;
         width: 100%;
-        padding: 18px 0;
+        padding: 16px 0;
     }
-    #footerLogoLink img {
-        height: 156px;
+    footer h2 {
+        padding-bottom: 8px;
+    }
+    footer h3 {
+        display: none;
+    }
+    #footerLogo {
+        height: 160px;
         padding: 0;
+        padding-top: 16px;
     }
     #footerSiteLinks {
         display: none;
@@ -122,18 +208,60 @@
     #footerAuxIcons {
         display: initial;
     }
+    #profileName {
+        margin-top: 48px;
+    }
+    #profileNameLogo {
+        width: 320px;
+    }
     #profilePortDrop, #workPortDrop {
         max-width: calc(378px * var(--scale));
-        ;
+    }
+    #profileAboutDrop {
+        border-radius: 88px 0 0 0;
+    }
+    #profileAbout img {
+        max-height: 128px;
+        margin-right: 28px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    :root {
+        --scale: 0.667;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    h4, .contactDivInput, #contactMessageInput {
+        font-size: 12px;
+    }
+    h5 {
+        font-size: 10px;
+    }
+    h6 {
+        font-size: 9px;
+    }
     .title {
-        font-size: 21px;
+        margin-top: 40px;
+    }
+    #navShow, #navHide, #navShape {
+        max-width: 320px;
+    }
+    #footPad {
+        height: 414px;
+    }
+    #profileName {
+        margin-top: 40px;
     }
     #profileNameLogo {
-        width: 300px;
+        width: 288px;
     }
 }
 
@@ -142,20 +270,17 @@
         height: 64px;
     }
     #navShow, #navHide, #navShape {
-        width: 300px;
+        max-width: 300px;
     }
     #navShape {
-        border-bottom: 64px solid var(--darkGray18);
+        border-top: 64px solid var(--backC);
         border-left: 37px solid transparent;
         border-right: 37px solid transparent;
     }
     #navIcons {
         padding: 8px 48px;
     }
-    .title {
-        font-size: 16px;
-    }
     #profileNameLogo {
-        width: 240px;
+        width: 256px;
     }
 }

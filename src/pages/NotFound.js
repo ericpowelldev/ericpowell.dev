@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Global } from '../utils/Global';
 
-export default function NotFound(props) {
-
-  const { checkPage } = props
-  React.useEffect(() => { checkPage(); });
+export default function NotFound() {
+  const ctx = React.useContext(Global);
+  React.useEffect(() => { ctx.checkPage(); });
 
   return (<>
     <main id="notFound">

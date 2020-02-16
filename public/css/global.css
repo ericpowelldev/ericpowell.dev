@@ -24,43 +24,61 @@
 
 :root {
     --scale: 1;
-    --lightDC: #dcdcff;
-    --lightDC-80: #dcdcff80;
-    --lightDC-40: #dcdcff40;
-    --lightDC-16: #dcdcff16;
-    --lightDC-80: #8484a0;
-    --dark24: #24242d;
-    --dark20: #202028;
-    --dark18: #18181f;
-    --green: #00ff80;
-    --green-80: #00ff8080;
-    --white: #fff;
-    --black: #121216;
-    --black-DC: #121216dc;
-    --invisible: #00000000;
+    --body: #fff;
+    --fore: #dcdcff;
+    --fore-80: #dcdcff80;
+    --fore-40: #dcdcff40;
+    --fore-32: #dcdcff32;
+    --fore-16: #dcdcff16;
+    --backA: #24242d;
+    --backB: #202028;
+    --backC: #18181e;
+    --backD: #121216;
+    --backD-80: #12121680;
+    --backD-DC: #121216dc;
+    --primary: #00ff80;
+    --primary-80: #00ff8080;
+    --info: #0080ff;
+    --success: #00c864;
+    --warning: #ffa064;
+    --error: #ff5064;
 }
+
+/* .moody {
+    --body: #121216;
+    --fore: #121216;
+    --fore-80: #12121680;
+    --fore-40: #12121640;
+    --fore-16: #12121616;
+    --backA: #dcdcff;
+    --backB: #ccccec;
+    --backC: #bcbcd8;
+    --backD: #a0a0c6;
+    --backD-80: #a0a0c680;
+    --backD-DC: #a0a0c6dc;
+} */
 
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
     width: 12px;
-    background: var(--invisible);
+    background-color: #00000000;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--lightDC-16);
+    background-color: #dcdcff16;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--lightDC-80);
+    background-color: #dcdcff80;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--lightDC);
+    background-color: #dcdcff;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: var(--green);
+    background-color: var(--primary);
 }
 
 /* RULES */
@@ -70,7 +88,7 @@ html {
 }
 
 :focus {
-    outline-color: var(--green);
+    outline-color: var(--primary);
 }
 
 .anim, div, img, a, h1, h2, h3, h4, h5, h6, p {
@@ -78,11 +96,55 @@ html {
 }
 
 .shade, img, h1, h2, h3, h4, h5, h6, p {
-    filter: drop-shadow(2px 2px 4px #12121680);
+    filter: drop-shadow(2px 2px 4px var(--backD-80));
 }
 
 a {
-    color: var(--white);
+    color: var(--body);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--fore-80);
+}
+
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--fore-80);
+}
+
+.grecaptcha-badge {
+    z-index: 1001 !important;
+    display: block !important;
+    box-shadow: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /* GLOBALS */
@@ -91,12 +153,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 300;
-    line-height: 1em;
+    line-height: normal;
     padding: 0;
     border: 0;
     margin: 0;
-    color: var(--white);
-    background-color: var(--dark24);
+    color: var(--body);
+    background-color: var(--backA);
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,6 +168,112 @@ body {
 #root {
     position: relative;
     min-height: 100vh;
+}
+
+.notify {
+    visibility: hidden;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 100%;
+    padding: 16px 24px;
+    background-color: var(--backB);
+    color: var(--body);
+    opacity: 0;
+    box-shadow: 0px 0px 14px var(--backD);
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.notify h4 {
+    text-align: center;
+    line-height: normal;
+    font-weight: 500;
+    filter: drop-shadow(0px 0px 2px var(--backD-80));
+}
+
+.notify.hide {
+    visibility: hidden;
+    top: 0;
+    opacity: 0;
+    -webkit-animation: fadeout 0.5s;
+    animation: fadeout 0.5s;
+}
+
+.notify.show {
+    visibility: visible;
+    top: 96px;
+    opacity: 1;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+.notify.info {
+    background-color: var(--info);
+}
+
+.notify.success {
+    background-color: var(--success);
+}
+
+.notify.warning {
+    background-color: var(--warning);
+}
+
+.notify.error {
+    background-color: var(--error);
+}
+
+@-webkit-keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 96px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 96px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        top: 96px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 96px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
 }
 
 #navPad {
@@ -119,12 +287,12 @@ body {
 }
 
 .title {
+    line-height: 1em;
     text-align: center;
-    font-size: 35px;
     font-weight: 600;
     width: 100%;
-    margin-top: calc(72px * var(--scale));
-    margin-bottom: calc(24px * var(--scale));
+    margin-top: 72px;
+    margin-bottom: 12px;
 }
 
 #profile, #work, #contact, #changelog, #notFound {
@@ -163,10 +331,9 @@ nav {
 #navShape {
     width: 1024px;
     height: 0;
-    border-bottom: 72px solid var(--dark18);
+    border-top: 72px solid var(--backC);
     border-left: 41px solid transparent;
     border-right: 41px solid transparent;
-    transform: rotate(180deg);
     margin-left: auto;
     margin-right: auto;
 }
@@ -205,33 +372,33 @@ nav {
 
 .navBtn, .navBtnActive {
     float: left;
-    text-align: center;
     width: 200px;
     height: 48px;
     transform: skew(-30deg);
-    padding-top: 14px;
+    padding-top: 25px;
     margin-top: 12px;
     margin-right: 12px;
-    /* background: var(--lightGrayDC-16); */
-    color: var(--lightDC-80);
+    /* background: var(--fore-16); */
+    color: var(--fore-80);
+    text-align: center;
     cursor: pointer;
 }
 
 .navBtn:hover, .navBtn:focus {
-    background: var(--lightDC);
-    color: var(--dark24);
+    background: var(--fore);
+    color: var(--backA);
 }
 
 .navBtn:active, .navBtnActive {
-    background: var(--green);
-    color: var(--dark24);
+    background: var(--primary);
+    color: var(--backA);
 }
 
-.navBtn h1, .navBtnActive h1 {
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 1em;
+.navBtn h3, .navBtnActive h3 {
     transform: skew(30deg);
+    line-height: 0;
+    vertical-align: top;
+    font-weight: 700;
     filter: drop-shadow(0px 0px 0px #12121600);
 }
 
@@ -249,16 +416,11 @@ nav {
     vertical-align: top;
     width: 33.333%;
     height: 48px;
-    opacity: 0.5;
-}
-
-.navIcon:hover, .navIcon:focus {
+    opacity: 0.4;
     cursor: pointer;
-    filter: grayscale();
-    opacity: 1;
 }
 
-.navIconActive {
+.navIcon:hover, .navIcon:focus, .navIconActive {
     opacity: 1;
 }
 
@@ -272,54 +434,43 @@ footer {
     width: 100%;
 }
 
-footer a:hover, footer a:focus {
-    color: var(--green);
-}
-
-footer h1 {
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 36px;
-}
-
-footer h2, footer h3 {
-    font-size: 21px;
-    font-weight: 300;
-    line-height: 2em;
-}
-
 #footerTop {
     text-align: center;
     width: 100%;
-    background: var(--dark18);
-}
-
-#footerBottom {
-    text-align: center;
-    width: 100%;
-    padding: 12px 0;
-    background: var(--black);
-}
-
-#footerBottom a {
-    font-weight: 300;
-    color: var(--lightDC-80);
-}
-
-#footerBottom a:hover, #footerBottom a:focus {
-    color: var(--green);
+    background: var(--backC);
 }
 
 .footer3rd {
     display: inline-block;
     vertical-align: top;
     width: 25%;
+    height: 100%;
     padding: 36px 0;
+}
+
+footer a:hover, footer a:focus {
+    color: var(--primary);
+}
+
+footer h2 {
+    padding-bottom: 24px;
+    line-height: normal;
+    font-weight: 400;
+}
+
+footer h3 {
+    padding: 8px 0;
+    line-height: normal;
+    font-weight: 300;
+}
+footer h4 {
+    line-height: normal;
+    font-weight: 300;
 }
 
 #footerLogo {
     height: 256px;
-    padding: 18px 0;
+    padding: 20px 0;
 }
 
 #footerLogo:hover, #footerLogo:focus {
@@ -340,20 +491,36 @@ footer h2, footer h3 {
     opacity: 0.5;
 }
 
+#footerBottom {
+    text-align: center;
+    width: 100%;
+    padding: 24px 0;
+    background: var(--backD);
+}
+
+#footerBottom a {
+    font-weight: 300;
+    color: var(--fore-80);
+}
+
+#footerBottom a:hover, #footerBottom a:focus {
+    color: var(--primary);
+}
+
 /* PROFILE */
 
 /* PROFILE NAME */
 
 #profileName {
     width: max-content;
-    margin-top: calc(72px * var(--scale));
-    margin-bottom: calc(24px * var(--scale));
+    margin-top: 72px;
+    margin-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #profileNameLogo {
-    width: 480px;
+    width: 448px;
 }
 
 /* PROFILE REEL */
@@ -363,7 +530,7 @@ footer h2, footer h3 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
     clip-path: inset(0px 0px 0px 0px);
 }
 
@@ -392,7 +559,7 @@ footer h2, footer h3 {
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
 .profilePortBox {
@@ -403,7 +570,7 @@ footer h2, footer h3 {
     width: calc(330px * var(--scale));
     height: calc(330px * var(--scale));
     margin: calc(12px * var(--scale));
-    background: var(--lightDC-16);
+    background: var(--fore-16);
 }
 
 .profilePortBox img {
@@ -413,12 +580,12 @@ footer h2, footer h3 {
 }
 
 .profilePortBox h1 {
-    font-size: calc(35px * var(--scale));
+    font-size: calc(32px * var(--scale));
     font-weight: 600;
     margin-bottom: calc(24px * var(--scale));
 }
 
-.profilePortBox p {
+.profilePortBox h3 {
     font-size: calc(21px * var(--scale));
     font-weight: 300;
     padding: 0 calc(28px * var(--scale));
@@ -427,11 +594,11 @@ footer h2, footer h3 {
 .profilePortBox:hover, .profilePortBox:focus {
     cursor: pointer;
     transform: scale(1.075);
-    background: var(--lightDC-40);
+    background: var(--fore-40);
 }
 
 .profilePortBox:active {
-    background: var(--green-80);
+    background: var(--primary-80);
 }
 
 /* PROFILE CAPABILITIES */
@@ -449,27 +616,25 @@ footer h2, footer h3 {
     width: fit-content;
     height: fit-content;
     padding: 24px;
-    border-radius: 144px 0 0 0;
+    border-radius: 150px 0 0 0;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
 #profileAbout img {
     float: left;
-    max-height: calc(240px * var(--scale) * var(--scale));
-    margin-bottom: calc(8px * var(--scale));
-    margin-right: calc(48px * var(--scale));
+    max-height: 256px;
+    margin-bottom: 8px;
+    margin-right: 54px;
     shape-outside: circle();
 }
 
-#profileAbout h1 {
-    font-size: calc(28px * var(--scale));
+#profileAbout h2 {
     font-weight: 500;
 }
 
-#profileAbout p {
-    font-size: calc(18px * var(--scale));
+#profileAbout h4 {
     margin-top: calc(28px * var(--scale));
 }
 
@@ -482,7 +647,7 @@ footer h2, footer h3 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
     clip-path: inset(0px 0px 0px 0px);
 }
 
@@ -506,13 +671,13 @@ footer h2, footer h3 {
 }
 
 #workPortDrop {
-    max-width: calc(1440px * var(--scale));
     width: fit-content;
+    max-width: 1440px;
     height: fit-content;
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
 .workPortBox {
@@ -534,8 +699,8 @@ footer h2, footer h3 {
     bottom: 0;
     left: 0;
     right: 0;
-    color: var(--white);
-    background-color: var(--black-DC);
+    padding: 0 12px;
+    background-color: #000000cc;
     opacity: 0;
 }
 
@@ -545,16 +710,15 @@ footer h2, footer h3 {
 
 .workPortOverlay h1 {
     z-index: 2;
-    font-size: calc(35px * var(--scale));
-    font-weight: 600;
-    line-height: 40px;
+    font-size: calc(32px * var(--scale));
+    font-weight: 500;
+    line-height: calc(40px * var(--scale));
     margin: calc(32px * var(--scale)) 0;
     opacity: 1;
 }
 
-.workPortOverlay p {
+.workPortOverlay h3 {
     z-index: 2;
-    font-size: calc(21px * var(--scale));
     font-weight: 300;
     padding: 0 calc(28px * var(--scale));
     opacity: 1;
@@ -566,12 +730,221 @@ footer h2, footer h3 {
 }
 
 .workPortOverlay:active {
-    background-color: var(--green-80);
+    background-color: var(--primary-80);
 }
 
 /* CONTACT */
 
 /* CONTACT FORM */
+
+#contactForm {
+    position: relative;
+    width: 100%;
+    /* line-height: calc(2.5em * var(--scale)); */
+}
+
+#contactFormDrop {
+    position: relative;
+    max-width: 1200px;
+    height: fit-content;
+    padding-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background: var(--backB); */
+}
+
+#contactInputWrap {
+    display: flex;
+}
+
+.contactDiv {
+    z-index: 1;
+    /* display: inline-block; */
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+
+.contactDivInput {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-appearance: none;
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    width: calc(100% - 32px);
+    height: calc(100% - 21px);
+    padding: 0 12px;
+    border: none;
+    border-radius: 0;
+    margin: 16px;
+    background: var(--fore-32);
+    color: var(--fore);
+    opacity: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.contactDivInput:focus, .contactDivInput:valid {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.contactDivInput:focus+.contactDivLabel, .contactDivInput:valid+.contactDivLabel {
+    cursor: default;
+    pointer-events: none;
+}
+
+.contactDivInput:focus+.contactDivLabel::before, .contactDivInput:valid+.contactDivLabel::before {
+    -webkit-transform: scale3d(1, 1.5, 1);
+    transform: scale3d(1, 1.5, 1);
+}
+
+.contactDivInput:focus+.contactDivLabel .contactDivTitle, .contactDivInput:valid+.contactDivLabel .contactDivTitle {
+    -webkit-transform: translate3d(0, -42px, 0);
+    transform: translate3d(0, -42px, 0) translateZ(1px);
+}
+
+.contactDivLabel {
+    float: right;
+    width: 100%;
+    padding: 0 16px;
+    color: var(--fore-80);
+    cursor: text;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contactDivLabel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--backC);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.contactDivTitle {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 2.5em 0;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.contactDivTitle h5 {
+    line-height: 0;
+    vertical-align: top;
+    text-align: center;
+    font-weight: 600;
+}
+
+#contactMessage {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    background: var(--backB);
+}
+
+#contactMessageInput {
+    resize: none;
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 24px;
+    background: #00000000;
+    color: var(--fore);
+    line-height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+}
+
+#contactSend {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    bottom: -28px;
+    transform: translate(-50%, 0%);
+    width: 100%;
+}
+
+#contactBtn {
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contactBtnShape {
+    width: 100%;
+    height: 0;
+    border-left: 31.888px solid transparent;
+    border-right: 31.888px solid transparent;
+}
+
+#contactBtn h3 {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: auto;
+    line-height: 0;
+    vertical-align: top;
+    text-align: center;
+    font-weight: 700;
+    filter: drop-shadow(2px 2px 4px #00000000);
+}
+
+#contactBtn.valid #contactBtnShape {
+    border-top: 56px solid var(--primary);
+    cursor: pointer;
+}
+
+#contactBtn.valid h3 {
+    color: var(--backA);
+    cursor: pointer;
+}
+
+#contactBtn.valid:hover #contactBtnShape {
+    border-top: 56px solid var(--fore);
+}
+
+#contactBtn.valid:hover h3 {
+    color: var(--backA);
+}
+
+#contactBtn.invalid #contactBtnShape {
+    border-top: 56px solid var(--backC);
+    cursor: default;
+}
+
+#contactBtn.invalid h3 {
+    color: var(--fore-80);
+    cursor: default;
+}
 
 /* CHANGELOG */
 
@@ -591,23 +964,24 @@ footer h2, footer h3 {
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark20);
+    background: var(--backB);
 }
 
-.changelogRow {
-    
-}
+.changelogRow {}
+
 .changelogRow h1 {
-    color: var(--lightDC-80);
+    color: var(--fore-80);
     font-size: calc(21px * var(--scale));
     font-weight: 400;
     line-height: calc(2em * var(--scale));
 }
+
 .changelogRow h2 {
     font-size: calc(21px * var(--scale));
     font-weight: 400;
     line-height: calc(2em * var(--scale));
 }
+
 .changelogRow p {
     font-size: calc(15px * var(--scale));
     font-weight: 300;
@@ -632,7 +1006,7 @@ footer h2, footer h3 {
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--lightDC-16);
+    background: var(--fore-16);
 }
 
 #notFound404 {
@@ -646,9 +1020,9 @@ footer h2, footer h3 {
 }
 
 #notFoundP a {
-    color: var(--green);
+    color: var(--primary);
 }
 
 #notFoundP a:hover, #notFoundP a:focus {
-    color: var(--lightDC-80);
+    color: var(--fore-80);
 }

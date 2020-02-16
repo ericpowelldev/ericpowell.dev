@@ -1,6 +1,6 @@
 {
   "name": "ep-portfolio",
-  "version": "0.3.13",
+  "version": "0.3.20",
   "description": "Eric Powell | Designer & Developer",
   "author": "Eric Powell",
   "license": "ISC",
@@ -9,6 +9,7 @@
     "moment": "^2.24.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-google-recaptcha": "^2.0.1",
     "react-router-dom": "^5.1.0",
     "react-scripts": "^3.3.0"
   },

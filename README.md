@@ -166,6 +166,14 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 
 - - -
 
+### TO ADD
+
+* Profile capabilities section
+* Look into sending emails using netlify forms
+* Create new contact form for below 800px
+
+- - -
+
 ### TO FIX
 
-* Small ipad version - Navbar icons are overlapping in firefox
+* Store recaptcha keys in envs

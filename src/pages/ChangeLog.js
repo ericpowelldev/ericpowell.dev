@@ -1,11 +1,17 @@
 import React from 'react';
+import { Global } from '../utils/Global';
 
-export default function ChangeLog(props) {
-
-  const { checkPage } = props
-  React.useEffect(() => { checkPage(); });
+export default function ChangeLog() {
+  const ctx = React.useContext(Global);
+  React.useEffect(() => { ctx.checkPage(); });
 
   const versions = [
+    {
+      num: `v0.3.20`,
+      date: `02/16/2020`,
+      change: `New Contact Form`,
+      detail: `First draft of Contact page. Has verification and ReCAPTCHA, but doesn't quite function just yet. Update for that coming soon.`,
+    },
     {
       num: `v0.3.11`,
       date: `01/10/2020`,
@@ -119,8 +125,8 @@ export default function ChangeLog(props) {
                     <h2>{ver.change}</h2>
                     <p>{ver.detail}</p>
                   </span>
-                  <div style={{width: "100%", height: "8px"}} />
-                  {i < versions.length - 1 ? <div style={{width: "100%", height: "1px", margin: "16px 0", background: "#dcdcff80"}} /> : null}
+                  <div style={{ width: "100%", height: "8px" }} />
+                  {i < versions.length - 1 ? <div style={{ width: "100%", height: "1px", margin: "16px 0", background: "#dcdcff80" }} /> : null}
                 </div>
               )
             }

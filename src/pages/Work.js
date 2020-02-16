@@ -1,21 +1,22 @@
 import React from 'react';
-import WR from '../components/WorkReel';
-import WW from '../components/WorkWeb';
+import { Global } from '../utils/Global';
 
-export default function Work(props) {
+import WorkReel from '../components/WorkReel';
+import WorkWeb from '../components/WorkWeb';
 
-  const { checkPage } = props
-  React.useEffect(() => { checkPage(); });
+export default function Work() {
+  const ctx = React.useContext(Global);
+  React.useEffect(() => { ctx.checkPage(); });
 
   return (<>
     <main id="work">
       <section id="work-reel">
         <h1 className="title">Game&nbsp;Reel</h1>
-        <WR />
+        <WorkReel />
       </section>
       <section id="work-web">
         <h1 className="title">Web&nbsp;Development&nbsp;Projects</h1>
-        <WW />
+        <WorkWeb />
       </section>
     </main>
   </>)

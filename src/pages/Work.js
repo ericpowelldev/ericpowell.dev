@@ -1,12 +1,12 @@
 import React from 'react';
-import { GlobalContext } from '../GlobalContext';
+import { Global } from '../utils/Global';
 
 import WorkReel from '../components/WorkReel';
 import WorkWeb from '../components/WorkWeb';
 
 export default function Work() {
-  const g = React.useContext(GlobalContext);
-  React.useEffect(() => { g.checkPage(); });
+  const ctx = React.useContext(Global);
+  React.useEffect(() => { ctx.checkPage(); });
 
   return (<>
     <main id="work">

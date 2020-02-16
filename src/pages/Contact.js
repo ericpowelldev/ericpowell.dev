@@ -1,10 +1,10 @@
 import React from 'react';
-import { GlobalContext } from '../GlobalContext';
+import { Global } from '../utils/Global';
 import ContactForm from '../components/ContactForm';
 
 export default function Contact() {
-  const g = React.useContext(GlobalContext);
-  React.useEffect(() => { g.checkPage(); });
+  const ctx = React.useContext(Global);
+  React.useEffect(() => { ctx.checkPage(); });
 
   return (<>
     <main id="contact">

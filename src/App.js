@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { NotifyProvider } from './NotifyContext';
-import { GlobalContext } from './GlobalContext';
+import { NotifyProvider } from './utils/Notify';
+import { Global } from './utils/Global';
 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -41,7 +41,7 @@ export default function App() {
   return (<>
     <Router>
       <NotifyProvider>
-        <GlobalContext.Provider value={ctx}>
+        <Global.Provider value={ctx}>
           <Nav />
           <div id="navPad" />
           <Switch>
@@ -56,7 +56,7 @@ export default function App() {
           </Switch>
           <div id="footPad" />
           <Footer />
-        </GlobalContext.Provider>
+        </Global.Provider>
       </NotifyProvider>
     </Router>
   </>)

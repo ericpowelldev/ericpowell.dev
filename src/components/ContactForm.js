@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Notify } from '../utils/Notify';
 import { Global } from '../utils/Global';
@@ -14,7 +15,6 @@ export default function ContactForm() {
   const [message, setMessage] = React.useState(``);
 
   const [valid, setValid] = React.useState(false);
-  const [spam, setSpam] = React.useState(false);
 
   const handleName = event => {
     setName(event.target.value);
@@ -28,19 +28,22 @@ export default function ContactForm() {
   const handleMessage = event => {
     setMessage(event.target.value);
   }
-
-  const checkValidation = () => {
-    if (name.length >= 1 && email.includes(`@`) && email.includes(`.`) && org.length >= 1 && message.length >= 1) {
+  const handleValidation = event => {
+    if (event.target.form.checkValidity()) {
       setValid(true);
     }
     else setValid(false);
   }
-  React.useEffect(() => checkValidation());
 
-  const handleSend = () => {
+  const handleSendBtn = event => {
+    event.preventDefault();
+
+    let sendTime = localStorage.getItem(`last-send-time`) ? moment().diff(moment(localStorage.getItem(`last-send-time`)), `minutes`) : 15;
+
     if (valid) {
-      if (!spam) {
+      if (sendTime >= 15) {
         ctx.log && console.log(`Message is valid!`);
+        notify(`Attempting to send message...`, `info`, 30000);
         recaptchaRef.current.execute();
       }
       else {
@@ -50,37 +53,38 @@ export default function ContactForm() {
     }
     else {
       ctx.log && console.log(`Message is not valid!`);
-      notify(`This form is under construction and will be functional very soon!`);
-      // notify(`Please fill out all fields and provide valid credentials.`, `warning`);
+      notify(`Please fill out all fields and provide valid credentials.`, `warning`);
     }
   }
 
   const onVerify = (res) => {
-    ctx.log && console.log(`ReCAPTCHA response:`, res);
     if (res) {
       ctx.log && console.log(`ReCAPTCHA successfully verified!`);
-      // setName(``);
-      // setEmail(``);
-      // setOrg(``);
-      // setMessage(``);
-      notify(`This form is under construction and will be functional very soon!`);
-      // notify(`Message was sent successfully!`, `success`);
-      setSpam(true);
+      handleSendEmail();
     }
   }
   const onError = (err) => {
-    console.log(`ReCAPTCHA error:`, err);
+    console.log(`ReCAPTCHA error:`, err ? err : {});
     notify(`Failed to establish a connection. Encountered a network error.`, `error`);
   }
 
+  const handleSendEmail = () => {
+    localStorage.setItem(`last-send-time`, moment().format());
+    setName(``);
+    setEmail(``);
+    setOrg(``);
+    setMessage(``);
+    notify(`Message was sent successfully!`, `success`);
+  }
+
   return (<>
-    <div id="contactForm">
+    <form id="contactForm" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
       <div id="contactFormDrop">
         <div style={{ width: '100%', height: '8px' }} />
         <div id="contactInputWrap">
 
           <div className="contactDiv">
-            <input className="contactDivInput" id="contact-name" value={name} onChange={handleName} type="text" placeholder="Enter your name..." autoComplete="off" required />
+            <input className="contactDivInput" id="contact-name" name="name" value={name} onChange={handleName} type="text" maxLength="64" placeholder="Enter your name..." autoComplete="off" required />
             <label className="contactDivLabel" htmlFor="contact-name">
               <span className="contactDivTitle">
                 <h5>FULL&nbsp;NAME</h5>
@@ -89,7 +93,7 @@ export default function ContactForm() {
           </div>
 
           <div className="contactDiv">
-            <input className="contactDivInput" id="contact-email" value={email} onChange={handleEmail} type="text" placeholder="Enter your email..." autoComplete="off" required />
+            <input className="contactDivInput" id="contact-email" name="email" value={email} onChange={handleEmail} type="email" maxLength="64" placeholder="Enter your email..." autoComplete="off" required />
             <label className="contactDivLabel" htmlFor="contact-email">
               <span className="contactDivTitle">
                 <h5>EMAIL&nbsp;ADDRESS</h5>
@@ -98,7 +102,7 @@ export default function ContactForm() {
           </div>
 
           <div className="contactDiv">
-            <input className="contactDivInput" id="contact-org" value={org} onChange={handleOrg} type="text" placeholder="Enter your organization..." autoComplete="off" required />
+            <input className="contactDivInput" id="contact-org" name="org" value={org} onChange={handleOrg} type="text" maxLength="64" placeholder="Enter your organization..." autoComplete="off" required />
             <label className="contactDivLabel" htmlFor="contact-org">
               <span className="contactDivTitle">
                 <h5>ORGANIZATION</h5>
@@ -109,18 +113,18 @@ export default function ContactForm() {
         </div>
 
         <div id="contactMessage">
-          <textarea id="contactMessageInput" rows="12" value={message} onChange={handleMessage} placeholder="Enter your message..." autoComplete="off" required />
+          <textarea id="contactMessageInput" rows="12" name="message" value={message} onChange={handleMessage} maxLength="1024" placeholder="Enter your message..." autoComplete="off" required />
           <div id="contactSend">
-            <div id="contactBtn" className={valid ? `valid` : `invalid`} onClick={handleSend}>
+            <button id="contactBtn" className={valid ? `valid` : `invalid`} type="submit">
               <div id="contactBtnShape" />
               <h3>SEND&nbsp;MESSAGE</h3>
-            </div>
+            </button>
           </div>
         </div>
 
         <div style={{ width: "100%", height: "64px" }} />
-        <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey="6LeXNdkUAAAAAO3iHeaDIA4tSfA-n9ic23eeIejp" onChange={onVerify} onErrored={onError} theme="light" badge="inline" />
+        <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={process.env.REACT_APP_RECAPTCHA_KEY} onChange={onVerify} onErrored={onError} theme="light" badge="inline" />
       </div>
-    </div>
+    </form>
   </>)
 }

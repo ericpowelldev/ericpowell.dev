@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ProfilePortfolio() {
-
   return (<>
     <div id="profilePort">
       <div id="profilePortDrop">

@@ -4,6 +4,12 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { Notify } from '../utils/Notify';
 import { Global } from '../utils/Global';
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function ContactForm() {
   const recaptchaRef = React.createRef();
   const notify = React.useContext(Notify);
@@ -42,25 +48,25 @@ export default function ContactForm() {
 
     if (valid) {
       if (sendTime >= 15) {
-        ctx.log && console.log(`Message is valid!`);
+        ctx.log(`Message is valid!`);
         notify(`Attempting to send message...`, `info`, 30000);
         recaptchaRef.current.execute();
       }
       else {
-        ctx.log && console.log(`Message is spam!`);
+        ctx.log(`Message is spam!`);
         notify(`Failed to send message. Please do not spam my email.`, `error`);
       }
     }
     else {
-      ctx.log && console.log(`Message is not valid!`);
+      ctx.log(`Message is not valid!`);
       notify(`Please fill out all fields and provide valid credentials.`, `warning`);
     }
   }
 
   const onVerify = (res) => {
     if (res) {
-      ctx.log && console.log(`ReCAPTCHA successfully verified!`);
-      handleSendEmail();
+      ctx.log(`ReCAPTCHA successfully verified!`);
+      handleSendForm();
     }
   }
   const onError = (err) => {
@@ -68,17 +74,28 @@ export default function ContactForm() {
     notify(`Failed to establish a connection. Encountered a network error.`, `error`);
   }
 
-  const handleSendEmail = () => {
-    localStorage.setItem(`last-send-time`, moment().format());
-    setName(``);
-    setEmail(``);
-    setOrg(``);
-    setMessage(``);
-    notify(`Message was sent successfully!`, `success`);
+  const handleSendForm = () => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", name: name, email: email, org: org, message: message })
+    }).then(res => {
+      ctx.log(`Message was sent!`);
+      localStorage.setItem(`last-send-time`, moment().format());
+      setName(``);
+      setEmail(``);
+      setOrg(``);
+      setMessage(``);
+      setValid(false);
+      notify(`Message was sent successfully!`, `success`);
+    }).catch(err => {
+      console.log(`Error sending message:`, err);
+      notify(`Failed to send message. Encountered a network error.`, `error`);
+    });
   }
 
   return (<>
-    <form id="contactForm" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
+    <form id="contactForm" name="contact" method="POST" data-netlify="true" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
       <div id="contactFormDrop">
         <div style={{ width: '100%', height: '8px' }} />
         <div id="contactInputWrap">

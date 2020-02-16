@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import { version } from '../../package.json';
-// import Global from '../Global';
 
 export default function Footer() {
-  // const ctx = React.useContext(Global);
 
   const links = [
     "https://github.com/ericpowell3d?tab=repositories",

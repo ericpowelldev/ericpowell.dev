@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function WorkReel() {
-  
   return (<>
     <div id="workReel">
       <div id="workReelFix">

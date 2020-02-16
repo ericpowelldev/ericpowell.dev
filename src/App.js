@@ -11,10 +11,16 @@ import Contact from './pages/Contact';
 import ChangeLog from './pages/ChangeLog';
 import NotFound from './pages/NotFound';
 
-const log = window.location.hostname === `localhost` ? true : false;
-
 export default function App() {
   const [page, setPage] = React.useState(0);
+
+  // Create a log function to console log only on localhost
+  const log = (msg, obj = undefined) => {
+    if (window.location.hostname === `localhost`) {
+      if (obj === undefined) return console.log(msg);
+      else return console.log(msg, obj);
+    }
+  }
 
   // Check which page is active to render things properly
   const checkPage = () => {

@@ -80,6 +80,7 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name: name, email: email, org: org, message: message })
     }).then(res => {
+      console.log(`Response:`, res);
       ctx.log(`Message was sent!`);
       localStorage.setItem(`last-send-time`, moment().format());
       setName(``);

@@ -80,6 +80,7 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name: name, email: email, org: org, message: message })
     }).then(res => {
+      console.log(`Response:`, res);
       ctx.log(`Message was sent!`);
       localStorage.setItem(`last-send-time`, moment().format());
       setName(``);
@@ -95,7 +96,7 @@ export default function ContactForm() {
   }
 
   return (<>
-    <form id="contactForm" name="contact" method="POST" data-netlify="true" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
+    <form id="contactForm" name="contact" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
       <div id="contactFormDrop">
         <div style={{ width: '100%', height: '8px' }} />
         <div id="contactInputWrap">

@@ -908,6 +908,7 @@ footer h4 {
     margin-right: auto !important;
     background: #00000000;
     color: #fff;
+    outline: none;
 }
 
 #contactBtnShape {

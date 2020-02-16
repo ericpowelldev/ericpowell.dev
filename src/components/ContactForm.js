@@ -96,7 +96,7 @@ export default function ContactForm() {
   }
 
   return (<>
-    <form id="contactForm" name="contact" method="POST" data-netlify="true" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
+    <form id="contactForm" name="contact" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
       <div id="contactFormDrop">
         <div style={{ width: '100%', height: '8px' }} />
         <div id="contactInputWrap">

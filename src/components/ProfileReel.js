@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function ProfileReel() {
-
   return (<>
     <div id="profileReel">
       <div id="profileReelFix">

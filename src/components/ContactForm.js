@@ -101,7 +101,7 @@ export default function ContactForm() {
         <div id="contactInputWrap">
 
           <div className="contactDiv">
-            <input className="contactDivInput" id="contact-name" name="name" value={name} onChange={handleName} type="text" maxLength="64" placeholder="Enter your name..." autoComplete="off" required />
+            <input className="contactDivInput" id="contact-name" type="text" name="name" value={name} onChange={handleName} maxLength="64" placeholder="Enter your name..." autoComplete="off" required />
             <label className="contactDivLabel" htmlFor="contact-name">
               <span className="contactDivTitle">
                 <h5>FULL&nbsp;NAME</h5>
@@ -110,7 +110,7 @@ export default function ContactForm() {
           </div>
 
           <div className="contactDiv">
-            <input className="contactDivInput" id="contact-email" name="email" value={email} onChange={handleEmail} type="email" maxLength="64" placeholder="Enter your email..." autoComplete="off" required />
+            <input className="contactDivInput" id="contact-email" type="email" name="email" value={email} onChange={handleEmail} maxLength="64" placeholder="Enter your email..." autoComplete="off" required />
             <label className="contactDivLabel" htmlFor="contact-email">
               <span className="contactDivTitle">
                 <h5>EMAIL&nbsp;ADDRESS</h5>
@@ -119,7 +119,7 @@ export default function ContactForm() {
           </div>
 
           <div className="contactDiv">
-            <input className="contactDivInput" id="contact-org" name="org" value={org} onChange={handleOrg} type="text" maxLength="64" placeholder="Enter your organization..." autoComplete="off" required />
+            <input className="contactDivInput" id="contact-org" type="text" name="org" value={org} onChange={handleOrg} maxLength="64" placeholder="Enter your organization..." autoComplete="off" required />
             <label className="contactDivLabel" htmlFor="contact-org">
               <span className="contactDivTitle">
                 <h5>ORGANIZATION</h5>

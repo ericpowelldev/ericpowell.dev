@@ -44,10 +44,10 @@ export default function ContactForm() {
   const handleSendBtn = event => {
     event.preventDefault();
 
-    let sendTime = localStorage.getItem(`last-send-time`) ? moment().diff(moment(localStorage.getItem(`last-send-time`)), `minutes`) : 15;
+    let sendTime = localStorage.getItem(`last-send-time`) ? moment().diff(moment(localStorage.getItem(`last-send-time`)), `days`) : 15;
 
     if (valid) {
-      if (sendTime >= 15) {
+      if (sendTime >= 1) {
         ctx.log(`Message is valid!`);
         notify(`Attempting to send message...`, `info`, 30000);
         recaptchaRef.current.execute();
@@ -80,15 +80,20 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name: name, email: email, org: org, message: message })
     }).then(res => {
-      console.log(`Response:`, res);
-      ctx.log(`Message was sent!`);
-      localStorage.setItem(`last-send-time`, moment().format());
-      setName(``);
-      setEmail(``);
-      setOrg(``);
-      setMessage(``);
-      setValid(false);
-      notify(`Message was sent successfully!`, `success`);
+      if (res.status === 200) {
+        ctx.log(`Message was sent!`);
+        localStorage.setItem(`last-send-time`, moment().format());
+        setName(``);
+        setEmail(``);
+        setOrg(``);
+        setMessage(``);
+        setValid(false);
+        notify(`Message was sent successfully!`, `success`);
+      }
+      else {
+        console.log(`Error sending message:`, res);
+        notify(`Failed to send message. Response came back with status: ${res.status}.`, `error`);
+      }
     }).catch(err => {
       console.log(`Error sending message:`, err);
       notify(`Failed to send message. Encountered a network error.`, `error`);

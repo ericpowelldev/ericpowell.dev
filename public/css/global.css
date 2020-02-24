@@ -141,7 +141,7 @@ textarea::placeholder {
 
 .grecaptcha-badge {
     z-index: 1001 !important;
-    display: block !important;
+    display: none !important;
     box-shadow: none !important;
     margin-left: auto !important;
     margin-right: auto !important;

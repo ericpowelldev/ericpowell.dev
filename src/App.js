@@ -15,9 +15,10 @@ export default function App() {
   const [page, setPage] = React.useState(0);
 
   // Create a log function to console log only on localhost
-  const log = (msg, obj = undefined) => {
+  const log = (msg = ``, obj = ``) => {
     if (window.location.hostname === `localhost`) {
-      if (obj === undefined) return console.log(msg);
+      if (obj === `` && obj === ``) return console.log();
+      else if (obj === ``) return console.log(msg);
       else return console.log(msg, obj);
     }
   }
@@ -33,7 +34,7 @@ export default function App() {
     else if (window.location.pathname === `/changelog`) setPage(4);
     else setPage(0);
     window.scrollTo({ top: 0, left: 0, behavior: `smooth` });
-    // log && console.log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
+    // log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
   }
 
   // Create global context object

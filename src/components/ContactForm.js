@@ -1,17 +1,13 @@
 import React from 'react';
 import moment from 'moment';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { Notify } from '../utils/Notify';
 import { Global } from '../utils/Global';
 
 const encode = (data) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+  return Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
 }
 
 export default function ContactForm() {
-  const recaptchaRef = React.createRef();
   const notify = React.useContext(Notify);
   const ctx = React.useContext(Global);
 
@@ -44,13 +40,13 @@ export default function ContactForm() {
   const handleSendBtn = event => {
     event.preventDefault();
 
-    let sendTime = localStorage.getItem(`last-send-time`) ? moment().diff(moment(localStorage.getItem(`last-send-time`)), `days`) : 15;
+    let sendTime = localStorage.getItem(`last-send-time`) ? moment().diff(moment(localStorage.getItem(`last-send-time`)), `minutes`) : 1;
 
     if (valid) {
       if (sendTime >= 1) {
         ctx.log(`Message is valid!`);
         notify(`Attempting to send message...`, `info`, 30000);
-        recaptchaRef.current.execute();
+        handleSendForm();
       }
       else {
         ctx.log(`Message is spam!`);
@@ -63,23 +59,13 @@ export default function ContactForm() {
     }
   }
 
-  const onVerify = (res) => {
-    if (res) {
-      ctx.log(`ReCAPTCHA successfully verified!`);
-      handleSendForm();
-    }
-  }
-  const onError = (err) => {
-    console.log(`ReCAPTCHA error:`, err ? err : {});
-    notify(`Failed to establish a connection. Encountered a network error.`, `error`);
-  }
-
   const handleSendForm = () => {
-    fetch("/", {
+    fetch(`/`, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name: name, email: email, org: org, message: message })
+      body: encode({ "form-name": "contact", name: name, email: email, org: org, message: message }),
     }).then(res => {
+      ctx.log(`Netlify form response:`, res);
       if (res.status === 200) {
         ctx.log(`Message was sent!`);
         localStorage.setItem(`last-send-time`, moment().format());
@@ -91,11 +77,11 @@ export default function ContactForm() {
         notify(`Message was sent successfully!`, `success`);
       }
       else {
-        console.log(`Error sending message:`, res);
+        ctx.log(`Error sending message:`, res);
         notify(`Failed to send message. Response came back with status: ${res.status}.`, `error`);
       }
     }).catch(err => {
-      console.log(`Error sending message:`, err);
+      ctx.log(`Error sending message:`, err);
       notify(`Failed to send message. Encountered a network error.`, `error`);
     });
   }
@@ -103,7 +89,9 @@ export default function ContactForm() {
   return (<>
     <form id="contactForm" name="contact" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
       <div id="contactFormDrop">
+
         <div style={{ width: '100%', height: '8px' }} />
+
         <div id="contactInputWrap">
 
           <div className="contactDiv">
@@ -145,8 +133,8 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div style={{ width: "100%", height: "64px" }} />
-        <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={process.env.REACT_APP_RECAPTCHA_KEY} onChange={onVerify} onErrored={onError} theme="light" badge="inline" />
+        <div style={{ width: "100%", height: "24px" }} />
+
       </div>
     </form>
   </>)

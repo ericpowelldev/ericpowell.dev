@@ -7,8 +7,14 @@ export default function ChangeLog() {
 
   const versions = [
     {
-      num: `v0.3.20`,
+      num: `v0.3.25`,
       date: `02/16/2020`,
+      change: `Working Contact Form`,
+      detail: `Contact form is fully functional. If you would like to shoot me an email, please do so!`,
+    },
+    {
+      num: `v0.3.20`,
+      date: `02/15/2020`,
       change: `New Contact Form`,
       detail: `First draft of Contact page. Has verification and ReCAPTCHA, but doesn't quite function just yet. Update for that coming soon.`,
     },

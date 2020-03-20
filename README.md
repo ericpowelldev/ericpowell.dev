@@ -21,18 +21,15 @@ This is my current portfolio made using ReactJS. [Deployed site here.](https://e
     * Game Dev
     * Graphic Design
     * 3D Design
-* [X] 3: About me
-    * Background
-    * Hobbies
-    * Principles
-* [ ] 4: Capabilities w/ Resume link
+* [X] 3: Capabilities w/ Resume link
     * Game Development
     * Front-End Design
     * Back-End Integration
-* [ ] 5: Let's work together
-    * Link to work page
-    * Link to contact page
-* [X] 6: Footer
+* [X] 4: About me
+    * Background
+    * Hobbies
+    * Principles
+* [X] 5: Footer
     * Large Logo
     * Links to all pages + resume
     * Links to social media
@@ -151,7 +148,6 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 ## Skills & Technologies I Plan To Learn
 
 * VueJS
-* TypeScript
 * Python
 * C++
 * SEO

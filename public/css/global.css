@@ -25,11 +25,12 @@
 :root {
     --scale: 1;
     --body: #fff;
-    --fore: #dcdcff;
-    --fore-80: #dcdcff80;
-    --fore-40: #dcdcff40;
-    --fore-32: #dcdcff32;
-    --fore-16: #dcdcff16;
+    --foreA: #dcdcff;
+    --foreA-80: #dcdcff80;
+    --foreA-40: #dcdcff40;
+    --foreA-32: #dcdcff32;
+    --foreA-16: #dcdcff16;
+    --foreB: #a0a0c6;
     --backA: #24242d;
     --backB: #202028;
     --backC: #18181e;
@@ -46,10 +47,10 @@
 
 /* .moody {
     --body: #121216;
-    --fore: #121216;
-    --fore-80: #12121680;
-    --fore-40: #12121640;
-    --fore-16: #12121616;
+    --foreA: #121216;
+    --foreA-80: #12121680;
+    --foreA-40: #12121640;
+    --foreA-16: #12121616;
     --backA: #dcdcff;
     --backB: #ccccec;
     --backC: #bcbcd8;
@@ -130,13 +131,13 @@ h6 {
 input::placeholder {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    color: var(--fore-80);
+    color: var(--foreA-80);
 }
 
 textarea::placeholder {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    color: var(--fore-80);
+    color: var(--foreA-80);
 }
 
 .grecaptcha-badge {
@@ -295,6 +296,15 @@ body {
     margin-bottom: 12px;
 }
 
+.titleIn {
+    line-height: 1em;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 24px;
+    color: var(--body);
+}
+
 #profile, #work, #contact, #changelog, #notFound {
     position: relative;
     width: 100%;
@@ -378,14 +388,14 @@ nav {
     padding-top: 25px;
     margin-top: 12px;
     margin-right: 12px;
-    /* background: var(--fore-16); */
-    color: var(--fore-80);
+    /* background: var(--foreA-16); */
+    color: var(--foreA-80);
     text-align: center;
     cursor: pointer;
 }
 
 .navBtn:hover, .navBtn:focus {
-    background: var(--fore);
+    background: var(--foreA);
     color: var(--backA);
 }
 
@@ -501,7 +511,7 @@ footer h4 {
 
 #footerBottom a {
     font-weight: 300;
-    color: var(--fore-80);
+    color: var(--foreA-80);
 }
 
 #footerBottom a:hover, #footerBottom a:focus {
@@ -571,7 +581,7 @@ footer h4 {
     width: calc(330px * var(--scale));
     height: calc(330px * var(--scale));
     margin: calc(12px * var(--scale));
-    background: var(--fore-16);
+    background: var(--foreA-16);
 }
 
 .profilePortBox img {
@@ -595,14 +605,12 @@ footer h4 {
 .profilePortBox:hover, .profilePortBox:focus {
     cursor: pointer;
     transform: scale(1.075);
-    background: var(--fore-40);
+    background: var(--foreA-40);
 }
 
 .profilePortBox:active {
     background: var(--primary-80);
 }
-
-/* PROFILE CAPABILITIES */
 
 /* PROFILE ABOUT */
 
@@ -637,6 +645,23 @@ footer h4 {
 
 #profileAbout h4 {
     margin-top: calc(28px * var(--scale));
+}
+
+/* PROFILE CAPABILITIES */
+
+#profileCaps {
+    position: relative;
+    width: 100%;
+    line-height: calc(2.5em * var(--scale));
+}
+
+#profileCapsDrop {
+    min-width: 100%;
+    height: fit-content;
+    padding: calc(48px * var(--scale));
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--backC);
 }
 
 /* WORK */
@@ -781,8 +806,8 @@ footer h4 {
     border: none;
     border-radius: 0;
     margin: 16px;
-    background: var(--fore-32);
-    color: var(--fore);
+    background: var(--foreA-32);
+    color: var(--foreA);
     opacity: 0;
     text-align: center;
     font-size: 18px;
@@ -824,7 +849,7 @@ footer h4 {
     float: right;
     width: 100%;
     padding: 0 16px;
-    color: var(--fore-80);
+    color: var(--foreA-80);
     cursor: text;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -881,7 +906,7 @@ footer h4 {
     border-radius: 0;
     margin-bottom: 24px;
     background: #00000000;
-    color: var(--fore);
+    color: var(--foreA);
     line-height: 1.5em;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -942,7 +967,7 @@ footer h4 {
 }
 
 #contactBtn.valid:hover #contactBtnShape {
-    border-top: 56px solid var(--fore);
+    border-top: 56px solid var(--foreA);
 }
 
 #contactBtn.valid:hover h3 {
@@ -955,7 +980,7 @@ footer h4 {
 }
 
 #contactBtn.invalid h3 {
-    color: var(--fore-80);
+    color: var(--foreA-80);
     cursor: default;
 }
 
@@ -983,7 +1008,7 @@ footer h4 {
 .changelogRow {}
 
 .changelogRow h1 {
-    color: var(--fore-80);
+    color: var(--foreA-80);
     font-size: calc(21px * var(--scale));
     font-weight: 400;
     line-height: calc(2em * var(--scale));
@@ -1019,7 +1044,7 @@ footer h4 {
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--fore-16);
+    background: var(--foreA-16);
 }
 
 #notFound404 {
@@ -1037,5 +1062,5 @@ footer h4 {
 }
 
 #notFoundP a:hover, #notFoundP a:focus {
-    color: var(--fore-80);
+    color: var(--foreA-80);
 }

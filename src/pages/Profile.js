@@ -3,8 +3,8 @@ import { Global } from '../utils/Global';
 
 import ProfileReel from '../components/profile/ProfileReel';
 import ProfilePortfolio from '../components/profile/ProfilePortfolio';
-// import ProfileCapabilities from '../components/profile/ProfileCapabilities';
 import ProfileAbout from '../components/profile/ProfileAbout';
+import ProfileCapabilities from '../components/profile/ProfileCapabilities';
 
 export default function Profile() {
   const { checkPage } = React.useContext(Global);
@@ -22,9 +22,9 @@ export default function Profile() {
         <h1 className="title">Survey&nbsp;my&nbsp;portfolio.</h1>
         <ProfilePortfolio />
       </section>
+      <div style={{ width: "100%", height: "64px" }} />
       <section id="profile-capabilities">
-        {/* <h1 className="title">See&nbsp;what&nbsp;I'm&nbsp;capable&nbsp;of.</h1>
-            <ProfileCapabilities /> */}
+        <ProfileCapabilities />
       </section>
       <section id="profile-about">
         <h1 className="title">Learn&nbsp;a&nbsp;little&nbsp;more&nbsp;about&nbsp;me.</h1>

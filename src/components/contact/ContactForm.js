@@ -1,15 +1,15 @@
 import React from 'react';
 import moment from 'moment';
-import { Notify } from '../utils/Notify';
-import { Global } from '../utils/Global';
+import { Global } from '../../utils/Global';
+import { Notify } from '../../utils/Notify';
 
 const encode = (data) => {
   return Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
 }
 
 export default function ContactForm() {
+  const { log } = React.useContext(Global);
   const notify = React.useContext(Notify);
-  const ctx = React.useContext(Global);
 
   const [name, setName] = React.useState(``);
   const [email, setEmail] = React.useState(``);
@@ -44,17 +44,17 @@ export default function ContactForm() {
 
     if (valid) {
       if (sendTime >= 1) {
-        ctx.log(`Message is valid!`);
+        log(`Message is valid!`);
         notify(`Attempting to send message...`, `info`, 30000);
         handleSendForm();
       }
       else {
-        ctx.log(`Message is spam!`);
+        log(`Message is spam!`);
         notify(`Failed to send message. Please do not spam my email.`, `error`);
       }
     }
     else {
-      ctx.log(`Message is not valid!`);
+      log(`Message is not valid!`);
       notify(`Please fill out all fields and provide valid credentials.`, `warning`);
     }
   }
@@ -65,9 +65,9 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name: name, email: email, org: org, message: message }),
     }).then(res => {
-      ctx.log(`Netlify form response:`, res);
+      log(`Netlify form response:`, res);
       if (res.status === 200) {
-        ctx.log(`Message was sent!`);
+        log(`Message was sent!`);
         localStorage.setItem(`last-send-time`, moment().format());
         setName(``);
         setEmail(``);
@@ -77,11 +77,11 @@ export default function ContactForm() {
         notify(`Message was sent successfully!`, `success`);
       }
       else {
-        ctx.log(`Error sending message:`, res);
+        log(`Error sending message:`, res);
         notify(`Failed to send message. Response came back with status: ${res.status}.`, `error`);
       }
     }).catch(err => {
-      ctx.log(`Error sending message:`, err);
+      log(`Error sending message:`, err);
       notify(`Failed to send message. Encountered a network error.`, `error`);
     });
   }
@@ -113,7 +113,7 @@ export default function ContactForm() {
           </div>
 
           <div className="contactDiv">
-            <input className="contactDivInput" id="contact-org" type="text" name="org" value={org} onChange={handleOrg} maxLength="64" placeholder="Enter your organization..." autoComplete="off" required />
+            <input className="contactDivInput" id="contact-org" type="text" name="organization" value={org} onChange={handleOrg} maxLength="64" placeholder="Enter your organization..." autoComplete="off" required />
             <label className="contactDivLabel" htmlFor="contact-org">
               <span className="contactDivTitle">
                 <h5>ORGANIZATION</h5>

@@ -1,2 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
+
+User-agent: Googlebot-Image
+Disallow: /images/vectors
+
 User-agent: *

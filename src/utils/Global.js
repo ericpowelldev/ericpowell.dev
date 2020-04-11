@@ -1,19 +1,26 @@
 import React from 'react';
+
+/** Global Context Object */
 export const Global = React.createContext();
 
+/** Global Context Provider */
 export function GlobalProvider({ children }) {
   const [page, setPage] = React.useState(`profile`);
 
-  // Create a log function to console log only on localhost
-  const log = (msg = ``, obj = ``) => {
+  /** Function to console log only on localhost
+   * @param {String} message - Message to display in the console log
+   * @param {Object} data - (Optional) Data to display in the console log after the message
+   * @return {Console} Returns a console.log() with the params passed in
+  */
+  const log = (message = ``, data = ``) => {
     if (window.location.hostname === `localhost`) {
-      if (msg === `` && obj === ``) return console.log();
-      else if (obj === ``) return console.log(msg);
-      else return console.log(msg, obj);
+      if (message === `` && data === ``) return console.log();
+      else if (data === ``) return console.log(message);
+      else return console.log(message, data);
     }
   }
 
-  // Check which page is active to render things properly
+  /** Function to check which page is active to render the page properly */
   const checkPage = () => {
     if (window.location.pathname === `/`) setPage(`profile`);
     else if (window.location.pathname === `/home`) setPage(`profile`);
@@ -27,7 +34,7 @@ export function GlobalProvider({ children }) {
     log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
   }
 
-  // Create global context object
+  /** Global context for the app */
   const ctx = {
     log: log,
     page: page,

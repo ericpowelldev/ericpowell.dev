@@ -51,7 +51,7 @@ Contact me and let's work together.
 
 * Game Development Pipeline (Unity/C#)
 * Full-Stack Web Development (MERN Stack)
-* API & Database Integration (AJAX/MongoDB/SQL)
+* API & Database Integration (MongoDB/SQL)
 * Command Line Interface, Git Version-Control & Deployment 
 * Vector Creation, Image Manipulation & Motion Graphics
 * 3D Modeling, Rigging, Animation, Texturing & Rendering
@@ -60,12 +60,12 @@ Contact me and let's work together.
 ### Favored Tools
 
 * C#/Unity
+* Node.js/NPM
 * HTML/CSS
 * JavaScript
-* MongoDB/SQL
-* Express.js
 * React.js
-* Node.js/NPM
+* Express.js
+* MongoDB/SQL
 * Adobe CC
 * Blender/Maya
 
@@ -147,10 +147,8 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 
 ## Skills & Technologies I Plan To Learn
 
-* VueJS
 * Python
 * C++
-* SEO
 
 - - -
 
@@ -165,7 +163,8 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 ### TO ADD
 
 * Profile capabilities section
-* Create new contact form for below 800px
+* Create new contact form modal
+* Replace contact page with something else
 
 - - -
 

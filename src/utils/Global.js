@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 /** Global Context Object */
 export const Global = React.createContext();
@@ -6,17 +7,18 @@ export const Global = React.createContext();
 /** Global Context Provider */
 export function GlobalProvider({ children }) {
   const [page, setPage] = React.useState(`profile`);
+  const [anchor, setAnchor] = React.useState(null);
 
   /** Function to console log only on localhost
    * @param {String} message - Message to display in the console log
    * @param {Object} data - (Optional) Data to display in the console log after the message
    * @return {Console} Returns a console.log() with the params passed in
   */
-  const log = (message = ``, data = ``) => {
+  const log = (message = null, data = null) => {
     if (window.location.hostname === `localhost`) {
-      if (message === `` && data === ``) return console.log();
-      else if (data === ``) return console.log(message);
-      else return console.log(message, data);
+      if (message && data) return console.log(message, data);
+      else if (message) return console.log(message);
+      else return console.log();
     }
   }
 
@@ -30,8 +32,17 @@ export function GlobalProvider({ children }) {
     else if (window.location.pathname === `/contact`) setPage(`contact`);
     else if (window.location.pathname === `/changelog`) setPage(`changelog`);
     else setPage(`404`);
-    window.scrollTo({ top: 0, left: 0, behavior: `smooth` });
-    log(`PAGE: ${page}, PATHNAME: ${window.location.pathname}`);
+
+    const element = document.getElementById(anchor);
+    const anchorTime = localStorage.getItem(`last-anchor-time`) ? moment().diff(moment(localStorage.getItem(`last-anchor-time`)), `seconds`) : 0;
+    if (anchor && element && anchorTime < 3) {
+      element.scrollIntoView({ block: `center` });
+      log(`PAGE: '${page}', PATHNAME: '${window.location.pathname}', ANCHOR: '${anchor}'`);
+    }
+    else {
+      window.scrollTo({ top: 0, left: 0, behavior: `smooth` });
+      log(`PAGE: '${page}', PATHNAME: '${window.location.pathname}'`);
+    }
   }
 
   /** Global context for the app */
@@ -39,12 +50,11 @@ export function GlobalProvider({ children }) {
     log: log,
     page: page,
     checkPage: checkPage,
+    setAnchor: setAnchor,
   }
 
   // Return the Global.Provider and wrap it around the contents of App.js
   return (
-    <Global.Provider value={ctx}>
-      {children}
-    </Global.Provider>
+    <Global.Provider value={ctx}>{children}</Global.Provider>
   )
 }

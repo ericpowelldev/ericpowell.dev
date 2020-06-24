@@ -45,6 +45,9 @@ jspm_packages/
 # MISC
 .DS_Store
 .vscode
-# dev/
+
+# Large Media
+large_media/
+
 # Local Netlify folder
 .netlify

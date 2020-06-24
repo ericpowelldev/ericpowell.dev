@@ -5,7 +5,7 @@ export default function ProfileReel() {
     <div id="profileReel">
       <div id="profileReelFix">
         <video id="profileReelMovie" playsInline autoPlay muted loop>
-          <source src="/videos/testReel.mp4" type="video/mp4" />
+          <source src="/videos/reel_game.mp4" type="video/mp4" />
         </video>
       </div>
     </div>

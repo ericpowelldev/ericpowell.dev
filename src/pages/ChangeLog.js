@@ -7,6 +7,12 @@ export default function ChangeLog() {
 
   const versions = [
     {
+      num: `v0.3.30`,
+      date: `06/24/2020`,
+      change: `New Portfolio Reels`,
+      detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills. Working on a carousel for them in the future.`,
+    },
+    {
       num: `v0.3.25`,
       date: `02/16/2020`,
       change: `Working Contact Form`,
@@ -22,7 +28,7 @@ export default function ChangeLog() {
       num: `v0.3.11`,
       date: `01/10/2020`,
       change: `New Changelogs`,
-      detail: `Created "Changelog" page with these messages visible to the public. Some folks were asking to see my progress. I plan on storing these in a database one day.`,
+      detail: `Created "Changelog" page with these messages visible to the public. Some folks were asking to see my progress.`,
     },
     {
       num: `v0.3.9`,

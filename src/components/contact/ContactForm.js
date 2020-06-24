@@ -40,7 +40,7 @@ export default function ContactForm() {
   const handleSendBtn = event => {
     event.preventDefault();
 
-    let sendTime = localStorage.getItem(`last-send-time`) ? moment().diff(moment(localStorage.getItem(`last-send-time`)), `minutes`) : 1;
+    const sendTime = localStorage.getItem(`last-send-time`) ? moment().diff(moment(localStorage.getItem(`last-send-time`)), `minutes`) : 1;
 
     if (valid) {
       if (sendTime >= 1) {

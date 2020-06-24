@@ -143,10 +143,10 @@
     #profileNameLogo {
         width: 352px;
     }
-    #profileReelFix, #workReelFix {
+    #profileReelFix, .workReelFix {
         width: 100%;
     }
-    #profileReelMovie, #workReelMovie {
+    #profileReelMovie, .workReelMovie {
         width: 100%;
     }
     #profileAboutDrop {

@@ -553,6 +553,7 @@ footer h4 {
 
 #profileReelMovie {
     width: 960px;
+    outline: none;
 }
 
 /* PROFILE PORTFOLIO */
@@ -668,7 +669,7 @@ footer h4 {
 
 /* WORK REEL */
 
-#workReel {
+.workReel {
     display: inline-flex;
     width: 100%;
     margin-left: auto;
@@ -677,14 +678,15 @@ footer h4 {
     clip-path: inset(0px 0px 0px 0px);
 }
 
-#workReelFix {
+.workReelFix {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#workReelMovie {
+.workReelMovie {
     width: 960px;
+    outline: none;
 }
 
 /* WORK PORTFOLIO */

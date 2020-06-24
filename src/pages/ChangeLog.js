@@ -6,12 +6,12 @@ export default function ChangeLog() {
   React.useEffect(() => { checkPage(); });
 
   const versions = [
-    {
-      num: `v0.3.30`,
-      date: `06/24/2020`,
-      change: `New Portfolio Reels`,
-      detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills. Working on a carousel for them in the future.`,
-    },
+    // {
+    //   num: `v0.3.32`,
+    //   date: `06/24/2020`,
+    //   change: `New Portfolio Reels`,
+    //   detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills. Working on a carousel for them in the future.`,
+    // },
     {
       num: `v0.3.25`,
       date: `02/16/2020`,

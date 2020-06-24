@@ -1,16 +1,16 @@
 {
   "name": "ep-portfolio",
-  "version": "0.3.26",
+  "version": "0.3.31",
   "description": "Eric Powell | Designer & Developer",
   "author": "Eric Powell",
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "moment": "^2.24.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-router-dom": "^5.1.0",
-    "react-scripts": "^3.3.0"
+    "moment": "^2.27.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

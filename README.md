@@ -21,18 +21,15 @@ This is my current portfolio made using ReactJS. [Deployed site here.](https://e
     * Game Dev
     * Graphic Design
     * 3D Design
-* [X] 3: About me
-    * Background
-    * Hobbies
-    * Principles
-* [ ] 4: Capabilities w/ Resume link
+* [X] 3: Capabilities w/ Resume link
     * Game Development
     * Front-End Design
     * Back-End Integration
-* [ ] 5: Let's work together
-    * Link to work page
-    * Link to contact page
-* [X] 6: Footer
+* [X] 4: About me
+    * Background
+    * Hobbies
+    * Principles
+* [X] 5: Footer
     * Large Logo
     * Links to all pages + resume
     * Links to social media
@@ -54,7 +51,7 @@ Contact me and let's work together.
 
 * Game Development Pipeline (Unity/C#)
 * Full-Stack Web Development (MERN Stack)
-* API & Database Integration (AJAX/MongoDB/SQL)
+* API & Database Integration (MongoDB/SQL)
 * Command Line Interface, Git Version-Control & Deployment 
 * Vector Creation, Image Manipulation & Motion Graphics
 * 3D Modeling, Rigging, Animation, Texturing & Rendering
@@ -63,12 +60,12 @@ Contact me and let's work together.
 ### Favored Tools
 
 * C#/Unity
+* Node.js/NPM
 * HTML/CSS
 * JavaScript
-* MongoDB/SQL
-* Express.js
 * React.js
-* Node.js/NPM
+* Express.js
+* MongoDB/SQL
 * Adobe CC
 * Blender/Maya
 
@@ -150,11 +147,8 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 
 ## Skills & Technologies I Plan To Learn
 
-* VueJS
-* TypeScript
 * Python
 * C++
-* SEO
 
 - - -
 
@@ -169,7 +163,8 @@ Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) f
 ### TO ADD
 
 * Profile capabilities section
-* Create new contact form for below 800px
+* Create new contact form modal
+* Replace contact page with something else
 
 - - -
 

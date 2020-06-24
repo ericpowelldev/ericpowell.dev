@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Global } from '../utils/Global';
 
 export default function NotFound() {
-  const ctx = React.useContext(Global);
-  React.useEffect(() => { ctx.checkPage(); });
+  const { checkPage } = React.useContext(Global);
+  React.useEffect(() => { checkPage(); });
 
   return (<>
     <main id="notFound">

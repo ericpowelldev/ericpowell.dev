@@ -1,0 +1,235 @@
+/* RULES */
+
+/* NAME */
+
+.profile-name {
+    width: max-content;
+    margin-top: 72px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-name-logo {
+    width: 448px;
+}
+
+/* REEL */
+
+.profile-reel {
+    position: relative;
+    width: 100%;
+    background: var(--backB);
+}
+
+.profile-reel-box {
+    position: relative;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-reel-movie {
+    width: 100%;
+    outline: none;
+}
+
+/* PORTFOLIO */
+
+.profile-port {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-port-box {
+    max-width: calc(1440px * var(--scale));
+    width: fit-content;
+    height: fit-content;
+    padding: calc(12px * var(--scale));
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--backB);
+}
+
+.profile-port-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: calc(330px * var(--scale));
+    height: calc(330px * var(--scale));
+    margin: calc(12px * var(--scale));
+    background: var(--foreA-16);
+    transition: var(--anim-02);
+}
+
+.profile-port-item:hover, .profile-port-item:focus {
+    cursor: pointer;
+    transform: scale(1.075);
+    background: var(--foreA-40);
+}
+
+.profile-port-item:active {
+    background: var(--primary-80);
+}
+
+.profile-port-item img {
+    max-height: calc(100px * var(--scale));
+    margin-top: calc(40px * var(--scale));
+    margin-bottom: calc(32px * var(--scale));
+}
+
+.profile-port-item-head {
+    line-height: 1;
+    font-size: calc(32px * var(--scale));
+    font-weight: 600;
+    margin-bottom: calc(24px * var(--scale));
+}
+
+.profile-port-item-body {
+    line-height: 1.333;
+    font-size: calc(21px * var(--scale));
+    font-weight: 300;
+    padding: 0 calc(28px * var(--scale));
+}
+
+/* ABOUT */
+
+.profile-about {
+    position: relative;
+    width: 100%;
+    line-height: calc(2.5em * var(--scale));
+}
+
+.profile-about-box {
+    max-width: 1100px;
+    width: fit-content;
+    height: fit-content;
+    padding: 24px;
+    border-radius: 150px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--backB);
+}
+
+.profile-about-img {
+    float: left;
+    max-height: 256px;
+    margin-bottom: 8px;
+    margin-right: 54px;
+    shape-outside: circle();
+}
+
+.profile-about-item-head {
+    line-height: 1;
+    font-weight: 500;
+}
+
+.profile-about-item-body {
+    line-height: 1.667;
+    font-weight: 300;
+    margin-top: calc(28px * var(--scale));
+}
+
+/* CAPABILITIES */
+
+.profile-caps {
+    position: relative;
+    width: 100%;
+    line-height: calc(2.5em * var(--scale));
+}
+
+.profile-caps-box {
+    min-width: 100%;
+    height: fit-content;
+    padding: calc(48px * var(--scale));
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--backC);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1600px) {
+    .profile-name {
+        margin-top: 64px;
+    }
+    .profile-name-logo {
+        width: 384px;
+    }
+    .profile-port-box {
+        max-width: calc(732px * var(--scale));
+    }
+    .profile-about-box {
+        border-radius: 136px 0 0 0;
+    }
+    .profile-about-img {
+        max-height: 220px;
+        margin-right: 48px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .profile-about-box {
+        max-width: 768px;
+        border-radius: 116px 0 0 0;
+    }
+    .profile-about-img {
+        max-height: 180px;
+        margin-right: 36px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .profile-name {
+        margin-top: 56px;
+    }
+    .profile-name-logo {
+        width: 352px;
+    }
+    .profile-reel-box {
+        width: 100%;
+    }
+    .profile-about-box {
+        border-radius: 100px 0 0 0;
+    }
+    .profile-about-img {
+        max-height: 150px;
+        margin-right: 32px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .profile-about-box {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .profile-name {
+        margin-top: 48px;
+    }
+    .profile-name-logo {
+        width: 320px;
+    }
+    .profile-port-box {
+        max-width: calc(378px * var(--scale));
+    }
+    .profile-about-box {
+        border-radius: 88px 0 0 0;
+    }
+    .profile-about-img {
+        max-height: 128px;
+        margin-right: 28px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .profile-name {
+        margin-top: 40px;
+    }
+    .profile-name-logo {
+        width: 288px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .profile-name-logo {
+        width: 256px;
+    }
+}

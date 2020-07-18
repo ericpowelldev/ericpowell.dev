@@ -1,7 +1,9 @@
+////////// DEPENDENCIES //////////
 import React from 'react';
 import { Global } from '../utils/Global';
 
-export default function ChangeLog() {
+////////// COMPONENT //////////
+export default function ChangeLog(props) {
   const { checkPage } = React.useContext(Global);
   React.useEffect(() => { checkPage(); });
 
@@ -12,6 +14,12 @@ export default function ChangeLog() {
     //   change: `New Portfolio Reels`,
     //   detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills. Working on a carousel for them in the future.`,
     // },
+    {
+      num: `v0.4.0`,
+      date: `07/18/2020`,
+      change: `Project Restructure`,
+      detail: `Using new ways of structuring the project. Working with SEO. Made some minor UI tweaks & optimizations.`,
+    },
     {
       num: `v0.3.25`,
       date: `02/16/2020`,
@@ -124,21 +132,16 @@ export default function ChangeLog() {
 
   return (<>
     <main id="changelog">
-      <section id="changelog-rows">
-        <div id="changelogFix">
-          <div id="changelogDrop">
+      <section id="section-changelog">
+        <div className="changelog-main">
+          <div className="changelog-box">
             {
               versions.map((ver, i) =>
-                <div key={ver.num} className="changelogRow">
-                  <span>
-                    <h1>{ver.num}</h1>
-                  </span>
-                  <span>
-                    <h2>{ver.change}</h2>
-                    <p>{ver.detail}</p>
-                  </span>
-                  <div style={{ width: "100%", height: "8px" }} />
-                  {i < versions.length - 1 ? <div style={{ width: "100%", height: "1px", margin: "16px 0", background: "#dcdcff80" }} /> : null}
+                <div key={ver.num} className="changelog-row">
+                  <h3 className="changelog-row-version">{ver.num}</h3>
+                  <h4 className="changelog-row-head">{ver.change}</h4>
+                  <h6 className="changelog-row-body">{ver.detail}</h6>
+                  {i < versions.length - 1 ? <div className="changelog-line-break" /> : null}
                 </div>
               )
             }

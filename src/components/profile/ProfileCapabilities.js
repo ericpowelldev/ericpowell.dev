@@ -1,10 +1,12 @@
+////////// DEPENDENCIES //////////
 import React from 'react';
 
-export default function ProfileCapabilities() {
+////////// COMPONENT //////////
+export default function ProfileCapabilities(props) {
   return (<>
-    <div id="profileCaps">
-      <div id="profileCapsDrop">
-        <h1 className="titleIn">See&nbsp;what&nbsp;I'm&nbsp;capable&nbsp;of.</h1>
+    <div className="profile-caps">
+      <div className="profile-caps-box">
+        <h1 className="title-in">See&nbsp;what&nbsp;I'm&nbsp;capable&nbsp;of.</h1>
       </div>
     </div>
   </>)

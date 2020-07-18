@@ -1,0 +1,162 @@
+/* RULES */
+
+footer {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* TOP */
+
+.footer-top {
+    text-align: center;
+    width: 100%;
+    background: var(--backC);
+}
+
+.footer-3 {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    height: 100%;
+    padding: 36px 0;
+}
+
+.footer-3 a:hover, .footer-3 a:focus {
+    color: var(--primary);
+}
+
+.footer-3-head {
+    padding-bottom: 24px;
+    font-weight: 400;
+}
+
+.footer-3-link {
+    padding: 8px 0;
+    font-weight: 300;
+    transition: var(--anim-02);
+}
+
+.footer-3-logo {
+    height: 255px;
+    padding: 20px 0;
+    transition: var(--anim-02);
+}
+
+.footer-3-logo:hover, .footer-3-logo:focus {
+    opacity: 0.5;
+}
+
+.footer-touch {
+    display: none;
+}
+
+.footer-touch a {
+    display: inline-block;
+    width: 54px;
+    padding: 6px;
+}
+
+.footer-touch-icon {
+    transition: var(--anim-02);
+}
+
+.footer-touch-icon:hover, .footer-touch-icon:focus {
+    opacity: 0.5;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    padding: 24px 0;
+    background: var(--backD);
+}
+
+.footer-bottom-txt {
+    line-height: 1;
+}
+
+.footer-bottom-txt a {
+    color: var(--foreA-80);
+    transition: var(--anim-02);
+}
+
+.footer-bottom-txt a:hover, .footer-bottom-txt a:focus {
+    color: var(--primary);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1600px) {
+    .footer-3 {
+        width: 30%;
+        padding: 32px 0;
+    }
+    .footer-3-head {
+        padding-bottom: 21px;
+    }
+    .footer-3-link {
+        padding: 7px 0;
+    }
+    .footer-3-logo {
+        height: 224px;
+        padding: 16px 0;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .footer-3 {
+        width: 33.333%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .footer-3 {
+        padding: 28px 0;
+    }
+    .footer-3-head {
+        padding-bottom: 18px;
+    }
+    .footer-3-link {
+        padding: 6px 0;
+    }
+    .footer-3-logo {
+        height: 192px;
+        padding: 12px 0;
+    }
+}
+@media screen and (max-width: 800px) {
+    
+}
+@media screen and (max-width: 600px) {
+    .footer-3 {
+        display: block;
+        width: 100%;
+        padding: 16px 0;
+    }
+    .footer-3-head {
+        padding-bottom: 8px;
+    }
+    .footer-3-link {
+        display: none;
+    }
+    .footer-3-logo {
+        height: 160px;
+        padding: 0;
+        padding-top: 16px;
+    }
+    .footer-links-site {
+        display: none;
+    }
+    .footer-touch {
+        display: initial;
+    }
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 360px) {
+
+}

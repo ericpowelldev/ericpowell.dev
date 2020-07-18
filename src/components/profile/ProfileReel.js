@@ -1,11 +1,15 @@
+////////// DEPENDENCIES //////////
 import React from 'react';
 
-export default function ProfileReel() {
+import reel_game from '../../videos/reel_game.mp4';
+
+////////// COMPONENT //////////
+export default function ProfileReel(props) {
   return (<>
-    <div id="profileReel">
-      <div id="profileReelFix">
-        <video id="profileReelMovie" playsInline autoPlay muted loop>
-          <source src="/videos/reel_game.mp4" type="video/mp4" />
+    <div className="profile-reel">
+      <div className="profile-reel-box">
+        <video className="profile-reel-movie" playsInline autoPlay muted loop>
+          <source src={reel_game} type="video/mp4" />
         </video>
       </div>
     </div>

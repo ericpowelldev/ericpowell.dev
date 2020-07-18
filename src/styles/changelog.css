@@ -1,0 +1,67 @@
+/* RULES */
+
+.changelog-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: calc(2.5em * var(--scale));
+}
+
+.changelog-box {
+    max-width: calc(1200px * var(--scale));
+    height: max-content;
+    padding: calc(32px * var(--scale));
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--backB);
+}
+
+.changelog-row-version {
+    margin-bottom: 16px;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--foreA-80);
+}
+
+.changelog-row-head {
+    margin-bottom: 8px;
+    line-height: 1.333;
+    font-weight: 400;
+}
+
+.changelog-row-body {
+    line-height: 1.333;
+    font-weight: 300;
+}
+
+.changelog-line-break {
+    width: 100%;
+    height: 1px;
+    margin: 24px 0;
+    background: var(--divider);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1600px) {
+
+}
+@media screen and (max-width: 1280px) {
+
+}
+@media screen and (max-width: 1000px) {
+
+}
+@media screen and (max-width: 800px) {
+    
+}
+@media screen and (max-width: 600px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 360px) {
+
+}

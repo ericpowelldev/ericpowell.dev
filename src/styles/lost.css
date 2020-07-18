@@ -1,0 +1,64 @@
+/* RULES */
+
+.lost-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: calc(2.5em * var(--scale));
+    text-align: center;
+}
+
+.lost-box {
+    max-width: calc(1440px * var(--scale));
+    width: max-content;
+    height: max-content;
+    padding: calc(48px * var(--scale));
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--foreA-16);
+}
+
+.lost-head {
+    font-size: calc(50px * var(--scale));
+    font-weight: 600;
+    margin-bottom: calc(24px * var(--scale));
+}
+
+.lost-body {
+    font-size: calc(18px * var(--scale));
+}
+
+.lost-body a {
+    color: var(--primary);
+}
+
+.lost-body a:hover, .lost-body a:focus {
+    color: var(--foreA-80);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1600px) {
+
+}
+@media screen and (max-width: 1280px) {
+
+}
+@media screen and (max-width: 1000px) {
+
+}
+@media screen and (max-width: 800px) {
+    .lost-box {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 360px) {
+
+}

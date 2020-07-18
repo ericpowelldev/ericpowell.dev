@@ -21,7 +21,7 @@ This is my current portfolio made using ReactJS. [Deployed site here.](https://e
     * Game Dev
     * Graphic Design
     * 3D Design
-* [X] 3: Capabilities w/ Resume link
+* [ ] 3: Capabilities w/ Resume link
     * Game Development
     * Front-End Design
     * Back-End Integration

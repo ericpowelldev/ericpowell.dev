@@ -5,7 +5,7 @@
 .work-reel {
     position: relative;
     width: 100%;
-    background: var(--backB);
+    background: var(--bg-main);
 }
 
 .work-reel-box {
@@ -35,7 +35,7 @@
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--backB);
+    background: var(--bg-main);
 }
 
 .work-web-item {
@@ -74,7 +74,7 @@
 }
 
 .work-web-item-overlay:active {
-    background-color: var(--primary-80);
+    background-color: var(--primary-light);
 }
 
 .work-web-item-head {

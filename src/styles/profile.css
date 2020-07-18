@@ -19,7 +19,7 @@
 .profile-reel {
     position: relative;
     width: 100%;
-    background: var(--backB);
+    background: var(--bg-main);
 }
 
 .profile-reel-box {
@@ -49,7 +49,7 @@
     padding: calc(12px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--backB);
+    background: var(--bg-main);
 }
 
 .profile-port-item {
@@ -60,18 +60,18 @@
     width: calc(330px * var(--scale));
     height: calc(330px * var(--scale));
     margin: calc(12px * var(--scale));
-    background: var(--foreA-16);
+    background: var(--act-static);
     transition: var(--anim-02);
 }
 
 .profile-port-item:hover, .profile-port-item:focus {
     cursor: pointer;
     transform: scale(1.075);
-    background: var(--foreA-40);
+    background: var(--act-hover);
 }
 
 .profile-port-item:active {
-    background: var(--primary-80);
+    background: var(--primary-light);
 }
 
 .profile-port-item img {
@@ -110,7 +110,7 @@
     border-radius: 150px 0 0 0;
     margin-left: auto;
     margin-right: auto;
-    background: var(--backB);
+    background: var(--bg-main);
 }
 
 .profile-about-img {
@@ -146,7 +146,7 @@
     padding: calc(48px * var(--scale));
     margin-left: auto;
     margin-right: auto;
-    background: var(--backC);
+    background: var(--bg-dark);
 }
 
 /* MEDIA QUERIES */

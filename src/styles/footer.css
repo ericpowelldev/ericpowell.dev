@@ -13,7 +13,7 @@ footer {
 .footer-top {
     text-align: center;
     width: 100%;
-    background: var(--backC);
+    background: var(--bg-dark);
 }
 
 .footer-3 {
@@ -25,7 +25,7 @@ footer {
 }
 
 .footer-3 a:hover, .footer-3 a:focus {
-    color: var(--primary);
+    color: var(--primary-main);
 }
 
 .footer-3-head {
@@ -73,7 +73,7 @@ footer {
     text-align: center;
     width: 100%;
     padding: 24px 0;
-    background: var(--backD);
+    background: var(--bg-verydark);
 }
 
 .footer-bottom-txt {
@@ -81,12 +81,12 @@ footer {
 }
 
 .footer-bottom-txt a {
-    color: var(--foreA-80);
+    color: var(--txt-secondary);
     transition: var(--anim-02);
 }
 
 .footer-bottom-txt a:hover, .footer-bottom-txt a:focus {
-    color: var(--primary);
+    color: var(--primary-main);
 }
 
 /* MEDIA QUERIES */

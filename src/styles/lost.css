@@ -16,7 +16,7 @@
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--foreA-16);
+    background: var(--act-static);
 }
 
 .lost-head {
@@ -30,11 +30,11 @@
 }
 
 .lost-body a {
-    color: var(--primary);
+    color: var(--primary-main);
 }
 
 .lost-body a:hover, .lost-body a:focus {
-    color: var(--foreA-80);
+    color: var(--txt-secondary);
 }
 
 /* MEDIA QUERIES */

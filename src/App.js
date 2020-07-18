@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { GlobalProvider } from './utils/Global';
 import { NotifyProvider } from './utils/Notify';
 
+import Mazeletter from './components/Mazeletter';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Profile from './components/Profile';
@@ -16,6 +17,7 @@ export default function App() {
     <Router>
       <GlobalProvider>
         <NotifyProvider>
+          <Mazeletter />
           <Nav />
           <div id="nav-pad" />
           <Switch>

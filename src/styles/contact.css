@@ -43,8 +43,8 @@
     border: none;
     border-radius: 0;
     margin: 16px;
-    background: var(--foreA-32);
-    color: var(--foreA);
+    background: var(--txt-tertiary);
+    color: var(--txt-main);
     opacity: 0;
     text-align: center;
     font-size: 18px;
@@ -54,11 +54,11 @@
 }
 
 .contact-form-input:invalid {
-    border: 1px solid var(--error);
+    border: 1px solid var(--error-main);
 }
 
 .contact-form-input:valid {
-    border: 1px solid var(--success);
+    border: 1px solid var(--success-main);
 }
 
 .contact-form-input:focus, .contact-form-input:valid {
@@ -86,7 +86,7 @@
     float: right;
     width: 100%;
     padding: 0 16px;
-    color: var(--foreA-80);
+    color: var(--txt-secondary);
     cursor: text;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -103,7 +103,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--backC);
+    background: var(--bg-dark);
     -webkit-transform-origin: 50% 100%;
     transform-origin: 50% 100%;
     -webkit-transition: -webkit-transform 0.2s;
@@ -132,7 +132,7 @@
     position: relative;
     width: 100%;
     padding: 16px;
-    background: var(--backB);
+    background: var(--bg-main);
 }
 
 .contact-form-message-input {
@@ -143,7 +143,7 @@
     border-radius: 0;
     margin-bottom: 24px;
     background: #00000000;
-    color: var(--foreA);
+    color: var(--txt-main);
     line-height: 1.5em;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -196,30 +196,30 @@
 }
 
 .contact-form-send-btn.valid .contact-form-send-btn-shape {
-    border-top: 56px solid var(--primary);
+    border-top: 56px solid var(--primary-main);
     cursor: pointer;
 }
 
 .contact-form-send-btn.valid h4 {
-    color: var(--backA);
+    color: var(--bg-light);
     cursor: pointer;
 }
 
 .contact-form-send-btn.valid:hover .contact-form-send-btn-shape {
-    border-top: 56px solid var(--foreA);
+    border-top: 56px solid var(--txt-primary);
 }
 
 .contact-form-send-btn.valid:hover h4 {
-    color: var(--backA);
+    color: var(--bg-light);
 }
 
 .contact-form-send-btn.invalid .contact-form-send-btn-shape {
-    border-top: 56px solid var(--backC);
+    border-top: 56px solid var(--bg-dark);
     cursor: default;
 }
 
 .contact-form-send-btn.invalid h4 {
-    color: var(--foreA-80);
+    color: var(--txt-secondary);
     cursor: default;
 }
 

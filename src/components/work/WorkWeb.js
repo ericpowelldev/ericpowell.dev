@@ -16,19 +16,19 @@ export default function WorkWeb(props) {
       body: `Test your skills in this harsh, web-based survival game (Takes a moment to\xa0load\xa0up).`,
     },
     {
-      link: `https://ericpowell3d.github.io/Monki/`,
+      link: `https://ericpowelldev.github.io/Monki/`,
       img: img_monki,
       head: `Monki`,
       body: `Find your favorite musical artists and discover local\xa0venues.`,
     },
     {
-      link: `https://ericpowell3d.github.io/Super-Smash-Trivia/`,
+      link: `https://ericpowelldev.github.io/Super-Smash-Trivia/`,
       img: img_smash,
       head: `Super Smash Trivia`,
       body: `Test your knowledge of Super Smash Bros in this web-based trivia\xa0game.`,
     },
     {
-      link: `https://ericpowell3d.github.io/Giphy-App/`,
+      link: `https://ericpowelldev.github.io/Giphy-App/`,
       img: img_giphy,
       head: `Giphy`,
       body: `Find GIFs of anything you want with a simple search and click. Powered by the Giphy\xa0API.`,

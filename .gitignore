@@ -46,9 +46,6 @@ jspm_packages/
 .DS_Store
 .vscode
 working_files/
-
-# Large Media
 large_media/
-
-# Local Netlify folder
 .netlify
+build/

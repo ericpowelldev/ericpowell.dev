@@ -15,11 +15,11 @@ import img_instagram from '../images/vectors/instagram.svg';
 ////////// COMPONENT //////////
 export default function Footer(props) {
   const links = [
-    "https://github.com/ericpowell3d?tab=repositories",
-    "https://www.linkedin.com/in/epowell3d/",
-    "https://www.artstation.com/epowell3d",
-    "https://www.facebook.com/epowell3d",
-    "https://www.instagram.com/epowell3d/"
+    "https://github.com/ericpowelldev?tab=repositories",
+    "https://www.linkedin.com/in/ericpowelldev/",
+    "https://www.artstation.com/ericpowell",
+    "https://www.facebook.com/ericpowelldev",
+    "https://www.instagram.com/ericpowelldev/"
   ];
 
   return (<>

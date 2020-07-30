@@ -1,6 +1,6 @@
 {
-  "name": "ep-portfolio",
-  "version": "0.4.1",
+  "name": "ericpowell-portfolio",
+  "version": "0.4.2",
   "description": "Eric Powell | Designer & Developer",
   "author": "Eric Powell",
   "license": "ISC",
@@ -33,5 +33,5 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://ericpowell3d.com"
+  "homepage": "https://ericpowell.dev"
 }

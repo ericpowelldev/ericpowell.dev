@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my current portfolio made using ReactJS. [Deployed site here.](https://ericpowell3d.com)
+This is my current portfolio made using ReactJS. [Deployed site here.](https://ericpowell.dev)
 
 - - -
 
@@ -71,7 +71,7 @@ Contact me and let's work together.
 
 ### Auxilary Information
 
-Please visit my portfolio site at [ericpowell3d.com](https://ericpowell3d.com) for more detailed information
+Please visit my portfolio site at [ericpowell.dev](https://ericpowell.dev) for more detailed information
 
 - - -
 

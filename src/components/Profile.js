@@ -7,7 +7,7 @@ import ProfilePortfolio from '../components/profile/ProfilePortfolio';
 // import ProfileCapabilities from '../components/profile/ProfileCapabilities';
 import ProfileAbout from '../components/profile/ProfileAbout';
 
-import img_text from '../images/vectors/text.svg';
+import img_text from '../images/vectors/ep_txt_light.svg';
 
 ////////// COMPONENT //////////
 export default function Profile(props) {

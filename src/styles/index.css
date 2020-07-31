@@ -1,33 +1,33 @@
-/* THEME */
+/* DARK THEME */
 
 :root {
     --scale: 1;
     --primary-light: #00ff8080;
     --primary-main: #00ff80;
     --primary-dark: #00ff80;
-    --secondary-light: #0080ff80;
-    --secondary-main: #0080ff;
-    --secondary-dark: #0080ff;
+    --secondary-light: #64ffa080;
+    --secondary-main: #64ffa0;
+    --secondary-dark: #64ffa0;
     --info-main: #0080ff;
     --success-main: #00c864;
     --warning-main: #ffa064;
     --error-main: #ff5064;
+    --bg-white: #e8eeff;
     --bg-light: #22242a;
     --bg-main: #1c1e24;
     --bg-dark: #12141a;
-    --bg-verydark: #0e1016;
-    --txt-main: #fff;
-    --txt-primary: #dce4ff;
-    --txt-secondary: #dce4ff80;
-    --txt-tertiary: #dce4ff40;
-    --txt-contrast: #202020;
-    --divider: #dce4ff40;
-    --shd-weak: #00000040;
-    --shd-medium: #00000060;
-    --shd-strong: #00000080;
-    --act-invisible: #dce4ff00;
-    --act-static: #dce4ff20;
-    --act-hover: #dce4ff40;
+    --bg-verydark: #0c0e14;
+    --txt-primary: #fff;
+    --txt-secondary: #e8eeff80;
+    --txt-tertiary: #e8eeff40;
+    --txt-contrast: #22242a;
+    --divider: #e8eeff40;
+    --shd-weak: #0c0e1440;
+    --shd-medium: #0c0e1460;
+    --shd-strong: #0c0e1480;
+    --act-invisible: #e8eeff00;
+    --act-static: #e8eeff20;
+    --act-hover: #e8eeff40;
     --h1: 48px;
     --h2: 32px;
     --h3: 24px;
@@ -92,13 +92,13 @@ body {
     padding: 0;
     border: 0;
     margin: 0;
-    color: var(--txt-main);
+    color: var(--txt-primary);
     background-color: var(--bg-light);
 }
 
 a {
     vertical-align: top;
-    color: var(--txt-main);
+    color: var(--txt-primary);
 }
 
 h1 {
@@ -131,7 +131,7 @@ h6 {
     font-size: var(--h6);
 }
 
-.shade, img, h1, h2, h3, h4, h5, h6, p {
+.shd, img, h1, h2, h3, h4, h5, h6, p {
     filter: drop-shadow(2px 2px 4px var(--shd-weak));
 }
 
@@ -178,7 +178,7 @@ h6 {
     font-weight: 600;
     width: 100%;
     margin-bottom: 24px;
-    color: var(--txt-main);
+    color: var(--txt-primary);
 }
 
 .line-break {
@@ -210,6 +210,12 @@ h6 {
     z-index: 1;
     color: var(--bg-main);
     filter: drop-shadow(2px 2px 4px var(--act-invisible));
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* RULES (NOTIFY) */
@@ -225,17 +231,17 @@ h6 {
     max-width: 100%;
     padding: 16px 24px;
     background-color: var(--bg-main);
-    color: var(--txt-main);
+    color: var(--txt-primary);
     opacity: 0;
     box-shadow: 0px 0px 14px var(--shd-strong);
     cursor: pointer;
+    transition: var(--anim-05);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    transition: var(--anim-05);
 }
 
 .notify.hide {

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { Global } from '../utils/Global';
 
 import res_pdf from '../resources/EricPowell_Resume_Web.pdf';
-import img_logo from '../images/vectors/logo.svg';
-import img_name from '../images/vectors/name.svg';
+import img_logo from '../images/vectors/ep_logo_main.svg';
+import img_name from '../images/vectors/ep_txt_alt.svg';
 import img_profile from '../images/vectors/profile.svg';
 import img_work from '../images/vectors/work.svg';
 import img_contact from '../images/vectors/contact.svg';

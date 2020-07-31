@@ -44,7 +44,7 @@
     border-radius: 0;
     margin: 16px;
     background: var(--txt-tertiary);
-    color: var(--txt-main);
+    color: var(--txt-primary);
     opacity: 0;
     text-align: center;
     font-size: 18px;
@@ -143,7 +143,7 @@
     border-radius: 0;
     margin-bottom: 24px;
     background: #00000000;
-    color: var(--txt-main);
+    color: var(--txt-primary);
     line-height: 1.5em;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;

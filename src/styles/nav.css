@@ -85,13 +85,13 @@ nav {
 }
 
 .nav-right-btn:hover, .nav-right-btn:focus {
-    background: var(--txt-primary);
-    color: var(--bg-light);
+    background: var(--bg-white);
+    color: var(--txt-contrast);
 }
 
 .nav-right-btn:active, .nav-right-btn-active {
     background: var(--primary-main);
-    color: var(--bg-light);
+    color: var(--txt-contrast);
 }
 
 .nav-right-btn h4, .nav-right-btn-active h4 {

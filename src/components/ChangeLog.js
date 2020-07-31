@@ -15,6 +15,12 @@ export default function ChangeLog(props) {
     //   detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills. Working on a carousel for them in the future.`,
     // },
     {
+      num: `v0.5.0`,
+      date: `07/31/2020`,
+      change: `New Reel Intro`,
+      detail: `Created a new intro for my demo reels. This is also planned to be used for future reels that I might add.`,
+    },
+    {
       num: `v0.4.2`,
       date: `07/30/2020`,
       change: `New Domain "ericpowell.dev"`,

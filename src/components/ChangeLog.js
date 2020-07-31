@@ -17,8 +17,8 @@ export default function ChangeLog(props) {
     {
       num: `v0.5.0`,
       date: `07/31/2020`,
-      change: `New Reel Intro`,
-      detail: `Created a new intro for my demo reels. This is also planned to be used for future reels that I might add.`,
+      change: `New Reel Intro & Outro`,
+      detail: `Created a new intro & outro for my demo reels. This is also planned to be used for future reels that I might add.`,
     },
     {
       num: `v0.4.2`,

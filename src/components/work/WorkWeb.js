@@ -10,7 +10,7 @@ import img_giphy from '../../images/thumbs/giphy.jpg';
 export default function WorkWeb(props) {
   const web = [
     {
-      link: `https://zone-unknown-react.herokuapp.com/`,
+      link: `https://zone-unknown.netlify.app/`,
       img: img_zur,
       head: `Zone Unknown`,
       body: `Test your skills in this harsh, web-based survival game (Takes a moment to\xa0load\xa0up).`,

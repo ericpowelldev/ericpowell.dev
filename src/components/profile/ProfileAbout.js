@@ -1,5 +1,6 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import img_profile from '../../images/profile.png';
 
@@ -24,8 +25,8 @@ export default function ProfileAbout(props) {
     {
       head: `Principles`,
       body: [
-        `The technical and formulaic aspects of coding are what I most enjoy. In my future, I'm going to strive to make something no one has ever seen before. I understand that pouring your heart and soul into your work can be stressful, but undoubtably gives you the best result. This is what I live by. I believe that no matter what you are doing, you should always give\xa0it\xa0your\xa0all.`,
-        `As a game developer, I understand how mechanics can make or break the gameplay experience. As a designer and web developer, I know what a clean, responsive interface can do for a business. I enjoy technical aspects of design & development and polishing critical details that others may overlook. I am fully confident in proving what I say I can do. Contact me and let's\xa0work\xa0together.`,
+        `The technical and formulaic aspects of coding are what I most enjoy. I strive to make things no one has ever seen before. I understand that pouring your heart and soul into your work can be stressful, but undoubtably gives you the best result. This is what I live by. I believe that no matter what you are doing, you should always give\xa0it\xa0your\xa0all.`,
+        `As a game developer, I understand how mechanics can make or break the gameplay experience. As a designer and web developer, I know what a clean, responsive interface can do for a business. I enjoy technical aspects of design & development and polishing critical details that others may overlook. I am fully confident in proving what I say I\xa0can\xa0do.`,
       ],
     },
   ]
@@ -34,15 +35,18 @@ export default function ProfileAbout(props) {
     <div className="profile-about">
       <div className="profile-about-box">
         <img className="profile-about-img" src={img_profile} alt="Eric Powell" />
-        {about.map((item, i) =>
-          <React.Fragment key={`profile-about-item-${i}`}>
-            <h3 className="profile-about-item-head">{item.head}</h3>
-            {item.body.map((bodyItem, bi) =>
-              <h5 key={`profile-about-item-body-${bi}`} className="profile-about-item-body">{bodyItem}</h5>
-            )}
-            {i < about.length - 1 ? <br /> : null}
-          </React.Fragment>
-        )}
+        <h3 className="profile-about-item-head">{about[0].head}</h3>
+        <h5 className="profile-about-item-body">{about[0].body[0]}</h5>
+        <h5 className="profile-about-item-body">{about[0].body[1]}</h5>
+        <h5 className="profile-about-item-body">{about[0].body[2]}</h5>
+        <br />
+        <h3 className="profile-about-item-head">{about[1].head}</h3>
+        <h5 className="profile-about-item-body">{about[1].body[0]}</h5>
+        <h5 className="profile-about-item-body">{about[1].body[1]}</h5>
+        <br />
+        <h3 className="profile-about-item-head">{about[2].head}</h3>
+        <h5 className="profile-about-item-body">{about[2].body[0]}</h5>
+        <h5 className="profile-about-item-body">{about[2].body[1]} <Link to="/contact" className="profile-about-item-link">Contact&nbsp;Me</Link> and let's&nbsp;work&nbsp;together</h5>
       </div>
     </div>
   </>)

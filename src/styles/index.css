@@ -13,18 +13,18 @@
     --warning-main: #ffa064;
     --error-main: #ff5064;
     --bg-white: #e8eeff;
-    --bg-light: #22242a;
-    --bg-main: #1c1e24;
-    --bg-dark: #12141a;
-    --bg-verydark: #0c0e14;
+    --bg-light: #202428;
+    --bg-main: #181b20;
+    --bg-dark: #101216;
+    --bg-verydark: #0c0e12;
     --txt-primary: #fff;
     --txt-secondary: #e8eeff80;
     --txt-tertiary: #e8eeff40;
-    --txt-contrast: #22242a;
+    --txt-contrast: #202428;
     --divider: #e8eeff40;
-    --shd-weak: #0c0e1440;
-    --shd-medium: #0c0e1460;
-    --shd-strong: #0c0e1480;
+    --shd-weak: #0c0e1240;
+    --shd-medium: #0c0e1260;
+    --shd-strong: #0c0e1280;
     --act-invisible: #e8eeff00;
     --act-static: #e8eeff20;
     --act-hover: #e8eeff40;
@@ -39,6 +39,7 @@
     --anim-02: 0.2s ease-out;
     --anim-05: 0.5s ease-out;
     --anim-1: 1s ease-out;
+    --font-family: 'Montserrat', sans-serif;
 }
 
 /* RULES (GLOBAL) */
@@ -69,13 +70,13 @@
 }
 
 input::placeholder {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family);
     font-weight: 400;
     color: var(--txt-secondary);
 }
 
 textarea::placeholder {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family);
     font-weight: 400;
     color: var(--txt-secondary);
 }
@@ -85,7 +86,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family);
     font-size: var(--p);
     font-weight: 300;
     line-height: normal;

@@ -8,6 +8,7 @@ import './styles/footer.css';
 import './styles/profile.css';
 import './styles/work.css';
 import './styles/contact.css';
+import './styles/project.css';
 import './styles/changelog.css';
 import './styles/lost.css';
 

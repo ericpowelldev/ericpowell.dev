@@ -5,7 +5,7 @@ import moment from 'moment';
 import { version } from '../../package.json';
 
 import res_pdf from '../resources/EricPowell_Resume_Web.pdf';
-import img_logo from '../images/vectors/ep_logo_main.svg';
+import img_logo from '../images/logo_profile_shd.png';
 import img_github from '../images/vectors/github.svg';
 import img_linkedin from '../images/vectors/linkedin.svg';
 import img_artstation from '../images/vectors/artstation.svg';

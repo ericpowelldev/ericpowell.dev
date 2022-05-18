@@ -9,11 +9,23 @@ export default function ChangeLog(props) {
 
   const versions = [
     // {
-    //   num: `v0.3.32`,
+    //   num: `v0.5.0`,
     //   date: `06/24/2020`,
     //   change: `New Portfolio Reels`,
-    //   detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills. Working on a carousel for them in the future.`,
+    //   detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills.`,
     // },
+    {
+      num: `v0.6.0`,
+      date: `08/03/2020`,
+      change: `Project Write-ups & Case Studies`,
+      detail: `Wrote more in-depth paragraphs about my projects. Every project now has its own page.`,
+    },
+    {
+      num: `v0.5.4`,
+      date: `08/01/2020`,
+      change: `Revamped Game Reel`,
+      detail: `Created a new, more in-depth, game reel. The new reel showcases features that weren't shown in the original. It has also been recorded in 1440p.`,
+    },
     {
       num: `v0.5.0`,
       date: `07/31/2020`,

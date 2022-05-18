@@ -10,7 +10,7 @@ This is my current portfolio made using ReactJS. [Deployed site here.](https://e
 
 * Profile
 * Work
-* Contact
+* Contact (Change to "Skills")
 
 ### Profile
 

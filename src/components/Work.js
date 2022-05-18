@@ -21,7 +21,7 @@ export default function Work(props) {
         <WorkWeb />
       </section>
       <section id="work-game-section">
-        <h2 className="title">Game&nbsp;Reel</h2>
+        <h2 className="title">Game&nbsp;Development&nbsp;Project</h2>
         <WorkReel src={reel_game} />
       </section>
       {/* <section id="work-2d-section">

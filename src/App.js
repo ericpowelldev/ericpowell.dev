@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Profile from './components/Profile';
 import Work from './components/Work';
 import Contact from './components/Contact';
+import Project from './components/Project';
 import ChangeLog from './components/ChangeLog';
 import Lost from './components/Lost';
 
@@ -22,11 +23,9 @@ export default function App() {
           <div id="nav-pad" />
           <Switch>
             <Route exact path="/" component={() => <Profile />} />
-            <Route exact path="/home" component={() => <Profile />} />
-            <Route exact path="/profile" component={() => <Profile />} />
             <Route exact path="/work" component={() => <Work />} />
-            <Route exact path="/portfolio" component={() => <Work />} />
             <Route exact path="/contact" component={() => <Contact />} />
+            <Route path="/project" component={() => <Project />} />
             <Route exact path="/changelog" component={() => <ChangeLog />} />
             <Route component={() => <Lost />} />
           </Switch>

@@ -25,10 +25,8 @@ export function GlobalProvider({ children }) {
   /** Function to check which page is active to render the page properly */
   const checkPage = () => {
     if (window.location.pathname === `/`) setPage(`profile`);
-    else if (window.location.pathname === `/home`) setPage(`profile`);
-    else if (window.location.pathname === `/profile`) setPage(`profile`);
     else if (window.location.pathname === `/work`) setPage(`work`);
-    else if (window.location.pathname === `/portfolio`) setPage(`work`);
+    else if (window.location.pathname.includes(`/project`)) setPage(`project`);
     else if (window.location.pathname === `/contact`) setPage(`contact`);
     else if (window.location.pathname === `/changelog`) setPage(`changelog`);
     else setPage(`404`);

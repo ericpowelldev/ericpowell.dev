@@ -1,23 +1,11 @@
 {
-  "name": "ericpowell-portfolio",
-  "version": "0.5.4",
+  "name": "@ericpowelldev/portfolio",
+  "version": "0.5.5",
   "description": "Eric Powell | Designer & Developer",
   "author": "Eric Powell",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "private": true,
-  "dependencies": {
-    "moment": "^2.27.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "homepage": "https://ericpowell.dev",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -31,7 +19,22 @@
     ]
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "homepage": "https://ericpowell.dev"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1"
+  }
 }

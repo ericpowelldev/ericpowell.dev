@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /** Modal Context Object */
 export const Modal = React.createContext();
@@ -12,18 +12,18 @@ export function ModalProvider({ children }) {
    * @param {Object} input - (Optional) Input data needed for the modal to render properly
    * @param {Array} actions - (Optional) Array of label:function pairs to render as buttons - { label: buttonLabel, fn: handleChange }
    * @param {Boolean} allowClose - (Optional) Boolean to allow the modal to be closed by the user manually
-  */
+   */
   const open = (state = `default`, input = null, actions = [], allowClose = true) => {
     setDialog({ open: true, state: state, input: input, actions: actions, allowClose: allowClose });
-  }
+  };
 
-  /** Function to close the modal 
+  /** Function to close the modal
    * @param {Object} output - (Optional) Output data extracted from the modal
-  */
+   */
   const close = (output = null) => {
     if (output) setDialog({ open: false, output: output });
     else setDialog({ open: false });
-  }
+  };
 
   /** Modal context for the app */
   const modal = {
@@ -32,13 +32,8 @@ export function ModalProvider({ children }) {
     state: dialog.state,
     input: dialog.input,
     output: dialog.output,
-  }
+  };
 
   // Return the Modal.Provider and wrap it around the contents of App.js with the Modal Component
-  return (
-    <Modal.Provider value={modal}>
-
-      {children}
-    </Modal.Provider>
-  )
+  return <Modal.Provider value={modal}>{children}</Modal.Provider>;
 }

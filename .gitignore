@@ -1,51 +1,36 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Bower dependency directory (https://bower.io/)
-bower_components
-
-# NODE-WAF configuration
-.lock-wscript
-
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# NPM cache directory
-.npm
-
-# ESLint cache
-.eslintcache
-
-# REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# ENV files
-.env
-.env.local
-.env.test
-.env.development.local
-.env.test.local
-.env.production.local
-
-# MISC
 .DS_Store
-.vscode
-working_files/
-large_media/
-.netlify
+.eslintcache
+.firebase/
+.lock-wscript
+.netlify/
+.next/
+.node_repl_history
+.vscode/
+*.env
+*.env-*
+*.env.*
+*.log
+*.log-*
+*.log.*
+*.npm
+*.pem
+*.pid
+*.pid-*
+*.pid.*
+*.pnp.js
+*.seed
+*.stackdump
+*.tgz
 build/
+coverage/
+dev/
+dist/
+jspm_packages/
+large_media/
+logs/
+node_modules/
+out/
+storybook-static/
+temp/
+tmp/
+working_files/

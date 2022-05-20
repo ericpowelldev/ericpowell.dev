@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Eric Powell | Designer & Developer" />
+    <meta name="og:image" content="%PUBLIC_URL%/preview.png" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="copyright" content="Eric Powell" />
 
-<!-- ////////// HEAD ////////// -->
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
 
-<head>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet" />
 
-  <!-- META -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Eric Powell | Designer & Developer" />
-  <meta name="og:image" content="%PUBLIC_URL%/preview.png"/>
-  <meta name="theme-color" content="#000000" />
-  <meta name="copyright"content="Eric Powell">
+    <!-- TITLE -->
+    <title>Eric Powell</title>
+  </head>
 
-  <!-- PUBLIC -->
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <body>
+    <!-- JavaScript required text -->
+    <noscript>You need to enable JavaScript to run this site.</noscript>
 
-  <!-- TAB -->
-  <title>Eric Powell</title>
+    <!-- A little help for the Netlify post-processing bots -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="organization" />
+      <textarea name="message"></textarea>
+    </form>
 
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet" />
-
-</head>
-
-<!-- ////////// BODY ////////// -->
-
-<body>
-
-  <!-- JavaScript required text -->
-  <noscript>You need to enable JavaScript to run this site.</noscript>
-
-  <!-- A little help for the Netlify post-processing bots -->
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <input type="text" name="organization" />
-    <textarea name="message"></textarea>
-  </form>
-
-  <!-- Root div for the React App -->
-  <div id="root"></div>
-
-</body>
-
+    <!-- Root div for the React App -->
+    <div id="root"></div>
+  </body>
 </html>

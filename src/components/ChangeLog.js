@@ -1,11 +1,13 @@
 ////////// DEPENDENCIES //////////
-import React from 'react';
-import { Global } from '../utils/Global';
+import React from "react";
+import { Global } from "../utils/Global";
 
 ////////// COMPONENT //////////
 export default function ChangeLog(props) {
   const { checkPage } = React.useContext(Global);
-  React.useEffect(() => { checkPage(); });
+  React.useEffect(() => {
+    checkPage();
+  });
 
   const versions = [
     // {
@@ -140,26 +142,26 @@ export default function ChangeLog(props) {
       change: `Initial Commit`,
       detail: `Created basic template with an "About" & "Portfolio" page.`,
     },
-  ]
+  ];
 
-  return (<>
-    <main id="changelog">
-      <section id="section-changelog">
-        <div className="changelog-main">
-          <div className="changelog-box">
-            {
-              versions.map((ver, i) =>
+  return (
+    <>
+      <main id="changelog">
+        <section id="section-changelog">
+          <div className="changelog-main">
+            <div className="changelog-box">
+              {versions.map((ver, i) => (
                 <div key={ver.num} className="changelog-row">
                   <h3 className="changelog-row-version">{ver.num}</h3>
                   <h4 className="changelog-row-head">{ver.change}</h4>
                   <h6 className="changelog-row-body">{ver.detail}</h6>
                   {i < versions.length - 1 ? <div className="changelog-line-break" /> : null}
                 </div>
-              )
-            }
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-  </>)
+        </section>
+      </main>
+    </>
+  );
 }

@@ -1,13 +1,13 @@
 ////////// DEPENDENCIES //////////
-import React from 'react';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
-import { Global } from '../../utils/Global';
+import React from "react";
+import dayjs from "dayjs";
+import { Link } from "react-router-dom";
+import { Global } from "../../utils/Global";
 
-import img_web from '../../images/vectors/web.svg';
-import img_game from '../../images/vectors/game.svg';
-import img_2d from '../../images/vectors/2d.svg';
-import img_3d from '../../images/vectors/3d.svg';
+import img_web from "../../images/vectors/web.svg";
+import img_game from "../../images/vectors/game.svg";
+import img_2d from "../../images/vectors/2d.svg";
+import img_3d from "../../images/vectors/3d.svg";
 
 ////////// COMPONENT //////////
 export default function ProfilePortfolio(props) {
@@ -15,10 +15,10 @@ export default function ProfilePortfolio(props) {
 
   const handleAnchor = (id) => {
     if (id) {
-      localStorage.setItem(`last-anchor-time`, moment().format());
+      localStorage.setItem(`last-anchor-time`, dayjs().format());
       setAnchor(id);
     }
-  }
+  };
 
   const portfolio = [
     {
@@ -45,23 +45,25 @@ export default function ProfilePortfolio(props) {
       head: `3D\xa0Design`,
       body: `View\xa0my\xa03D\xa0models\xa0and character\xa0animation.`,
     },
-  ]
+  ];
 
-  return (<>
-    <div className="profile-port">
-      <div className="profile-port-box">
-        {portfolio.map((item, i) =>
-          <React.Fragment key={`profile-port-item-${i}`}>
-            <Link to="/work">
-              <div className="profile-port-item" onClick={() => handleAnchor(item.anchor)}>
-                <img src={item.vector} alt={item.head} />
-                <p className="profile-port-item-head">{item.head}</p>
-                <p className="profile-port-item-body">{item.body}</p>
-              </div>
-            </Link>
-          </React.Fragment>
-        )}
+  return (
+    <>
+      <div className="profile-port">
+        <div className="profile-port-box">
+          {portfolio.map((item, i) => (
+            <React.Fragment key={`profile-port-item-${i}`}>
+              <Link to="/work">
+                <div className="profile-port-item" onClick={() => handleAnchor(item.anchor)}>
+                  <img src={item.vector} alt={item.head} />
+                  <p className="profile-port-item-head">{item.head}</p>
+                  <p className="profile-port-item-body">{item.body}</p>
+                </div>
+              </Link>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
-    </div>
-  </>)
+    </>
+  );
 }

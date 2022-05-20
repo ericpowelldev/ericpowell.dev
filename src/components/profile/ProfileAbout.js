@@ -1,7 +1,7 @@
 ////////// DEPENDENCIES //////////
-import React from 'react';
+import React from "react";
 
-import img_profile from '../../images/profile.png';
+import img_profile from "../../images/profile.png";
 
 ////////// COMPONENT //////////
 export default function ProfileAbout(props) {
@@ -28,22 +28,26 @@ export default function ProfileAbout(props) {
         `As a game developer, I understand how mechanics can make or break the gameplay experience. As a designer and web developer, I know what a clean, responsive interface can do for a business. I enjoy technical aspects of design & development and polishing critical details that others may overlook. I am fully confident in proving what I say I can do. Contact me and let's\xa0work\xa0together.`,
       ],
     },
-  ]
+  ];
 
-  return (<>
-    <div className="profile-about">
-      <div className="profile-about-box">
-        <img className="profile-about-img" src={img_profile} alt="Eric Powell" />
-        {about.map((item, i) =>
-          <React.Fragment key={`profile-about-item-${i}`}>
-            <h3 className="profile-about-item-head">{item.head}</h3>
-            {item.body.map((bodyItem, bi) =>
-              <h5 key={`profile-about-item-body-${bi}`} className="profile-about-item-body">{bodyItem}</h5>
-            )}
-            {i < about.length - 1 ? <br /> : null}
-          </React.Fragment>
-        )}
+  return (
+    <>
+      <div className="profile-about">
+        <div className="profile-about-box">
+          <img className="profile-about-img" src={img_profile} alt="Eric Powell" />
+          {about.map((item, i) => (
+            <React.Fragment key={`profile-about-item-${i}`}>
+              <h3 className="profile-about-item-head">{item.head}</h3>
+              {item.body.map((bodyItem, bi) => (
+                <h5 key={`profile-about-item-body-${bi}`} className="profile-about-item-body">
+                  {bodyItem}
+                </h5>
+              ))}
+              {i < about.length - 1 ? <br /> : null}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
-    </div>
-  </>)
+    </>
+  );
 }

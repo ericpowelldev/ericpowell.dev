@@ -58,8 +58,7 @@ nav {
 .nav-left-name {
     float: left;
     width: 160px;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin: 18px 0 0 18px;
 }
 
 /* RIGHT */
@@ -85,7 +84,7 @@ nav {
 }
 
 .nav-right-btn:hover, .nav-right-btn:focus {
-    background: var(--bg-white);
+    background: var(--txt-secondary);
     color: var(--txt-contrast);
 }
 

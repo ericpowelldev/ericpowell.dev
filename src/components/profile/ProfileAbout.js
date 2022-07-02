@@ -25,7 +25,7 @@ export default function ProfileAbout(props) {
       head: `Principles`,
       body: [
         `The technical and formulaic aspects of coding are what I most enjoy. In my future, I'm going to strive to make something no one has ever seen before. I understand that pouring your heart and soul into your work can be stressful, but undoubtably gives you the best result. This is what I live by. I believe that no matter what you are doing, you should always give\xa0it\xa0your\xa0all.`,
-        `As a game developer, I understand how mechanics can make or break the gameplay experience. As a designer and web developer, I know what a clean, responsive interface can do for a business. I enjoy technical aspects of design & development and polishing critical details that others may overlook. I am fully confident in proving what I say I can do. Contact me and let's\xa0work\xa0together.`,
+        `As a game developer, I understand how mechanics can make or break the gameplay experience. As a designer and web developer, I know what a clean, responsive interface can do for a business. I excel at the technical side of design & development, polishing critical details that others may overlook. I am fully confident in proving what I say I can do. Contact me and let's\xa0work\xa0together.`,
       ],
     },
   ];

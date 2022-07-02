@@ -7,7 +7,7 @@ import ProfilePortfolio from "../components/profile/ProfilePortfolio";
 // import ProfileCapabilities from '../components/profile/ProfileCapabilities';
 import ProfileAbout from "../components/profile/ProfileAbout";
 
-import img_text from "../images/vectors/ep_txt_light.svg";
+import img_text from "../images/vectors/ep-text-light.svg";
 
 ////////// COMPONENT //////////
 export default function Profile(props) {
@@ -28,7 +28,7 @@ export default function Profile(props) {
           <ProfileReel />
         </section>
         <section id="profile-portfolio-section">
-          <h2 className="title">Survey&nbsp;my&nbsp;portfolio.</h2>
+          <h2 className="title">Survey&nbsp;My&nbsp;Portfolio</h2>
           <ProfilePortfolio />
         </section>
         {/* <div style={{ width: "100%", height: "64px" }} />
@@ -36,7 +36,7 @@ export default function Profile(props) {
           <ProfileCapabilities />
         </section> */}
         <section id="profile-about-section">
-          <h2 className="title">Learn&nbsp;a&nbsp;little&nbsp;more&nbsp;about&nbsp;me.</h2>
+          <h2 className="title">Learn&nbsp;More&nbsp;About&nbsp;Me</h2>
           <ProfileAbout />
         </section>
       </main>

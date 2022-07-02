@@ -19,6 +19,7 @@
 .profile-reel {
     position: relative;
     width: 100%;
+    padding: 12px 0;
     background: var(--bg-main);
 }
 
@@ -30,9 +31,8 @@
 }
 
 .profile-reel-movie {
+    display: block;
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 9px;
     outline: none;
 }
 

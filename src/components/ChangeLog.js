@@ -16,6 +16,12 @@ export default function ChangeLog(props) {
     //   change: `New Portfolio Reels`,
     //   detail: `Added 2 new video reels! One to show of my 3D skills and another to show off my motion graphics skills. Working on a carousel for them in the future.`,
     // },
+    // {
+    //   num: `v0.6.0`,
+    //   date: `07/2/2022`,
+    //   change: `New Project Sections`,
+    //   detail: `Updated each section with new projects. More graphic design projects and animations are visible to see.`,
+    // },
     {
       num: `v0.5.0`,
       date: `07/31/2020`,

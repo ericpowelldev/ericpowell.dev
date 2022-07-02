@@ -15,7 +15,7 @@ export default function Contact(props) {
     <>
       <main id="contact">
         <section id="contact-form-section">
-          <h2 className="title">Send&nbsp;me&nbsp;an&nbsp;email.</h2>
+          <h2 className="title">Send&nbsp;Me&nbsp;An&nbsp;Email</h2>
           <ContactForm />
         </section>
       </main>

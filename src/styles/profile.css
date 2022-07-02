@@ -19,6 +19,7 @@
 .profile-reel {
     position: relative;
     width: 100%;
+    padding: 12px 0;
     background: var(--bg-main);
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "@ericpowelldev/portfolio",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Eric Powell | Designer & Developer",
   "author": "Eric Powell",
   "license": "UNLICENSED",
@@ -31,10 +31,10 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "dayjs": "^1.11.3",
+    "dayjs": "^1.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1"
   }
 }

@@ -1,15 +1,20 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./styles/reset.css";
-import "./styles/index.css";
-import "./styles/nav.css";
-import "./styles/footer.css";
-import "./styles/profile.css";
-import "./styles/work.css";
-import "./styles/contact.css";
-import "./styles/changelog.css";
-import "./styles/lost.css";
+
+import "./static/styles/reset.css";
+import "./static/styles/index.css";
+import "./static/styles/header.css";
+import "./static/styles/footer.css";
+import "./static/styles/profile.css";
+import "./static/styles/work.css";
+import "./static/styles/contact.css";
+import "./static/styles/changelog.css";
+import "./static/styles/lost.css";
+
+// -------------------------------- RENDER -------------------------------- //
 
 const root = document.getElementById("root");
 const app = ReactDOM.createRoot(root);

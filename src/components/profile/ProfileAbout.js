@@ -1,9 +1,11 @@
-////////// DEPENDENCIES //////////
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 
-import img_profile from "../../images/profile.png";
+import img_profile from "../../static/images/profile.png";
 
-////////// COMPONENT //////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function ProfileAbout(props) {
   const about = [
     {
@@ -31,23 +33,24 @@ export default function ProfileAbout(props) {
   ];
 
   return (
-    <>
-      <div className="profile-about">
-        <div className="profile-about-box">
-          <img className="profile-about-img" src={img_profile} alt="Eric Powell" />
-          {about.map((item, i) => (
-            <React.Fragment key={`profile-about-item-${i}`}>
-              <h3 className="profile-about-item-head">{item.head}</h3>
-              {item.body.map((bodyItem, bi) => (
-                <h5 key={`profile-about-item-body-${bi}`} className="profile-about-item-body">
-                  {bodyItem}
-                </h5>
-              ))}
-              {i < about.length - 1 ? <br /> : null}
-            </React.Fragment>
-          ))}
-        </div>
+    <div className="profile-about">
+      <div className="profile-about-box">
+        <img className="profile-about-img" src={img_profile} alt="Eric Powell" />
+
+        {about.map((item, i) => (
+          <React.Fragment key={`profile-about-item-${i}`}>
+            <h3 className="profile-about-item-head">{item.head}</h3>
+
+            {item.body.map((bodyItem, bi) => (
+              <h5 key={`profile-about-item-body-${bi}`} className="profile-about-item-body">
+                {bodyItem}
+              </h5>
+            ))}
+
+            {i < about.length - 1 ? <br /> : null}
+          </React.Fragment>
+        ))}
       </div>
-    </>
+    </div>
   );
 }

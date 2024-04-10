@@ -1,12 +1,14 @@
-////////// DEPENDENCIES //////////
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 
-import img_zur from "../../images/thumbs/zur.jpg";
-import img_monki from "../../images/thumbs/monki.jpg";
-import img_smash from "../../images/thumbs/smash.jpg";
-import img_giphy from "../../images/thumbs/giphy.jpg";
+import img_zur from "../../static/images/thumbs/zur.jpg";
+import img_monki from "../../static/images/thumbs/monki.jpg";
+import img_smash from "../../static/images/thumbs/smash.jpg";
+import img_giphy from "../../static/images/thumbs/giphy.jpg";
 
-////////// COMPONENT //////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function WorkWeb(props) {
   const web = [
     {
@@ -36,21 +38,19 @@ export default function WorkWeb(props) {
   ];
 
   return (
-    <>
-      <div className="work-web">
-        <div className="work-web-box">
-          {web.map((item, i) => (
-            <a key={`work-web-item-${i}`} href={item.link} target="_blank" rel="noopener noreferrer">
-              <div className="work-web-item" style={{ backgroundImage: `url(${item.img})` }}>
-                <div className="work-web-item-overlay">
-                  <p className="work-web-item-head">{item.head}</p>
-                  <p className="work-web-item-body">{item.body}</p>
-                </div>
+    <div className="work-web">
+      <div className="work-web-box">
+        {web.map((item, i) => (
+          <a key={`work-web-item-${i}`} href={item.link} target="_blank" rel="noopener noreferrer">
+            <div className="work-web-item" style={{ backgroundImage: `url(${item.img})` }}>
+              <div className="work-web-item-overlay">
+                <p className="work-web-item-head">{item.head}</p>
+                <p className="work-web-item-body">{item.body}</p>
               </div>
-            </a>
-          ))}
-        </div>
+            </div>
+          </a>
+        ))}
       </div>
-    </>
+    </div>
   );
 }

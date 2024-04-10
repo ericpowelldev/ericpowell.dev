@@ -1,9 +1,13 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 
-/** Modal Context Object */
+// -------------------------------- CONTEXT -------------------------------- //
+
 export const Modal = React.createContext();
 
-/** Modal Context Provider */
+// -------------------------------- PROVIDER -------------------------------- //
+
 export function ModalProvider({ children }) {
   const [dialog, setDialog] = React.useState({ open: false });
 

@@ -1,8 +1,12 @@
-////////// DEPENDENCIES //////////
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import dayjs from "dayjs";
-import { Global } from "../../utils/Global";
-import { Notify } from "../../utils/Notify";
+
+import { Global } from "../../providers/Global";
+import { Notify } from "../../providers/Notify";
+
+// -------------------------------- HELPERS -------------------------------- //
 
 const encode = (data) => {
   return Object.keys(data)
@@ -10,7 +14,8 @@ const encode = (data) => {
     .join("&");
 };
 
-////////// COMPONENT //////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function ContactForm(props) {
   const { log } = React.useContext(Global);
   const notify = React.useContext(Notify);
@@ -91,96 +96,98 @@ export default function ContactForm(props) {
   };
 
   return (
-    <>
-      <form className="contact-form" name="contact" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
-        <div className="contact-form-box">
-          <div style={{ width: "100%", height: "8px" }} />
+    <form className="contact-form" name="contact" onChange={handleValidation} onSubmit={handleSendBtn} noValidate>
+      <div className="contact-form-box">
+        <div style={{ width: "100%", height: "8px" }} />
 
-          <div className="contact-form-wrap">
-            <div className="contact-form-div">
-              <input
-                className="contact-form-input"
-                id="contact-name"
-                type="text"
-                name="name"
-                value={name}
-                onChange={handleName}
-                maxLength="64"
-                placeholder="Enter your name..."
-                autoComplete="off"
-                required
-              />
-              <label className="contact-form-label" htmlFor="contact-name">
-                <span className="contact-form-label-txt">
-                  <h6>FULL&nbsp;NAME</h6>
-                </span>
-              </label>
-            </div>
-
-            <div className="contact-form-div">
-              <input
-                className="contact-form-input"
-                id="contact-email"
-                type="email"
-                name="email"
-                value={email}
-                onChange={handleEmail}
-                maxLength="64"
-                placeholder="Enter your email..."
-                autoComplete="off"
-                required
-              />
-              <label className="contact-form-label" htmlFor="contact-email">
-                <span className="contact-form-label-txt">
-                  <h6>EMAIL&nbsp;ADDRESS</h6>
-                </span>
-              </label>
-            </div>
-
-            <div className="contact-form-div">
-              <input
-                className="contact-form-input"
-                id="contact-org"
-                type="text"
-                name="organization"
-                value={org}
-                onChange={handleOrg}
-                maxLength="64"
-                placeholder="Enter your organization..."
-                autoComplete="off"
-                required
-              />
-              <label className="contact-form-label" htmlFor="contact-org">
-                <span className="contact-form-label-txt">
-                  <h6>ORGANIZATION</h6>
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div className="contact-form-message">
-            <textarea
-              className="contact-form-message-input"
-              rows="12"
-              name="message"
-              value={message}
-              onChange={handleMessage}
-              maxLength="1024"
-              placeholder="Enter your message..."
+        <div className="contact-form-wrap">
+          <div className="contact-form-div">
+            <input
+              className="contact-form-input"
+              id="contact-name"
+              type="text"
+              name="name"
+              value={name}
+              onChange={handleName}
+              maxLength="64"
+              placeholder="Enter your name..."
               autoComplete="off"
               required
             />
-            <div className="contact-form-send">
-              <button className={`contact-form-send-btn ${valid ? `valid` : `invalid`}`} type="submit">
-                <div className="contact-form-send-btn-shape" />
-                <h4>SEND&nbsp;MESSAGE</h4>
-              </button>
-            </div>
+
+            <label className="contact-form-label" htmlFor="contact-name">
+              <span className="contact-form-label-txt">
+                <h6>FULL&nbsp;NAME</h6>
+              </span>
+            </label>
           </div>
 
-          <div style={{ width: "100%", height: "24px" }} />
+          <div className="contact-form-div">
+            <input
+              className="contact-form-input"
+              id="contact-email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleEmail}
+              maxLength="64"
+              placeholder="Enter your email..."
+              autoComplete="off"
+              required
+            />
+
+            <label className="contact-form-label" htmlFor="contact-email">
+              <span className="contact-form-label-txt">
+                <h6>EMAIL&nbsp;ADDRESS</h6>
+              </span>
+            </label>
+          </div>
+
+          <div className="contact-form-div">
+            <input
+              className="contact-form-input"
+              id="contact-org"
+              type="text"
+              name="organization"
+              value={org}
+              onChange={handleOrg}
+              maxLength="64"
+              placeholder="Enter your organization..."
+              autoComplete="off"
+              required
+            />
+
+            <label className="contact-form-label" htmlFor="contact-org">
+              <span className="contact-form-label-txt">
+                <h6>ORGANIZATION</h6>
+              </span>
+            </label>
+          </div>
         </div>
-      </form>
-    </>
+
+        <div className="contact-form-message">
+          <textarea
+            className="contact-form-message-input"
+            rows="12"
+            name="message"
+            value={message}
+            onChange={handleMessage}
+            maxLength="1024"
+            placeholder="Enter your message..."
+            autoComplete="off"
+            required
+          />
+
+          <div className="contact-form-send">
+            <button className={`contact-form-send-btn ${valid ? `valid` : `invalid`}`} type="submit">
+              <div className="contact-form-send-btn-shape" />
+              <h4>SEND&nbsp;MESSAGE</h4>
+            </button>
+          </div>
+        </div>
+
+        <div style={{ width: "100%", height: "24px" }} />
+      </div>
+    </form>
   );
 }

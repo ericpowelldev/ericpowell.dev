@@ -1,10 +1,14 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import dayjs from "dayjs";
 
-/** Global Context Object */
+// -------------------------------- CONTEXT -------------------------------- //
+
 export const Global = React.createContext();
 
-/** Global Context Provider */
+// -------------------------------- PROVIDER -------------------------------- //
+
 export function GlobalProvider({ children }) {
   const [page, setPage] = React.useState(`profile`);
   const [anchor, setAnchor] = React.useState(null);

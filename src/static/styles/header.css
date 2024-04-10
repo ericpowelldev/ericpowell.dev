@@ -1,6 +1,6 @@
 /* RULES */
 
-nav {
+header {
     z-index: 11;
     position: fixed;
     top: 0;
@@ -8,7 +8,7 @@ nav {
     width: 100%;
 }
 
-.nav-show {
+.header-show {
     position: relative;
     top: 0;
     max-width: 1024px;
@@ -17,7 +17,7 @@ nav {
     transition: var(--anim-02);
 }
 
-.nav-hide {
+.header-hide {
     position: relative;
     top: -72px;
     max-width: 1024px;
@@ -26,7 +26,7 @@ nav {
     transition: var(--anim-05);
 }
 
-.nav-shape {
+.header-shape {
     max-width: 1024px;
     height: 0;
     border-top: 72px solid var(--bg-dark);
@@ -36,14 +36,14 @@ nav {
     margin-right: auto;
 }
 
-.nav-left {
+.header-left {
     position: absolute;
     top: 0;
     left: 0;
     margin-left: 64px;
 }
 
-.nav-left-logo {
+.header-left-logo {
     float: left;
     height: 48px;
     margin-top: 12px;
@@ -51,11 +51,11 @@ nav {
     transition: var(--anim-02);
 }
 
-.nav-left-logo:hover, .nav-left-logo:focus {
+.header-left-logo:hover, .header-left-logo:focus {
     opacity: 0.5;
 }
 
-.nav-left-name {
+.header-left-name {
     float: left;
     width: 160px;
     margin: 18px 0 0 18px;
@@ -63,14 +63,14 @@ nav {
 
 /* RIGHT */
 
-.nav-right {
+.header-right {
     position: absolute;
     top: 0;
     right: 0;
     margin-right: 22px;
 }
 
-.nav-right-btn, .nav-right-btn-active {
+.header-right-btn, .header-right-btn-active {
     float: left;
     width: 200px;
     height: 48px;
@@ -83,17 +83,17 @@ nav {
     transition: var(--anim-02);
 }
 
-.nav-right-btn:hover, .nav-right-btn:focus {
+.header-right-btn:hover, .header-right-btn:focus {
     background: var(--txt-secondary);
     color: var(--txt-contrast);
 }
 
-.nav-right-btn:active, .nav-right-btn-active {
+.header-right-btn:active, .header-right-btn-active {
     background: var(--primary-main);
     color: var(--txt-contrast);
 }
 
-.nav-right-btn h4, .nav-right-btn-active h4 {
+.header-right-btn h4, .header-right-btn-active h4 {
     transform: skew(30deg);
     line-height: 0;
     margin-top: 25px;
@@ -103,7 +103,7 @@ nav {
 
 /* TOUCH */
 
-.nav-touch {
+.header-touch {
     display: none;
     position: absolute;
     top: 0;
@@ -113,7 +113,7 @@ nav {
     margin-right: auto;
 }
 
-.nav-touch-icon {
+.header-touch-icon {
     vertical-align: top;
     width: 33.333%;
     height: 48px;
@@ -122,7 +122,7 @@ nav {
     transition: var(--anim-02);
 }
 
-.nav-touch-icon:hover, .nav-touch-icon:focus, .nav-touch-icon-active {
+.header-touch-icon:hover, .header-touch-icon:focus, .header-touch-icon-active {
     opacity: 1;
 }
 
@@ -132,16 +132,16 @@ nav {
 
 }
 @media screen and (max-width: 1280px) {
-    .nav-show, .nav-hide, .nav-shape {
+    .header-show, .header-hide, .header-shape {
         max-width: 768px;
     }
-    .nav-left-logo {
+    .header-left-logo {
         margin-left: 8px;
     }
-    .nav-left-name {
+    .header-left-name {
         display: none;
     }
-    .nav-right-btn, .nav-right-btn-active {
+    .header-right-btn, .header-right-btn-active {
         width: 180px;
     }
 }
@@ -149,13 +149,13 @@ nav {
 
 }
 @media screen and (max-width: 800px) {
-    .nav-show, .nav-hide, .nav-shape {
+    .header-show, .header-hide, .header-shape {
         max-width: 400px;
     }
-    .nav-left, .nav-right {
+    .header-left, .header-right {
         display: none;
     }
-    .nav-touch {
+    .header-touch {
         display: initial;
     }
 }
@@ -163,20 +163,20 @@ nav {
 
 }
 @media screen and (max-width: 480px) {
-    .nav-show, .nav-hide, .nav-shape {
+    .header-show, .header-hide, .header-shape {
         max-width: 320px;
     }
 }
 @media screen and (max-width: 360px) {
-    .nav-show, .nav-hide, .nav-shape {
+    .header-show, .header-hide, .header-shape {
         max-width: 300px;
     }
-    .nav-shape {
+    .header-shape {
         border-top: 64px solid var(--bg-dark);
         border-left: 37px solid transparent;
         border-right: 37px solid transparent;
     }
-    .nav-touch {
+    .header-touch {
         padding: 8px 48px;
     }
 }

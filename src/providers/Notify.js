@@ -1,9 +1,13 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 
-/** Notify Context Object */
+// -------------------------------- CONTEXT -------------------------------- //
+
 export const Notify = React.createContext();
 
-/** Notify Context Provider */
+// -------------------------------- PROVIDER -------------------------------- //
+
 export function NotifyProvider({ children }) {
   const [alert, setAlert] = React.useState(null);
   const [alertStyle, setAlertStyle] = React.useState(`notify`);
